@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جسور - حيث تلتقي الرؤية بالواقع</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/assets/style/home/section2.css">
+    <link rel="stylesheet" href="public/assets/style/home/section3.css">
+    <link rel="stylesheet" href="public/assets/style/home/section4.css">
+    <link rel="stylesheet" href="public/assets/style/home/section5.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body class="loading">
+
+    <div class="page-loader">
+        <div class="loader-panel loader-panel-left"></div>
+        <div class="loader-panel loader-panel-right "></div>
+       <div class="loader-logo" >
+    <img src="/public/assets/images/logo.png" 
+         class="w-32 sm:w-40 md:w-48 lg:w-52 xl:w-56 max-w-[80vw] h-auto" 
+         alt="شعار جسور">
+</div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar ">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo-text" >
+                <img src="/public/assets/images/logo.png" 
+                     class="w-20 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw] h-auto" 
+                     alt="شعار جسور">
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-trigger" data-ar="خدماتنا" data-en="Services">
+        <span class="nav-text">خدماتنا</span>
+        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </a>
+                    <div class="dropdown-content">
+                        <a href="#mobile-theater" class="dropdown-item" data-ar="المسرح المتنقل" data-en="Mobile Theater">المسرح المتنقل</a>
+                        <a href="#technical-setup" class="dropdown-item" data-ar="التجهيزات التقنية المتكاملة" data-en="Comprehensive Technical Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        <a href="#exhibition" class="dropdown-item" data-ar="تنظيم المعارض والمؤتمرات" data-en="Exhibition & Conference Organization">تنظيم المعارض والمؤتمرات</a>
+                        <a href="#event-management" class="dropdown-item" data-ar="إدارة وتفعيل الفعاليات" data-en="Event Management & Activation">إدارة وتفعيل الفعاليات</a>
+                        <a href="#production" class="dropdown-item" data-ar="الإنتاج والتسويق" data-en="Production & Marketing">الإنتاج والتسويق</a>
+                        <a href="#booth-design" class="dropdown-item" data-ar="تصميم وتنفيذ الأجنحة والمعارض التجارية" data-en="Booth and Trade Exhibition Design & Execution">تصميم وتنفيذ الأجنحة والمعارض التجارية</a>
+                    </div>
+                </li>
+                <li class="nav-item desktop-works">
+                    <a href="#works" class="nav-link" data-ar="أعمالنا" data-en="Works">أعمالنا</a>
+                </li>
+                <button class="lang-toggle lang-toggle-mobile" >
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-ar="EN" data-en="عربي">EN</span>
+</button>
+            </ul>
+
+           <button class="lang-toggle lang-toggle-desktop" >
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-ar="EN" data-en="عربي">EN</span>
+</button>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+      <div class="bg-layer">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-pattern"></div>
+    <div class="diagonal-lines"></div>
+  </div>
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Video Background -->
+        <video class="video-background" autoplay muted loop playsinline>
+            <!-- Replace with your actual video file -->
+            <source src="/public/assets/videos/Background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video Overlay -->
+        <div class="video-overlay"></div>
+
+
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-4">
+            <h1 class="text-6xl font-[800]"> جسور ترحب بكمツ</h1>
+        </div>
+
+
+    </section>
+
+<section class="py-12 pt-30" id="about">
+    <!-- Background Layers -->
+    <div class="bg-layer">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-pattern"></div>
+      <div class="diagonal-lines"></div>
+    </div>
+
+    <!-- Text Content -->
+    <div class="about-text">
+      <h1 data-aos="fade-up" class="text-white about-title">
+        من هي <span class="font-[900] text-[#ffa349]">جسور ؟</span>
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="200" class="text-white">
+        جسور<span class="gradient-text-about"> شركة سعودية</span> رائدة في تنظيم <span class="gradient-text-about">المعارض</span> <span class="gradient-text-about">والمؤتمرات</span> <span class="gradient-text-about">والفعاليات</span> النوعية. نربط بين <span class="gradient-text-about">الفكرة</span> <span class="gradient-text-about">والتنفيذ</span> عبر <span class="gradient-text-about">تخطيط</span> ذكي وتشغيل متكامل، لنصنع حدثاً يليق بطموح عملائنا ويترك أثراً ممتداً.
+      </p>
+      <button class="cta-btn" data-aos="fade-up" data-aos-delay="250">المزيد</button>
+    </div>
+
+    <!-- Image Scroller -->
+    <div  class="scroller" dir="ltr" data-speed="fast">
+      <div  class="scroller__inner">
+        <!-- Original images -->
+        <div data-aos="fade-up" class="slide-card">
+          <img src="/public/assets/images/home/section2/19.webp" alt="فعالية 1">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" class="slide-card">
+          <img src="/public/assets/images/home/section2/24.webp" alt="فعالية 2">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="slide-card">
+          <img src="/public/assets/images/home/section2/29.webp" alt="فعالية 3">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="400" class="slide-card">
+          <img src="/public/assets/images/home/section2/30.webp" alt="فعالية 4">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="500" class="slide-card">
+          <img src="/public/assets/images/home/section2/19.webp" alt="فعالية 5">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <!-- Duplicated images for seamless loop -->
+        <div  data-aos="fade-up" class="slide-card" aria-hidden="true">
+          <img src="/public/assets/images/home/section2/24.webp" alt="">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div class="slide-card" data-aos="fade-up" data-aos-delay="200" aria-hidden="true">
+          <img src="/public/assets/images/home/section2/29.webp" alt="">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div class="slide-card" data-aos="fade-up" data-aos-delay="300" aria-hidden="true">
+          <img src="/public/assets/images/home/section2/30.webp" alt="">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div class="slide-card" data-aos="fade-up" data-aos-delay="400" aria-hidden="true">
+          <img src="/public/assets/images/home/section2/19.webp" alt="">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+
+        <div class="slide-card" data-aos="fade-up" data-aos-delay="500" aria-hidden="true">
+          <img src="/public/assets/images/home/section2/24.webp" alt="">
+          <div class="slide-overlay-1"></div>
+          <div class="slide-overlay-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+
+  <!-- Services -->
+ <section class="relative py-24 px-6">
+        <div class="container mx-auto max-w-7xl relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-20 animate-in delay-1">
+                <p data-aos="fade-up" class="section-subtitle mb-2">ما نقدمه</p>
+                <h2 data-aos="fade-up" class="text-5xl md:text-6xl font-bold text-white mb-4">
+                    خدماتنا <span class="gradient-accent">المتكاملة</span>
+                </h2>
+                <div class="decorative-line"></div>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-[#cacaca] max-w-3xl mx-auto mt-6">
+                    نقدم حلولاً شاملة ومتكاملة لتنظيم وإدارة الفعاليات والمعارض والمؤتمرات بأعلى معايير الاحترافية
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service 1: Event Management -->
+                <div data-aos="fade-up" class="service-card animate-in delay-2">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop" 
+                         alt="إدارة وتنظيم المعارض والمؤتمرات" 
+                         class="service-image">
+                    <div class="service-content">
+                        <span class="service-number">01</span>
+                        <h3 class="service-title">إدارة وتنظيم المعارض والمؤتمرات</h3>
+                        <p class="service-description">
+                            تصميم وتنفيذ متكامل للفعاليات من مرحلة الفكرة إلى لحظة الافتتاح، مع التخطيط الاستراتيجي وإدارة كافة التفاصيل
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">التخطيط الاستراتيجي</span>
+                            <span class="feature-tag">إدارة الحضور</span>
+                            <span class="feature-tag">توثيق الحدث</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Technical Equipment -->
+                <div data-aos="fade-up" class="service-card animate-in delay-3">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop" 
+                         alt="التجهيزات التقنية المتكاملة" 
+                         class="service-image">
+                    <div class="service-content">
+                        <span class="service-number">02</span>
+                        <h3 class="service-title">التجهيزات التقنية المتكاملة</h3>
+                        <p class="service-description">
+                            أنظمة صوت وإضاءة احترافية وشاشات عملاقة بإشراف فني متخصص لضمان تجربة استثنائية
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">أنظمة الصوت</span>
+                            <span class="feature-tag">الإضاءة الاحترافية</span>
+                            <span class="feature-tag">الشاشات العملاقة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Stages & Platforms -->
+                <div data-aos="fade-up" class="service-card animate-in delay-4">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop" 
+                         alt="المسارح والمنصات" 
+                         class="service-image">
+                    <div class="service-content">
+                        <span class="service-number">03</span>
+                        <h3 class="service-title">المسارح والمنصات</h3>
+                        <p class="service-description">
+                            تصميم وتنفيذ مسارح بمقاسات خاصة وهوية مميزة، مع توفير مسارح متنقلة احترافية ومتكاملة
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">تصميم مخصص</span>
+                            <span class="feature-tag">مسارح متنقلة</span>
+                            <span class="feature-tag">أعلى معايير الأمان</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Broadcasting -->
+                <div data-aos="fade-up" class="service-card animate-in delay-5">
+                    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&h=600&fit=crop" 
+                         alt="البث المباشر والإنتاج الإعلامي" 
+                         class="service-image">
+                    <div class="service-content">
+                        <span class="service-number">04</span>
+                        <h3 class="service-title">البث المباشر والإنتاج الإعلامي</h3>
+                        <p class="service-description">
+                            توثيق ونقل فعالياتكم بجودة عالية عبر عربة بث مجهزة بالكامل وإخراج احترافي
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">OB Van</span>
+                            <span class="feature-tag">إخراج احترافي</span>
+                            <span class="feature-tag">جودة عالية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Photography & Documentation -->
+                <div data-aos="fade-up" class="service-card animate-in delay-6">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=600&fit=crop" 
+                         alt="التصوير والتوثيق" 
+                         class="service-image">
+                    <div class="service-content">
+                        <span class="service-number">05</span>
+                        <h3 class="service-title">التصوير والتوثيق</h3>
+                        <p class="service-description">
+                            توثيق أجمل اللحظات بأحدث تقنيات التصوير الفوتوغرافي والجوي والإبداعي
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">تصوير احترافي</span>
+                            <span class="feature-tag">تصوير جوي</span>
+                            <span class="feature-tag">إخراج برومو</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Design & Decor -->
+                <div data-aos="fade-up" class="service-card animate-in delay-6">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop" 
+                         alt="التصميم والديكورات" 
+                         class="service-image">
+                    <div class="service-content">
+                        <span class="service-number">06</span>
+                        <h3 class="service-title">التصميم والديكورات</h3>
+                        <p class="service-description">
+                            تصميم وتنفيذ ديكورات ومنصات خاصة بأسلوب عصري ومبتكر يعكس هوية الحدث
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">تصميم مبتكر</span>
+                            <span class="feature-tag">تنفيذ احترافي</span>
+                            <span class="feature-tag">هوية مميزة</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Section -->
+            <div data-aos="fade-up" class="text-center mt-20 animate-in delay-6">
+                <p class="text-gray-400 mb-6 text-lg">هل لديك فعالية قادمة؟</p>
+                <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-10 rounded-lg text-lg shadow-xl transform hover:scale-105 transition-all duration-300 border border-purple-500/30">
+                    تواصل معنا الآن
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+        <section class="gallery-section text-white w-full" data-aos="fade-up" data-aos-delay="300">
+            <div class="animated-background"></div>
+        <div class="gallery-grid px-4 lg:px-8">
+            
+            <!-- Images Column - Each figure is sticky -->
+            <div class="images-column" >
+                <figure class="sticky-figure">
+                    <img src="/public/assets/images/home/section2/24.webp" alt="صورة فعاليات 1">
+                </figure>
+                <figure class="sticky-figure">
+                    <img src="/public/assets/images/home/section2/29.webp" alt="صورة فعاليات 2">
+                </figure>
+                <figure class="sticky-figure">
+                    <img src="/public/assets/images/home/section2/30.webp" alt="صورة فعاليات 3">
+                </figure>
+                <figure class="sticky-figure">
+                    <img src="/public/assets/images/home/section2/19.webp" alt="صورة فعاليات 4">
+                </figure>
+            </div>
+
+            <!-- Text Column - Sticky -->
+            <div class="text-column" >
+                <h1>
+           نبدع من أجل التأثير
+                </h1>
+        </div>
+        
+       
+    </section>
+
+
+
+
+
+        <!-- Partners Section -->
+<section class="partners-section relative py-24 px-6 overflow-hidden">
+    <!-- Background Effects -->
+    <div class="bg-layer">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-pattern"></div>
+        <div class="diagonal-lines"></div>
+    </div>
+
+    <div class="container mx-auto max-w-7xl relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <p class="section-subtitle mb-2" data-ar="من نفتخر بالعمل معهم" data-en="Those We're Proud to Work With">من نفتخر بالعمل معهم</p>
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                شركاء <span class="gradient-accent">النجاح</span>
+            </h2>
+            <div class="decorative-line"></div>
+        </div>
+
+        <!-- Scrolling Partners -->
+        <div class="scroll-container" dir="ltr">
+            <div class="scroll-content">
+                <!-- Original logos -->
+                <div class="partner-logo">
+                    <div class="partner-card">
+                        <img src="/public/assets/images/home/partners/Alrajhi.png" loading="lazy" alt="Alrajhi">
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-card">
+                        <img src="/public/assets/images/home/partners/mobily.png" class="mobily" loading="lazy" alt="Mobily">
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-card">
+                        <img src="/public/assets/images/home/partners/STC.png" loading="lazy" alt="STC">
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div class="partner-card">
+                        <img src="/public/assets/images/home/partners/Toyota.png" loading="lazy" alt="Toyota">
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+   <footer class="footer-gradient py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Logo & Description -->
+                <div class="space-y-4">
+                    <h2 class="text-4xl font-bold gradient-text" data-ar="جسور" data-en="Gsoor">
+                        جسور
+                    </h2>
+                    <p class="text-gray-400 text-sm leading-relaxed" dir="rtl" 
+                       data-ar="حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة"
+                       data-en="Where Vision Meets Reality... We build bridges between ideas and events, between planning and execution, creating memorable experiences">
+                        حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
+                    <ul class="space-y-3" dir="rtl">
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="من نحن" data-en="About Us">من نحن</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="خدماتنا" data-en="Our Services">خدماتنا</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="أعمالنا" data-en="Our Work">أعمالنا</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="الخدمات" data-en="Services">الخدمات</h3>
+                    <ul class="space-y-3" dir="rtl">
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="تنظيم الفعاليات" data-en="Event Planning">تنظيم الفعاليات</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="إدارة المشاريع" data-en="Project Management">إدارة المشاريع</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="التصميم الإبداعي" data-en="Creative Design">التصميم الإبداعي</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="الاستشارات" data-en="Consulting">الاستشارات</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
+                    <ul class="space-y-4">
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope text-purple-400 text-sm"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm">info@jusoor.com</span>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone text-pink-400 text-sm"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm">+966 XX XXX XXXX</span>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt text-orange-400 text-sm"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm" data-ar="الرياض، السعودية" data-en="Riyadh, Saudi Arabia">الرياض، السعودية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider mb-10"></div>
+
+            <!-- Bottom Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                
+                <!-- Social Media Icons -->
+                <div class="flex gap-3 justify-center md:justify-start">
+                    <a href="#" class="social-icon facebook w-10 h-10 rounded-lg text-white flex items-center justify-center">
+                        <i class="fab fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram w-10 h-10 rounded-lg text-white flex items-center justify-center">
+                        <i class="fab fa-instagram text-sm"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
+                        <i class="fab fa-twitter text-sm"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin w-10 h-10 rounded-lg text-white flex items-center justify-center">
+                        <i class="fab fa-linkedin-in text-sm"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube w-10 h-10 rounded-lg text-white flex items-center justify-center">
+                        <i class="fab fa-youtube text-sm"></i>
+                    </a>
+                    <a href="#" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
+                        <i class="fab fa-tiktok text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center text-gray-400 text-sm">
+                    <p data-ar="© 2024 جسور. جميع الحقوق محفوظة" data-en="© 2024 Jusoor. All rights reserved.">© 2024 جسور. جميع الحقوق محفوظة</p>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="flex gap-2 justify-center md:justify-end">
+                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input px-4 py-2 rounded-lg text-white text-sm placeholder-gray-500">
+                    <button class="newsletter-btn px-5 py-2 rounded-lg text-white font-semibold text-sm">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="/index.js"></script>
+</body>
+</html>
