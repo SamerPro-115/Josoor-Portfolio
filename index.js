@@ -1,236 +1,215 @@
-
-          AOS.init();
-    
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            $('.nav-menu').toggleClass('active');
-            $('.mobile-menu-toggle').toggleClass('active');
-        }
-
-        // Mobile dropdown toggle
-        $('.dropdown > .nav-link').on('click', function(e) {
-            if ($(window).width() <= 768) {
-                e.preventDefault();
-                $(this).parent().toggleClass('active');
-            }
-        });
-
-        // Close mobile menu when clicking on a link
-        $('.nav-link:not(.dropdown .nav-link), .dropdown-item').on('click', function() {
-            if ($(window).width() <= 768) {
-                $('.nav-menu').removeClass('active');
-                $('.mobile-menu-toggle').removeClass('active');
-            }
-        });
-
-        // Navbar scroll effect
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 50) {
-                $('.navbar').addClass('scrolled');
-            } else {
-                $('.navbar').removeClass('scrolled');
-            }
-        });
-
-        // Smooth scroll for anchor links
-        $('a[href^="#"]').on('click', function(event) {
-            event.preventDefault();
-            const target = $(this.getAttribute('href'));
-            if(target.length) {
-                $('html, body').stop().animate({
-                    scrollTop: target.offset().top - 80
-                }, 1000);
-            }
-        });
-
-        // Close mobile menu on window resize
-        $(window).resize(function() {
-            if ($(window).width() > 768) {
-                $('.nav-menu').removeClass('active');
-                $('.mobile-menu-toggle').removeClass('active');
-                $('.dropdown').removeClass('active');
-            }
-        });
-$(window).on('load', function() {
-    setTimeout(function() {
-        $('body').removeClass('loading');
-
-        // 🔥 Remove loader background after animation
-        $('.page-loader').css('background', 'transparent');
-
-        setTimeout(function() {
-            $('.page-loader').fadeOut(400);
-        }, 2000);
-    }, 100);
+function throttle(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+AOS.init({ once: !0, duration: 800, offset: 100 });
+function toggleMobileMenu() {
+  $(".nav-menu").toggleClass("active");
+  $(".mobile-menu-toggle").toggleClass("active");
+  if ($(window).scrollTop() === 0 && $(".nav-menu").hasClass("active")) {
+    $(".navbar").addClass("toggle-top");
+    $(".mobile-menu-toggle span").addClass("menu-toggle-on-top");
+    $(".lang-text").addClass("lang-toggle-on-top");
+  } else {
+    $(".navbar").removeClass("toggle-top");
+    $(".mobile-menu-toggle span").removeClass("menu-toggle-on-top");
+    $(".lang-text").removeClass("lang-toggle-on-top");
+  }
+}
+$(".dropdown > .nav-link").on("click", function (e) {
+  if ($(window).width() <= 768) {
+    e.preventDefault();
+    $(this).parent().toggleClass("active");
+  }
 });
-
-
- $(document).ready(function() {
-      // Create floating particles
-      function createParticles() {
-        const about = $('#about');
-        for (let i = 0; i < 20; i++) {
-          const particle = $('<div class="particle"></div>');
-          const randomDelay = Math.random() * 15;
-          const randomDuration = 10 + Math.random() * 10;
-          
-          // Start particles at random positions throughout their journey
-          const randomStart = -(Math.random() * 100);
-          
-          particle.css({
-            left: Math.random() * 100 + '%',
-            bottom: randomStart + 'vh',
-            animationDelay: randomDelay + 's',
-            animationDuration: randomDuration + 's'
-          });
-          about.append(particle);
-        }
+$(".nav-link:not(.dropdown .nav-link), .dropdown-item").on(
+  "click",
+  function () {
+    if ($(window).width() <= 768) {
+      $(".nav-menu, .mobile-menu-toggle").removeClass("active");
+    }
+  }
+);
+(function () {
+  const $navbar = $(".navbar");
+  const $mobileToggle = $(".mobile-menu-toggle span");
+  const $langText = $(".lang-text");
+  let ticking = !1;
+  let lastScrollTop = 0;
+  function updateNavbar() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop === lastScrollTop) {
+      ticking = !1;
+      return;
+    }
+    if (scrollTop > 0) {
+      $navbar.addClass("scrolled").removeClass("toggle-top");
+      $mobileToggle.removeClass("menu-toggle-on-top");
+      $langText.removeClass("lang-toggle-on-top");
+    } else {
+      $navbar.removeClass("scrolled");
+    }
+    lastScrollTop = scrollTop;
+    ticking = !1;
+  }
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavbar);
+        ticking = !0;
       }
-
-      createParticles();
-
-      // Scroll animations
-      $(window).on('scroll load', function() {
-        const aboutTop = $('#about').offset().top;
-        const scrollBottom = $(window).scrollTop() + $(window).height();
-
-        if (scrollBottom > aboutTop + 100) {
-          $('.about-text').addClass('show');
-          $('.scroller').addClass('show');
+    },
+    { passive: !0 }
+  );
+  updateNavbar();
+})();
+const handleResize = throttle(function () {
+  if ($(window).width() > 768) {
+    $(".nav-menu, .mobile-menu-toggle, .dropdown").removeClass("active");
+  }
+}, 250);
+$(window).on("resize", handleResize);
+$(document).ready(function () {
+  function createParticles() {
+    const about = $("#about");
+    for (let i = 0; i < 10; i++) {
+      const particle = $('<div class="particle"></div>');
+      const randomDelay = Math.random() * 15;
+      const randomDuration = 15 + Math.random() * 10;
+      const randomStart = -(Math.random() * 100);
+      particle.css({
+        left: Math.random() * 100 + "%",
+        bottom: randomStart + "vh",
+        animationDelay: randomDelay + "s",
+        animationDuration: randomDuration + "s",
+        willChange: "transform",
+      });
+      about.append(particle);
+    }
+  }
+  createParticles();
+});
+$(document).ready(function () {
+  const $serviceCards = $(".service-card");
+  const isMobile = window.innerWidth <= 768;
+  let ticking = !1;
+  const handleServiceScroll = function () {
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    if (isMobile) {
+      $serviceCards.each(function () {
+        const $card = $(this);
+        const cardTop = $card.offset().top;
+        const cardBottom = cardTop + $card.outerHeight();
+        const triggerPoint = scrollTop + 210;
+        if (triggerPoint >= cardTop && triggerPoint < cardBottom) {
+          $card.addClass("active-card");
+        } else {
+          $card.removeClass("active-card");
         }
       });
-
-      // Trigger on load
-      $(window).trigger('scroll');
-
-      // Mobile detection
-      const isMobile = $(window).width() < 768;
-      if (isMobile) {
-        $('.slide-overlay-1').removeClass('mix-blend-multiply');
-      }
-    });
-
-    $(document).ready(function() {
-            // Smooth parallax effect on scroll
-            let lastScroll = 0;
-            $(window).on('scroll', function() {
-                const scrolled = $(window).scrollTop();
-                const direction = scrolled > lastScroll ? 1 : -1;
-                
-                $('.service-card').each(function(index) {
-                    const cardOffset = $(this).offset().top;
-                    const windowHeight = $(window).height();
-                    const scrollPosition = scrolled + windowHeight;
-                    
-                    if (scrollPosition > cardOffset && scrolled < cardOffset + $(this).height()) {
-                        const movement = (scrollPosition - cardOffset) * 0.02 * direction;
-                        $(this).find('.service-image').css('transform', 
-                            `scale(1.1) translateY(${movement}px)`
-                        );
-                    }
-                });
-                
-                lastScroll = scrolled;
-            });
-
-            // Add touch support for mobile
-            $('.service-card').on('touchstart', function() {
-                $(this).addClass('touch-active');
-            });
-
-            $('.service-card').on('touchend', function() {
-                $(this).removeClass('touch-active');
-            });
-
-            
-        });
-        
-
-        // Partners Infinity Scroll - Enhanced
-function initPartnersScroll() {
-    const scrollContent = $('.scroll-content');
-    
-    if (scrollContent.length === 0) return;
-    
-    const originalLogos = scrollContent.children().clone();
-    
-    // Clone enough times for seamless loop
-    scrollContent.append(originalLogos.clone());
-    scrollContent.append(originalLogos.clone());
-    scrollContent.append(originalLogos.clone());
-    
-    let scrollPosition = 0;
-    let scrollSpeed = 0.7;
-    const baseSpeed = 0.7;
-    const containerWidth = scrollContent.width() / 4;
-    
-    let isPaused = false;
-    
-    // Pause on hover with smooth transition
-    $('.partner-logo').hover(
-        function() { 
-            isPaused = true;
-            scrollSpeed = 0.2; // Slow down smoothly
-        },
-        function() { 
-            isPaused = false;
-            scrollSpeed = baseSpeed; // Return to normal speed
+    } else {
+      const scrollPosition = scrollTop + windowHeight;
+      $serviceCards.each(function () {
+        const $card = $(this);
+        const cardOffset = $card.offset().top;
+        if (
+          scrollPosition > cardOffset &&
+          scrollTop < cardOffset + $card.height()
+        ) {
+          const movement = (scrollPosition - cardOffset) * 0.02;
+          $card
+            .find(".service-image")
+            .css(
+              "transform",
+              `scale(1.1) translateY(${movement}px) translateZ(0)`
+            );
         }
-    );
-    
-    // Add sparkle effect on hover
-    $('.partner-logo').on('mouseenter', function() {
-        createSparkles($(this));
-    });
-    
-    function animate() {
-        if (!isPaused) {
-            scrollPosition += scrollSpeed;
-            
-            if (scrollPosition >= containerWidth) {
-                scrollPosition = 0;
-            }
-            
-            scrollContent.css('transform', 'translateX(-' + scrollPosition + 'px)');
-        } else {
-            // Still move slightly when paused for alive feeling
-            scrollPosition += scrollSpeed;
-            if (scrollPosition >= containerWidth) {
-                scrollPosition = 0;
-            }
-            scrollContent.css('transform', 'translateX(-' + scrollPosition + 'px)');
-        }
-        
-        requestAnimationFrame(animate);
+      });
     }
-    
-    // Create sparkle particles
-    function createSparkles($element) {
-        for (let i = 0; i < 3; i++) {
-            setTimeout(() => {
-                const sparkle = $('<div class="sparkle"></div>');
-                const rect = $element[0].getBoundingClientRect();
-                const x = Math.random() * rect.width;
-                const y = Math.random() * rect.height;
-                
-                sparkle.css({
-                    left: x + 'px',
-                    top: y + 'px'
-                });
-                
-                $element.append(sparkle);
-                
-                setTimeout(() => sparkle.remove(), 1000);
-            }, i * 100);
-        }
+    ticking = !1;
+  };
+  $(window).on("scroll", function () {
+    if (!ticking) {
+      window.requestAnimationFrame(handleServiceScroll);
+      ticking = !0;
     }
-    
-    animate();
-}
-
-$(document).ready(function() {
-    initPartnersScroll();
+  });
+  if (isMobile) {
+    $serviceCards
+      .on("touchstart", function () {
+        $(this).addClass("touch-active");
+      })
+      .on("touchend", function () {
+        $(this).removeClass("touch-active");
+      });
+  }
+  handleServiceScroll();
 });
-
-
-
+function initPartnersScroll() {
+  const $scrollContent = $(".scroll-content");
+  if ($scrollContent.length === 0) return;
+  const $originalLogos = $scrollContent.children().clone();
+  $scrollContent.append($originalLogos.clone());
+  $scrollContent.append($originalLogos.clone());
+  let scrollPosition = 0;
+  let scrollSpeed = 0.7;
+  const baseSpeed = 0.7;
+  const containerWidth = $scrollContent.width() / 3;
+  let isPaused = !1;
+  let animationId = null;
+  $(".partner-logo").hover(
+    function () {
+      isPaused = !0;
+      scrollSpeed = 0.2;
+    },
+    function () {
+      isPaused = !1;
+      scrollSpeed = baseSpeed;
+    }
+  );
+  $(".partner-logo").on("mouseenter", function () {
+    const $logo = $(this);
+    for (let i = 0; i < 2; i++) {
+      setTimeout(() => {
+        const $sparkle = $('<div class="sparkle"></div>');
+        const rect = $logo[0].getBoundingClientRect();
+        const x = Math.random() * rect.width;
+        const y = Math.random() * rect.height;
+        $sparkle.css({ left: x + "px", top: y + "px" });
+        $logo.append($sparkle);
+        setTimeout(() => $sparkle.remove(), 1000);
+      }, i * 150);
+    }
+  });
+  function animate() {
+    scrollPosition += scrollSpeed;
+    if (scrollPosition >= containerWidth) {
+      scrollPosition = 0;
+    }
+    $scrollContent.css(
+      "transform",
+      `translateX(-${scrollPosition}px) translateZ(0)`
+    );
+    animationId = requestAnimationFrame(animate);
+  }
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      if (animationId) cancelAnimationFrame(animationId);
+    } else {
+      animate();
+    }
+  });
+  animate();
+}
+$(document).ready(function () {
+  initPartnersScroll();
+});

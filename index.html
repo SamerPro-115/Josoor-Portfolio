@@ -3,33 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جسور - حيث تلتقي الرؤية بالواقع</title>
+    <title>جسور</title>
+
+     <style>
+        /* Prevent flash of content */
+        body.loading {
+            overflow: hidden;
+        }
+        
+  
+
+        /* Loader container */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0416;
+            transition: opacity 0.6s ease-out;
+        }
+
+        /* Gradient background */
+        .page-loader::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #1A0B2E 0%, #0a0416 50%, #1A0B2E 100%);
+            opacity: 1;
+        }
+
+        /* Bouncing balls loader */
+        .wrapper {
+            width: 200px;
+            height: 60px;
+            position: relative;
+            z-index: 10000;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #FF3D9A;
+            left: 15%;
+            transform-origin: 50%;
+            animation: circle7124 .5s alternate infinite ease;
+        }
+
+        @keyframes circle7124 {
+            0% {
+                top: 60px;
+                height: 5px;
+                border-radius: 50px 50px 25px 25px;
+                transform: scaleX(1.7);
+            }
+            40% {
+                height: 20px;
+                border-radius: 50%;
+                transform: scaleX(1);
+            }
+            100% {
+                top: 0%;
+            }
+        }
+
+        .circle:nth-child(2) {
+            left: 45%;
+            animation-delay: .2s;
+            background-color: #7B4FA3;
+        }
+
+        .circle:nth-child(3) {
+            left: auto;
+            right: 15%;
+            animation-delay: .3s;
+            background-color: #FFB582;
+        }
+
+        .shadow {
+            width: 20px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgba(107, 107, 107, 0.5);
+            position: absolute;
+            top: 62px;
+            transform-origin: 50%;
+            z-index: -1;
+            left: 15%;
+            filter: blur(1px);
+            animation: shadow046 .5s alternate infinite ease;
+        }
+
+        @keyframes shadow046 {
+            0% {
+                transform: scaleX(1.5);
+            }
+            40% {
+                transform: scaleX(1);
+                opacity: .7;
+            }
+            100% {
+                transform: scaleX(.2);
+                opacity: .4;
+            }
+        }
+
+        .shadow:nth-child(4) {
+            left: 45%;
+            animation-delay: .2s;
+        }
+
+        .shadow:nth-child(5) {
+            left: auto;
+            right: 15%;
+            animation-delay: .3s;
+        }
+
+        /* Fade out state */
+        .page-loader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+    
+    <!-- CRITICAL: Inline Loader Script - Runs immediately -->
+    <script>
+        // Track timing from the very start
+        window.loaderStartTime = Date.now();
+        window.loaderState = {
+            videoReady: false,
+            pageLoaded: false,
+            hidden: false
+        };
+
+        // Loader logic
+        function checkAndHideLoader() {
+            const state = window.loaderState;
+            const elapsedTime = Date.now() - window.loaderStartTime;
+            const minimumDisplayTime = 1200; // 1.2 seconds minimum
+            
+            // Don't hide if already hidden
+            if (state.hidden) return;
+            
+            // Check if ready to hide
+            if (state.videoReady && state.pageLoaded && elapsedTime >= minimumDisplayTime) {
+                hideLoader();
+            } else if (state.videoReady && state.pageLoaded) {
+                // Wait for remaining time
+                const remainingTime = minimumDisplayTime - elapsedTime;
+                setTimeout(hideLoader, remainingTime);
+            }
+        }
+
+        function hideLoader() {
+            if (window.loaderState.hidden) return;
+            window.loaderState.hidden = true;
+            
+            const loader = document.querySelector('.page-loader');
+            const body = document.body;
+            
+            if (!loader) return;
+            
+            console.log('Hiding loader after', Date.now() - window.loaderStartTime, 'ms');
+            
+            loader.classList.add('fade-out');
+            
+            setTimeout(function() {
+                body.classList.remove('loading');
+                
+                setTimeout(function() {
+                    loader.remove();
+                }, 600);
+            }, 100);
+        }
+
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM ready');
+            
+            const video = document.querySelector('.video-background');
+            
+            if (video) {
+                // Check if video is already loaded (cached)
+                if (video.readyState >= 3) {
+                    console.log('Video already cached');
+                    window.loaderState.videoReady = true;
+                    checkAndHideLoader();
+                } else {
+                    // Wait for video to load
+                    video.addEventListener('canplaythrough', function() {
+                        console.log('Video ready');
+                        window.loaderState.videoReady = true;
+                        checkAndHideLoader();
+                    }, { once: true });
+                    
+                    video.addEventListener('loadeddata', function() {
+                        console.log('Video data loaded');
+                        window.loaderState.videoReady = true;
+                        checkAndHideLoader();
+                    }, { once: true });
+                }
+                
+                // Fallback for slow connections
+                setTimeout(function() {
+                    if (!window.loaderState.videoReady) {
+                        console.log('Video timeout - proceeding anyway');
+                        window.loaderState.videoReady = true;
+                        checkAndHideLoader();
+                    }
+                }, 8000);
+                
+            } else {
+                console.log('No video found');
+                window.loaderState.videoReady = true;
+                checkAndHideLoader();
+            }
+        });
+
+        // Page fully loaded
+        window.addEventListener('load', function() {
+            console.log('Page fully loaded');
+            window.loaderState.pageLoaded = true;
+            checkAndHideLoader();
+        });
+
+        // Emergency fallback
+        setTimeout(function() {
+            if (document.body.classList.contains('loading')) {
+                console.warn('Emergency timeout - forcing hide');
+                window.loaderState.videoReady = true;
+                window.loaderState.pageLoaded = true;
+                hideLoader();
+            }
+        }, 15000);
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="public/assets/style/home/section2.css">
-    <link rel="stylesheet" href="public/assets/style/home/section3.css">
-    <link rel="stylesheet" href="public/assets/style/home/section4.css">
-    <link rel="stylesheet" href="public/assets/style/home/section5.css">
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome Free -->
+
+
+  <link rel="icon" type="image/png" href="/public/assets/images/logo.webp">
+
 
 </head>
-<body class="loading">
+<body >
 
-    <div class="page-loader">
-        <div class="loader-panel loader-panel-left"></div>
-        <div class="loader-panel loader-panel-right "></div>
-       <div class="loader-logo" >
-    <img src="/public/assets/images/logo.png" 
-         class="w-32 sm:w-40 md:w-48 lg:w-52 xl:w-56 max-w-[80vw] h-auto" 
-         alt="شعار جسور">
-</div>
+ <div class="page-loader">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+        </div>
     </div>
+
     <!-- Navbar -->
-    <nav class="navbar ">
+    <nav class="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="logo-text" >
-                <img src="/public/assets/images/logo.png" 
+                <img src="/public/assets/images/logo.webp" 
                      class="w-20 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw] h-auto" 
                      alt="شعار جسور">
             </div>
@@ -39,10 +282,8 @@
                 <li class="nav-item">
                     <a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
-                </li>
-                <li class="nav-item dropdown">
+              
+                <li class="nav-item dropdown " style="padding-bottom: 0 !important;">
                   <a class="nav-link dropdown-trigger" data-ar="خدماتنا" data-en="Services">
         <span class="nav-text">خدماتنا</span>
         <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -61,9 +302,12 @@
                 <li class="nav-item desktop-works">
                     <a href="#works" class="nav-link" data-ar="أعمالنا" data-en="Works">أعمالنا</a>
                 </li>
+                  <li class="nav-item lg:pr-5">
+                    <a href="#about" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                </li>
                 <button class="lang-toggle lang-toggle-mobile" >
     <span class="flag-icon">
-        <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/sa.png"  alt="العربية" class="flag-ar">
         <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
     </span>
     <span class="lang-text" data-ar="EN" data-en="عربي">EN</span>
@@ -73,7 +317,7 @@
            <button class="lang-toggle lang-toggle-desktop" >
     <span class="flag-icon">
         <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
-        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+        <img src="https://flagcdn.com/w40/us.png"  alt="English" class="flag-en">
     </span>
     <span class="lang-text" data-ar="EN" data-en="عربي">EN</span>
 </button>
@@ -87,117 +331,143 @@
         </div>
     </nav>
 
-      <div class="bg-layer">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-pattern"></div>
-    <div class="diagonal-lines"></div>
-  </div>
-    
+     
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <!-- Video Background -->
-        <video class="video-background" autoplay muted loop playsinline>
-            <!-- Replace with your actual video file -->
-            <source src="/public/assets/videos/Background-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <video class="video-background" 
+       autoplay 
+       muted 
+       loop 
+       playsinline
+       preload="auto"
+       poster="/public/assets/images//home/poster.webp">
+    <source src="/public/assets/videos/Background-Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
         
         <!-- Video Overlay -->
         <div class="video-overlay"></div>
 
 
         <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-4">
-            <h1 class="text-6xl font-[800]"> جسور ترحب بكمツ</h1>
+            <h1 class="xl:text-6xl lg:text-4xl text-4xl  font-[800]"> جسور </h1>
+            <h2 class="font-[300] mt-3  xl:text-2xl text-md"> حيث تلتقي الرؤية بالواقع.. </h2>
         </div>
 
 
     </section>
 
+
+        <button
+      class="
+        fixed bottom-5 
+         right-6
+        group
+        overflow-hidden
+        cursor-pointer
+    " style="z-index: 999;"
+    >
+      <div class="
+        relative
+        text-white
+        p-2
+        rounded-full
+        shadow-xl hover:shadow-2xl
+        transition-all duration-300
+        transform hover:scale-102
+        border-2 border-white/20
+        cursor-pointer
+      " style="
+       background-color: #25D366;
+  background-image: linear-gradient(to bottom right, #25D366, #1ea952);
+  background-repeat: no-repeat;">
+        <svg
+          class="w-7 h-7 relative z-10 transition-transform duration-300 group-hover:scale-110"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        
+      </div>
+    
+    </button>
+
 <section class="py-12 pt-30" id="about">
-    <!-- Background Layers -->
-    <div class="bg-layer">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-      <div class="grid-pattern"></div>
-      <div class="diagonal-lines"></div>
-    </div>
 
     <!-- Text Content -->
     <div class="about-text">
-      <h1 data-aos="fade-up" class="text-white about-title">
+      <h1 data-aos="fade-up" class="text-white about-title text-3xl sm:text-5xl lg:text-6xl">
         من هي <span class="font-[900] text-[#ffa349]">جسور ؟</span>
       </h1>
-      <p data-aos="fade-up" data-aos-delay="200" class="text-white">
-        جسور<span class="gradient-text-about"> شركة سعودية</span> رائدة في تنظيم <span class="gradient-text-about">المعارض</span> <span class="gradient-text-about">والمؤتمرات</span> <span class="gradient-text-about">والفعاليات</span> النوعية. نربط بين <span class="gradient-text-about">الفكرة</span> <span class="gradient-text-about">والتنفيذ</span> عبر <span class="gradient-text-about">تخطيط</span> ذكي وتشغيل متكامل، لنصنع حدثاً يليق بطموح عملائنا ويترك أثراً ممتداً.
+      <p data-aos="fade-up" class="text-white text-md ">
+         جسور <span class="gradient-text-about"> شركة سعودية</span> رائدة في تنظيم <span class="gradient-text-about">المعارض</span> <span class="gradient-text-about">والمؤتمرات</span> <span class="gradient-text-about">والفعاليات</span> النوعية. نربط بين <span class="gradient-text-about">الفكرة</span> <span class="gradient-text-about">والتنفيذ</span> عبر <span class="gradient-text-about">تخطيط</span> ذكي وتشغيل متكامل، لنصنع حدثاً يليق بطموح عملائنا ويترك أثراً ممتداً.
       </p>
-      <button class="cta-btn" data-aos="fade-up" data-aos-delay="250">المزيد</button>
+      <button class="cta-btn p-2 text-md" >المزيد</button>
     </div>
 
     <!-- Image Scroller -->
-    <div  class="scroller" dir="ltr" data-speed="fast">
+    <div class="scroller" dir="ltr" data-speed="fast">
       <div  class="scroller__inner">
         <!-- Original images -->
         <div data-aos="fade-up" class="slide-card">
-          <img src="/public/assets/images/home/section2/19.webp" alt="فعالية 1">
+          <img src="/public/assets/images/home/section2/19.webp" loading="lazy" alt="فعالية 1">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="200" class="slide-card">
-          <img src="/public/assets/images/home/section2/24.webp" alt="فعالية 2">
+          <img src="/public/assets/images/home/section2/24.webp" loading="lazy" alt="فعالية 2">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="300" class="slide-card">
-          <img src="/public/assets/images/home/section2/29.webp" alt="فعالية 3">
+          <img src="/public/assets/images/home/section2/29.webp" loading="lazy" alt="فعالية 3">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="400" class="slide-card">
-          <img src="/public/assets/images/home/section2/30.webp" alt="فعالية 4">
+          <img src="/public/assets/images/home/section2/30.webp" loading="lazy" alt="فعالية 4">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="500" class="slide-card">
-          <img src="/public/assets/images/home/section2/19.webp" alt="فعالية 5">
+          <img src="/public/assets/images/home/section2/19.webp" loading="lazy" alt="فعالية 5">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <!-- Duplicated images for seamless loop -->
         <div  data-aos="fade-up" class="slide-card" aria-hidden="true">
-          <img src="/public/assets/images/home/section2/24.webp" alt="">
+          <img src="/public/assets/images/home/section2/24.webp" loading="lazy" alt="">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="200" aria-hidden="true">
-          <img src="/public/assets/images/home/section2/29.webp" alt="">
+          <img src="/public/assets/images/home/section2/29.webp" loading="lazy" alt="">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="300" aria-hidden="true">
-          <img src="/public/assets/images/home/section2/30.webp" alt="">
+          <img src="/public/assets/images/home/section2/30.webp" loading="lazy" alt="">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="400" aria-hidden="true">
-          <img src="/public/assets/images/home/section2/19.webp" alt="">
+          <img src="/public/assets/images/home/section2/19.webp" loading="lazy" alt="">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="500" aria-hidden="true">
-          <img src="/public/assets/images/home/section2/24.webp" alt="">
+          <img src="/public/assets/images/home/section2/24.webp" loading="lazy" alt="">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
@@ -206,18 +476,18 @@
   </section>
     
 
+<img src="/public/assets/images/smoke.webp" fetchpriority="high" class="smoke-effect" alt="صورة تأثير دخان">
+
   <!-- Services -->
- <section class="relative py-24 px-6">
+ <section class=" py-24 px-6">
         <div class="container mx-auto max-w-7xl relative z-10">
-            
             <!-- Section Header -->
             <div class="text-center mb-20 animate-in delay-1">
-                <p data-aos="fade-up" class="section-subtitle mb-2">ما نقدمه</p>
-                <h2 data-aos="fade-up" class="text-5xl md:text-6xl font-bold text-white mb-4">
+                <h2 data-aos="fade-up" class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
                     خدماتنا <span class="gradient-accent">المتكاملة</span>
                 </h2>
                 <div class="decorative-line"></div>
-                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-[#cacaca] max-w-3xl mx-auto mt-6">
+                <p data-aos="fade-up" data-aos-delay="200" class="text-md sm:text-xl text-[#cacaca] max-w-3xl mx-auto mt-6">
                     نقدم حلولاً شاملة ومتكاملة لتنظيم وإدارة الفعاليات والمعارض والمؤتمرات بأعلى معايير الاحترافية
                 </p>
             </div>
@@ -226,10 +496,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Service 1: Event Management -->
-                <div data-aos="fade-up" class="service-card animate-in delay-2">
+                <div  class="service-card animate-in delay-2">
                     <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop" 
                          alt="إدارة وتنظيم المعارض والمؤتمرات" 
-                         class="service-image">
+                         class="service-image" loading="lazy">
                     <div class="service-content">
                         <span class="service-number">01</span>
                         <h3 class="service-title">إدارة وتنظيم المعارض والمؤتمرات</h3>
@@ -245,8 +515,9 @@
                 </div>
 
                 <!-- Service 2: Technical Equipment -->
-                <div data-aos="fade-up" class="service-card animate-in delay-3">
+                <div d class="service-card animate-in delay-3">
                     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop" 
+                    loading="lazy"
                          alt="التجهيزات التقنية المتكاملة" 
                          class="service-image">
                     <div class="service-content">
@@ -264,9 +535,10 @@
                 </div>
 
                 <!-- Service 3: Stages & Platforms -->
-                <div data-aos="fade-up" class="service-card animate-in delay-4">
+                <div  class="service-card animate-in delay-4">
                     <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop" 
                          alt="المسارح والمنصات" 
+                         loading="lazy"
                          class="service-image">
                     <div class="service-content">
                         <span class="service-number">03</span>
@@ -283,9 +555,10 @@
                 </div>
 
                 <!-- Service 4: Broadcasting -->
-                <div data-aos="fade-up" class="service-card animate-in delay-5">
+                <div  class="service-card animate-in delay-5">
                     <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&h=600&fit=crop" 
                          alt="البث المباشر والإنتاج الإعلامي" 
+                         loading="lazy"
                          class="service-image">
                     <div class="service-content">
                         <span class="service-number">04</span>
@@ -302,9 +575,10 @@
                 </div>
 
                 <!-- Service 5: Photography & Documentation -->
-                <div data-aos="fade-up" class="service-card animate-in delay-6">
+                <div  class="service-card animate-in delay-6">
                     <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=600&fit=crop" 
                          alt="التصوير والتوثيق" 
+                         loading="lazy"
                          class="service-image">
                     <div class="service-content">
                         <span class="service-number">05</span>
@@ -321,9 +595,10 @@
                 </div>
 
                 <!-- Service 6: Design & Decor -->
-                <div data-aos="fade-up" class="service-card animate-in delay-6">
+                <div class="service-card animate-in delay-6">
                     <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop" 
                          alt="التصميم والديكورات" 
+                         loading="lazy"
                          class="service-image">
                     <div class="service-content">
                         <span class="service-number">06</span>
@@ -342,7 +617,7 @@
             </div>
 
             <!-- CTA Section -->
-            <div data-aos="fade-up" class="text-center mt-20 animate-in delay-6">
+            <div  class="text-center mt-20 animate-in delay-6">
                 <p class="text-gray-400 mb-6 text-lg">هل لديك فعالية قادمة؟</p>
                 <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-10 rounded-lg text-lg shadow-xl transform hover:scale-105 transition-all duration-300 border border-purple-500/30">
                     تواصل معنا الآن
@@ -362,16 +637,16 @@
             <!-- Images Column - Each figure is sticky -->
             <div class="images-column" >
                 <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/24.webp" alt="صورة فعاليات 1">
+                    <img src="/public/assets/images/home/section2/24.webp" alt="صورة فعاليات 1" loading="lazy">
                 </figure>
                 <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/29.webp" alt="صورة فعاليات 2">
+                    <img src="/public/assets/images/home/section2/29.webp" alt="صورة فعاليات 2" loading="lazy">
                 </figure>
                 <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/30.webp" alt="صورة فعاليات 3">
+                    <img src="/public/assets/images/home/section2/30.webp" alt="صورة فعاليات 3" loading="lazy">
                 </figure>
                 <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/19.webp" alt="صورة فعاليات 4">
+                    <img src="/public/assets/images/home/section2/19.webp" alt="صورة فعاليات 4" loading="lazy">
                 </figure>
             </div>
 
@@ -387,24 +662,21 @@
 
 
 
-
-
-        <!-- Partners Section -->
-<section class="partners-section relative py-24 px-6 overflow-hidden">
-    <!-- Background Effects -->
+ <!-- Background Effects -->
     <div class="bg-layer">
         <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
         <div class="grid-pattern"></div>
         <div class="diagonal-lines"></div>
     </div>
 
+        <!-- Partners Section -->
+<section class="partners-section relative py-24 px-6 overflow-hidden">
+   
     <div class="container mx-auto max-w-7xl relative z-10">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <p class="section-subtitle mb-2" data-ar="من نفتخر بالعمل معهم" data-en="Those We're Proud to Work With">من نفتخر بالعمل معهم</p>
-            <h2 class="text-5xl md:text-6xl font-bold text-white mb-4">
+            <p class="section-subtitle mb-2">من نفتخر بالعمل معهم</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
                 شركاء <span class="gradient-accent">النجاح</span>
             </h2>
             <div class="decorative-line"></div>
@@ -440,6 +712,14 @@
     </div>
 </section>
 
+<section id="coming-soon" class="coming-section">
+  <div class="coming-content">
+
+    <p class="coming-text"> المزيد من الأقسام قريباً...</p>
+  </div>
+</section>
+
+
    <footer class="footer-gradient py-16 px-6">
         <div class="max-w-7xl mx-auto">
             <!-- Main Footer Content -->
@@ -447,9 +727,7 @@
                 
                 <!-- Logo & Description -->
                 <div class="space-y-4">
-                    <h2 class="text-4xl font-bold gradient-text" data-ar="جسور" data-en="Gsoor">
-                        جسور
-                    </h2>
+                   <img src="/public/assets/images/logo.webp" width="100px" alt="شعار جسور">
                     <p class="text-gray-400 text-sm leading-relaxed" dir="rtl" 
                        data-ar="حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة"
                        data-en="Where Vision Meets Reality... We build bridges between ideas and events, between planning and execution, creating memorable experiences">
@@ -467,15 +745,11 @@
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="من نحن" data-en="About Us">من نحن</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="خدماتنا" data-en="Our Services">خدماتنا</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-ar="أعمالنا" data-en="Our Work">أعمالنا</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="من نحن" data-en="About Us">من نحن</a>
                         </li>
                     </ul>
                 </div>
@@ -486,47 +760,66 @@
                     <ul class="space-y-3" dir="rtl">
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="تنظيم الفعاليات" data-en="Event Planning">تنظيم الفعاليات</a>
+                               data-ar="تنظيم الفعاليات" data-en="Event Planning">المسرح المتنقل</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="إدارة المشاريع" data-en="Project Management">إدارة المشاريع</a>
+                               data-ar="إدارة المشاريع" data-en="Project Management">تنظيم المعارض والمؤتمرات</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="التصميم الإبداعي" data-en="Creative Design">التصميم الإبداعي</a>
+                               data-ar="التصميم الإبداعي" data-en="Creative Design">الإنتاج والتسويق</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-ar="الاستشارات" data-en="Consulting">الاستشارات</a>
                         </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="التجهيزات التقنية المتكاملة" data-en="Consulting">التجهيزات التقنية المتكاملة</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="إدارة وتفعيل الفعاليات" data-en="Consulting">إدارة وتفعيل الفعاليات</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-ar="تصميم وتنفيذ الإجنحة والمعارض التجارية" data-en="Consulting">تصميم وتنفيذ الإجنحة والمعارض التجارية</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
-                    <ul class="space-y-4">
-                        <li class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope text-purple-400 text-sm"></i>
-                            </div>
-                            <span class="text-gray-400 text-sm">info@jusoor.com</span>
-                        </li>
-                        <li class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone text-pink-400 text-sm"></i>
-                            </div>
-                            <span class="text-gray-400 text-sm">+966 XX XXX XXXX</span>
-                        </li>
-                        <li class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt text-orange-400 text-sm"></i>
-                            </div>
-                            <span class="text-gray-400 text-sm" data-ar="الرياض، السعودية" data-en="Riyadh, Saudi Arabia">الرياض، السعودية</span>
-                        </li>
-                    </ul>
-                </div>
+               <div>
+        <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
+        <ul class="space-y-4">
+          <li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        </svg>
+    </div>
+    <span class="text-gray-400 text-sm">info@jusoor.com</span>
+</li>
+          <li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+    </div>
+    <span class="text-gray-400 text-sm">+966 XX XXX XXXX</span>
+</li>
+<li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+        </svg>
+    </div>
+    <span class="text-gray-400 text-sm" data-ar="الرياض، السعودية" data-en="Riyadh, Saudi Arabia">الرياض، السعودية</span>
+</li>
+        </ul>
+    </div>
             </div>
 
             <!-- Divider -->
@@ -535,46 +828,56 @@
             <!-- Bottom Section -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 
-                <!-- Social Media Icons -->
-                <div class="flex gap-3 justify-center md:justify-start">
-                    <a href="#" class="social-icon facebook w-10 h-10 rounded-lg text-white flex items-center justify-center">
-                        <i class="fab fa-facebook-f text-sm"></i>
-                    </a>
-                    <a href="#" class="social-icon instagram w-10 h-10 rounded-lg text-white flex items-center justify-center">
-                        <i class="fab fa-instagram text-sm"></i>
-                    </a>
-                    <a href="#" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
-                        <i class="fab fa-twitter text-sm"></i>
-                    </a>
-                    <a href="#" class="social-icon linkedin w-10 h-10 rounded-lg text-white flex items-center justify-center">
-                        <i class="fab fa-linkedin-in text-sm"></i>
-                    </a>
-                    <a href="#" class="social-icon youtube w-10 h-10 rounded-lg text-white flex items-center justify-center">
-                        <i class="fab fa-youtube text-sm"></i>
-                    </a>
-                    <a href="#" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
-                        <i class="fab fa-tiktok text-sm"></i>
-                    </a>
-                </div>
+               <!-- Social Media Icons -->
+    <div class="flex gap-3 justify-center md:justify-start">
+        <a href="#" class="social-icon facebook w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+</a>
+
+       <a href="#" class="social-icon instagram w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+</a>
+      <a href="#" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+</a>
+       <a href="#" class="social-icon linkedin w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+</a>
+        <a href="#" class="social-icon youtube w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>
+</a>
+        <a href="#" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+    </svg>
+</a>
+    </div>
 
                 <!-- Copyright -->
                 <div class="text-center text-gray-400 text-sm">
                     <p data-ar="© 2024 جسور. جميع الحقوق محفوظة" data-en="© 2024 Jusoor. All rights reserved.">© 2024 جسور. جميع الحقوق محفوظة</p>
                 </div>
 
-                <!-- Newsletter Signup -->
-                <div class="flex gap-2 justify-center md:justify-end">
-                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input px-4 py-2 rounded-lg text-white text-sm placeholder-gray-500">
-                    <button class="newsletter-btn px-5 py-2 rounded-lg text-white font-semibold text-sm">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
+               
             </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 
-    <script src="/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="/index.js"></script>
 </body>
 </html>
+
+
