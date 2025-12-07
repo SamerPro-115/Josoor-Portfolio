@@ -100,16 +100,19 @@ $(document).ready(function () {
 $(document).ready(function () {
   const $serviceCards = $(".service-card");
   const isMobile = window.innerWidth <= 768;
-  let ticking = !1;
+  let ticking = false;
+
   const handleServiceScroll = function () {
     const scrollTop = $(window).scrollTop();
     const windowHeight = $(window).height();
+
     if (isMobile) {
       $serviceCards.each(function () {
         const $card = $(this);
         const cardTop = $card.offset().top;
         const cardBottom = cardTop + $card.outerHeight();
         const triggerPoint = scrollTop + 210;
+
         if (triggerPoint >= cardTop && triggerPoint < cardBottom) {
           $card.addClass("active-card");
         } else {
@@ -121,6 +124,7 @@ $(document).ready(function () {
       $serviceCards.each(function () {
         const $card = $(this);
         const cardOffset = $card.offset().top;
+
         if (
           scrollPosition > cardOffset &&
           scrollTop < cardOffset + $card.height()
@@ -135,23 +139,41 @@ $(document).ready(function () {
         }
       });
     }
-    ticking = !1;
+
+    ticking = false;
   };
+
   $(window).on("scroll", function () {
     if (!ticking) {
       window.requestAnimationFrame(handleServiceScroll);
-      ticking = !0;
+      ticking = true;
     }
   });
+
   if (isMobile) {
     $serviceCards
-      .on("touchstart", function () {
+      .on("touchstart", function (e) {
+        // Remove touch-active from all other cards
+        $serviceCards.removeClass("touch-active");
+        // Add to current card
         $(this).addClass("touch-active");
       })
-      .on("touchend", function () {
-        $(this).removeClass("touch-active");
+      .on("touchend touchcancel", function () {
+        // Keep the class for a brief moment for visual feedback
+        const $card = $(this);
+        setTimeout(function () {
+          $card.removeClass("touch-active");
+        }, 300);
       });
+
+    // Remove touch-active when touching outside cards
+    $(document).on("touchstart", function (e) {
+      if (!$(e.target).closest(".service-card").length) {
+        $serviceCards.removeClass("touch-active");
+      }
+    });
   }
+
   handleServiceScroll();
 });
 function initPartnersScroll() {
@@ -213,3 +235,67 @@ function initPartnersScroll() {
 $(document).ready(function () {
   initPartnersScroll();
 });
+
+
+i18next
+  .use(i18nextHttpBackend)
+  .init({
+    lng: localStorage.getItem("lang") || 'ar', // Set initial language
+    fallbackLng: 'ar',
+    debug: true, // Enable for testing
+    backend: {
+      loadPath: '/public/locals/{{lng}}/common.json' 
+    }
+  }, function(err, t) {
+    if (err) console.error('i18next initialization error:', err);
+    updateContent();
+  });
+
+function changeLang() {
+  // Toggle between 'ar' and 'en'
+  const currentLang = i18next.language;
+  const newLang = currentLang === 'ar' ? 'en' : 'ar';
+  
+  i18next.changeLanguage(newLang, function(err, t) {
+    if (err) console.error('Language change error:', err);
+    localStorage.setItem("lang", newLang);
+    updateContent();
+  });
+}
+
+function updateContent() {
+  const currentLang = i18next.language;
+  document.documentElement.lang = currentLang;
+  
+  // Set text direction
+  const rtl = currentLang === "ar";
+  document.body.dir = rtl ? "rtl" : "ltr";
+  
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(function(element) {
+    const key = element.getAttribute('data-i18n');
+    element.textContent = i18next.t(key);
+  });
+  
+  // Update language toggle button text
+  const langText = document.querySelector('.lang-text');
+  if (langText) {
+    langText.textContent = currentLang === 'ar' ? 'En' : 'عربي';
+  }
+  
+  // Toggle flag visibility (optional - show opposite language flag)
+  const flagAr = document.querySelector('.flag-ar');
+  const flagEn = document.querySelector('.flag-en');
+  if (flagAr && flagEn) {
+    if (currentLang === 'ar') {
+      flagAr.style.display = 'none';
+      flagEn.style.display = 'inline-block';
+    } else {
+      flagAr.style.display = 'inline-block';
+      flagEn.style.display = 'none';
+    }
+  }
+
+
+  
+}

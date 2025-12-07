@@ -253,7 +253,14 @@
 
   <link rel="icon" type="image/png" href="/public/assets/images/logo.webp">
 
+        <script src="
+    https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
+    
+    <script src="
+    
+https://cdnjs.com/libraries/i18next"> </script>
 
+  <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
 </head>
 <body >
 
@@ -268,6 +275,7 @@
         </div>
     </div>
 
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -280,46 +288,46 @@
             <!-- Desktop Menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                    <a href="#home" class="nav-link"  data-i18n="Home">الرئيسية</a>
                 </li>
               
                 <li class="nav-item dropdown " style="padding-bottom: 0 !important;">
-                  <a class="nav-link dropdown-trigger" data-ar="خدماتنا" data-en="Services">
-        <span class="nav-text">خدماتنا</span>
+                  <a class="nav-link dropdown-trigger">
+        <span class="nav-text" data-i18n="Services">خدماتنا</span>
         <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
             <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
     </a>
                     <div class="dropdown-content">
-                        <a href="#mobile-theater" class="dropdown-item" data-ar="المسرح المتنقل" data-en="Mobile Theater">المسرح المتنقل</a>
-                        <a href="#technical-setup" class="dropdown-item" data-ar="التجهيزات التقنية المتكاملة" data-en="Comprehensive Technical Show/Setup">التجهيزات التقنية المتكاملة</a>
-                        <a href="#exhibition" class="dropdown-item" data-ar="تنظيم المعارض والمؤتمرات" data-en="Exhibition & Conference Organization">تنظيم المعارض والمؤتمرات</a>
-                        <a href="#event-management" class="dropdown-item" data-ar="إدارة وتفعيل الفعاليات" data-en="Event Management & Activation">إدارة وتفعيل الفعاليات</a>
-                        <a href="#production" class="dropdown-item" data-ar="الإنتاج والتسويق" data-en="Production & Marketing">الإنتاج والتسويق</a>
-                        <a href="#booth-design" class="dropdown-item" data-ar="تصميم وتنفيذ الأجنحة والمعارض التجارية" data-en="Booth and Trade Exhibition Design & Execution">تصميم وتنفيذ الأجنحة والمعارض التجارية</a>
+                        <a href="#mobile-theater" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        <a href="#technical-setup" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        <a href="#exhibition" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        <a href="#event-management" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
+                        <a href="#production" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                        <a href="#booth-design" class="dropdown-item" data-i18n="Booth-and-Trade-Exhibition-Design-&-Execution">تصميم وتنفيذ الأجنحة والمعارض التجارية</a>
                     </div>
                 </li>
                 <li class="nav-item desktop-works">
-                    <a href="#works" class="nav-link" data-ar="أعمالنا" data-en="Works">أعمالنا</a>
+                    <a href="#works" class="nav-link" data-i18n="Works">أعمالنا</a>
                 </li>
                   <li class="nav-item lg:pr-5">
-                    <a href="#about" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                    <a href="#about" class="nav-link" data-i18n="About">من نحن</a>
                 </li>
-                <button class="lang-toggle lang-toggle-mobile" >
+                <button class="lang-toggle lang-toggle-mobile" onclick="changeLang()">
     <span class="flag-icon">
         <img src="https://flagcdn.com/w40/sa.png"  alt="العربية" class="flag-ar">
         <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
     </span>
-    <span class="lang-text" data-ar="EN" data-en="عربي">EN</span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
 </button>
             </ul>
 
-           <button class="lang-toggle lang-toggle-desktop" >
+           <button class="lang-toggle lang-toggle-desktop" onclick="changeLang()">
     <span class="flag-icon">
         <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
         <img src="https://flagcdn.com/w40/us.png"  alt="English" class="flag-en">
     </span>
-    <span class="lang-text" data-ar="EN" data-en="عربي">EN</span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
 </button>
 
             <!-- Mobile Menu Toggle -->
@@ -350,11 +358,10 @@
         <div class="video-overlay"></div>
 
 
-        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-4">
-            <h1 class="xl:text-6xl lg:text-4xl text-4xl  font-[800]"> جسور </h1>
-            <h2 class="font-[300] mt-3  xl:text-2xl text-md"> حيث تلتقي الرؤية بالواقع.. </h2>
-        </div>
-
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-4">
+    <h1 class="xl:text-6xl lg:text-4xl text-4xl font-[800]" data-i18n="hero-title">جسور</h1>
+    <h2 class="font-[300] mt-3 xl:text-2xl text-md" data-i18n="hero-subtitle">حيث تلتقي الرؤية بالواقع..</h2>
+</div>
 
     </section>
 
@@ -394,17 +401,19 @@
     
     </button>
 
-<section class="py-12 pt-30" id="about">
+<section class="py-12 pt-30 relative" id="about">
+    <img src="/public/assets/images/smoke.webp" fetchpriority="high" class="smoke-effect" alt="صورة تأثير دخان">
 
     <!-- Text Content -->
     <div class="about-text">
-      <h1 data-aos="fade-up" class="text-white about-title text-3xl sm:text-5xl lg:text-6xl">
-        من هي <span class="font-[900] text-[#ffa349]">جسور ؟</span>
+      <h1 data-aos="fade-up" class="text-white about-title text-3xl sm:text-5xl lg:text-6xl" >
+         <span data-i18n="who-is-jusoor">من هي</span> <span class="font-[900] text-[#ffa349]" data-i18n="Jusoor">جسور ؟</span>
       </h1>
-      <p data-aos="fade-up" class="text-white text-md ">
-         جسور <span class="gradient-text-about"> شركة سعودية</span> رائدة في تنظيم <span class="gradient-text-about">المعارض</span> <span class="gradient-text-about">والمؤتمرات</span> <span class="gradient-text-about">والفعاليات</span> النوعية. نربط بين <span class="gradient-text-about">الفكرة</span> <span class="gradient-text-about">والتنفيذ</span> عبر <span class="gradient-text-about">تخطيط</span> ذكي وتشغيل متكامل، لنصنع حدثاً يليق بطموح عملائنا ويترك أثراً ممتداً.
-      </p>
-      <button class="cta-btn p-2 text-md" >المزيد</button>
+    <p data-aos="fade-up" class="text-white text-md">
+    <span data-i18n="about-intro-jusoor">جسور</span> <span class="gradient-text-about" data-i18n="about-intro-saudi-company">شركة سعودية</span> <span data-i18n="about-intro-leading">رائدة في تنظيم</span> <span class="gradient-text-about" data-i18n="about-intro-exhibitions">المعارض</span> <span class="gradient-text-about" data-i18n="about-intro-conferences">والمؤتمرات</span> <span class="gradient-text-about" data-i18n="about-intro-events">والفعاليات</span> <span data-i18n="about-intro-quality">النوعية. نربط بين</span> <span class="gradient-text-about" data-i18n="about-intro-idea">الفكرة</span>
+    <span class="gradient-text-about" data-i18n="about-intro-execution">والتنفيذ</span> <span data-i18n="about-intro-through">عبر</span> <span class="gradient-text-about" data-i18n="about-intro-planning">تخطيط</span> <span data-i18n="about-intro-smart">ذكي وتشغيل متكامل، لنصنع حدثاً يليق بطموح عملائنا ويترك أثراً ممتداً.</span>
+</p>
+<button class="cta-btn p-2 text-md" data-i18n="about-more-btn">المزيد</button>
     </div>
 
     <!-- Image Scroller -->
@@ -476,153 +485,150 @@
   </section>
     
 
-<img src="/public/assets/images/smoke.webp" fetchpriority="high" class="smoke-effect" alt="صورة تأثير دخان">
+
+
 
   <!-- Services -->
  <section class=" py-24 px-6">
         <div class="container mx-auto max-w-7xl relative z-10">
             <!-- Section Header -->
-            <div class="text-center mb-20 animate-in delay-1">
-                <h2 data-aos="fade-up" class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-                    خدماتنا <span class="gradient-accent">المتكاملة</span>
-                </h2>
-                <div class="decorative-line"></div>
-                <p data-aos="fade-up" data-aos-delay="200" class="text-md sm:text-xl text-[#cacaca] max-w-3xl mx-auto mt-6">
-                    نقدم حلولاً شاملة ومتكاملة لتنظيم وإدارة الفعاليات والمعارض والمؤتمرات بأعلى معايير الاحترافية
-                </p>
-            </div>
-
+         <div class="text-center mb-20 animate-in delay-1">
+    <h2 data-aos="fade-up" class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <span data-i18n="services-title-our">خدماتنا</span> <span class="gradient-accent" data-i18n="services-title-integrated">المتكاملة</span>
+    </h2>
+    <div class="decorative-line"></div>
+    <p data-aos="fade-up" data-aos-delay="200" class="text-md sm:text-xl text-[#cacaca] max-w-3xl mx-auto mt-6" data-i18n="services-description">
+        نقدم حلولاً شاملة ومتكاملة لتنظيم وإدارة الفعاليات والمعارض والمؤتمرات بأعلى معايير الاحترافية
+    </p>
+</div>
             <!-- Services Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Service 1: Event Management -->
-                <div  class="service-card animate-in delay-2">
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop" 
-                         alt="إدارة وتنظيم المعارض والمؤتمرات" 
-                         class="service-image" loading="lazy">
-                    <div class="service-content">
-                        <span class="service-number">01</span>
-                        <h3 class="service-title">إدارة وتنظيم المعارض والمؤتمرات</h3>
-                        <p class="service-description">
-                            تصميم وتنفيذ متكامل للفعاليات من مرحلة الفكرة إلى لحظة الافتتاح، مع التخطيط الاستراتيجي وإدارة كافة التفاصيل
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">التخطيط الاستراتيجي</span>
-                            <span class="feature-tag">إدارة الحضور</span>
-                            <span class="feature-tag">توثيق الحدث</span>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="service-card animate-in delay-2">
+    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop" 
+         alt="إدارة وتنظيم المعارض والمؤتمرات" 
+         class="service-image" loading="lazy">
+    <div class="service-content">
+        <span class="service-number">01</span>
+        <h3 class="service-title" data-i18n="service-1-title">إدارة وتنظيم المعارض والمؤتمرات</h3>
+        <p class="service-description" data-i18n="service-1-description">
+            تصميم وتنفيذ متكامل للفعاليات من مرحلة الفكرة إلى لحظة الافتتاح، مع التخطيط الاستراتيجي وإدارة كافة التفاصيل
+        </p>
+        <div class="service-features">
+            <span class="feature-tag" data-i18n="service-1-feature-1">التخطيط الاستراتيجي</span>
+            <span class="feature-tag" data-i18n="service-1-feature-2">إدارة الحضور</span>
+            <span class="feature-tag" data-i18n="service-1-feature-3">توثيق الحدث</span>
+        </div>
+    </div>
+</div>
                 <!-- Service 2: Technical Equipment -->
-                <div d class="service-card animate-in delay-3">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop" 
-                    loading="lazy"
-                         alt="التجهيزات التقنية المتكاملة" 
-                         class="service-image">
-                    <div class="service-content">
-                        <span class="service-number">02</span>
-                        <h3 class="service-title">التجهيزات التقنية المتكاملة</h3>
-                        <p class="service-description">
-                            أنظمة صوت وإضاءة احترافية وشاشات عملاقة بإشراف فني متخصص لضمان تجربة استثنائية
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">أنظمة الصوت</span>
-                            <span class="feature-tag">الإضاءة الاحترافية</span>
-                            <span class="feature-tag">الشاشات العملاقة</span>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="service-card animate-in delay-3">
+    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop" 
+         loading="lazy"
+         alt="التجهيزات التقنية المتكاملة" 
+         class="service-image">
+    <div class="service-content">
+        <span class="service-number">02</span>
+        <h3 class="service-title" data-i18n="service-2-title">التجهيزات التقنية المتكاملة</h3>
+        <p class="service-description" data-i18n="service-2-description">
+            أنظمة صوت وإضاءة احترافية وشاشات عملاقة بإشراف فني متخصص لضمان تجربة استثنائية
+        </p>
+        <div class="service-features">
+            <span class="feature-tag" data-i18n="service-2-feature-1">أنظمة الصوت</span>
+            <span class="feature-tag" data-i18n="service-2-feature-2">الإضاءة الاحترافية</span>
+            <span class="feature-tag" data-i18n="service-2-feature-3">الشاشات العملاقة</span>
+        </div>
+    </div>
+</div>
                 <!-- Service 3: Stages & Platforms -->
-                <div  class="service-card animate-in delay-4">
-                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop" 
-                         alt="المسارح والمنصات" 
-                         loading="lazy"
-                         class="service-image">
-                    <div class="service-content">
-                        <span class="service-number">03</span>
-                        <h3 class="service-title">المسارح والمنصات</h3>
-                        <p class="service-description">
-                            تصميم وتنفيذ مسارح بمقاسات خاصة وهوية مميزة، مع توفير مسارح متنقلة احترافية ومتكاملة
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">تصميم مخصص</span>
-                            <span class="feature-tag">مسارح متنقلة</span>
-                            <span class="feature-tag">أعلى معايير الأمان</span>
-                        </div>
-                    </div>
-                </div>
+             <div class="service-card animate-in delay-4">
+    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop" 
+         alt="المسارح والمنصات" 
+         loading="lazy"
+         class="service-image">
+    <div class="service-content">
+        <span class="service-number">03</span>
+        <h3 class="service-title" data-i18n="service-3-title">المسارح والمنصات</h3>
+        <p class="service-description" data-i18n="service-3-description">
+            تصميم وتنفيذ مسارح بمقاسات خاصة وهوية مميزة، مع توفير مسارح متنقلة احترافية ومتكاملة
+        </p>
+        <div class="service-features">
+            <span class="feature-tag" data-i18n="service-3-feature-1">تصميم مخصص</span>
+            <span class="feature-tag" data-i18n="service-3-feature-2">مسارح متنقلة</span>
+            <span class="feature-tag" data-i18n="service-3-feature-3">أعلى معايير الأمان</span>
+        </div>
+    </div>
+</div>
 
                 <!-- Service 4: Broadcasting -->
-                <div  class="service-card animate-in delay-5">
-                    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&h=600&fit=crop" 
-                         alt="البث المباشر والإنتاج الإعلامي" 
-                         loading="lazy"
-                         class="service-image">
-                    <div class="service-content">
-                        <span class="service-number">04</span>
-                        <h3 class="service-title">البث المباشر والإنتاج الإعلامي</h3>
-                        <p class="service-description">
-                            توثيق ونقل فعالياتكم بجودة عالية عبر عربة بث مجهزة بالكامل وإخراج احترافي
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">OB Van</span>
-                            <span class="feature-tag">إخراج احترافي</span>
-                            <span class="feature-tag">جودة عالية</span>
-                        </div>
-                    </div>
-                </div>
+              <div class="service-card animate-in delay-5">
+    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&h=600&fit=crop" 
+         alt="البث المباشر والإنتاج الإعلامي" 
+         loading="lazy"
+         class="service-image">
+    <div class="service-content">
+        <span class="service-number">04</span>
+        <h3 class="service-title" data-i18n="service-4-title">البث المباشر والإنتاج الإعلامي</h3>
+        <p class="service-description" data-i18n="service-4-description">
+            توثيق ونقل فعالياتكم بجودة عالية عبر عربة بث مجهزة بالكامل وإخراج احترافي
+        </p>
+        <div class="service-features">
+            <span class="feature-tag" data-i18n="service-4-feature-1">OB Van</span>
+            <span class="feature-tag" data-i18n="service-4-feature-2">إخراج احترافي</span>
+            <span class="feature-tag" data-i18n="service-4-feature-3">جودة عالية</span>
+        </div>
+    </div>
+</div>
 
                 <!-- Service 5: Photography & Documentation -->
-                <div  class="service-card animate-in delay-6">
-                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=600&fit=crop" 
-                         alt="التصوير والتوثيق" 
-                         loading="lazy"
-                         class="service-image">
-                    <div class="service-content">
-                        <span class="service-number">05</span>
-                        <h3 class="service-title">التصوير والتوثيق</h3>
-                        <p class="service-description">
-                            توثيق أجمل اللحظات بأحدث تقنيات التصوير الفوتوغرافي والجوي والإبداعي
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">تصوير احترافي</span>
-                            <span class="feature-tag">تصوير جوي</span>
-                            <span class="feature-tag">إخراج برومو</span>
-                        </div>
-                    </div>
-                </div>
-
+               <div class="service-card animate-in delay-6">
+    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=600&fit=crop" 
+         alt="التصوير والتوثيق" 
+         loading="lazy"
+         class="service-image">
+    <div class="service-content">
+        <span class="service-number">05</span>
+        <h3 class="service-title" data-i18n="service-5-title">التصوير والتوثيق</h3>
+        <p class="service-description" data-i18n="service-5-description">
+            توثيق أجمل اللحظات بأحدث تقنيات التصوير الفوتوغرافي والجوي والإبداعي
+        </p>
+        <div class="service-features">
+            <span class="feature-tag" data-i18n="service-5-feature-1">تصوير احترافي</span>
+            <span class="feature-tag" data-i18n="service-5-feature-2">تصوير جوي</span>
+            <span class="feature-tag" data-i18n="service-5-feature-3">إخراج برومو</span>
+        </div>
+    </div>
+</div>
                 <!-- Service 6: Design & Decor -->
-                <div class="service-card animate-in delay-6">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop" 
-                         alt="التصميم والديكورات" 
-                         loading="lazy"
-                         class="service-image">
-                    <div class="service-content">
-                        <span class="service-number">06</span>
-                        <h3 class="service-title">التصميم والديكورات</h3>
-                        <p class="service-description">
-                            تصميم وتنفيذ ديكورات ومنصات خاصة بأسلوب عصري ومبتكر يعكس هوية الحدث
-                        </p>
-                        <div class="service-features">
-                            <span class="feature-tag">تصميم مبتكر</span>
-                            <span class="feature-tag">تنفيذ احترافي</span>
-                            <span class="feature-tag">هوية مميزة</span>
-                        </div>
-                    </div>
-                </div>
+               <div class="service-card animate-in delay-6">
+    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop" 
+         alt="التصميم والديكورات" 
+         loading="lazy"
+         class="service-image">
+    <div class="service-content">
+        <span class="service-number">06</span>
+        <h3 class="service-title" data-i18n="service-6-title">التصميم والديكورات</h3>
+        <p class="service-description" data-i18n="service-6-description">
+            تصميم وتنفيذ ديكورات ومنصات خاصة بأسلوب عصري ومبتكر يعكس هوية الحدث
+        </p>
+        <div class="service-features">
+            <span class="feature-tag" data-i18n="service-6-feature-1">تصميم مبتكر</span>
+            <span class="feature-tag" data-i18n="service-6-feature-2">تنفيذ احترافي</span>
+            <span class="feature-tag" data-i18n="service-6-feature-3">هوية مميزة</span>
+        </div>
+    </div>
+</div>
 
             </div>
 
             <!-- CTA Section -->
-            <div  class="text-center mt-20 animate-in delay-6">
-                <p class="text-gray-400 mb-6 text-lg">هل لديك فعالية قادمة؟</p>
-                <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-10 rounded-lg text-lg shadow-xl transform hover:scale-105 transition-all duration-300 border border-purple-500/30">
-                    تواصل معنا الآن
-                </button>
-            </div>
+           <div class="text-center mt-20 animate-in delay-6">
+    <p class="text-gray-400 mb-6 text-lg" data-i18n="cta-question">هل لديك فعالية قادمة؟</p>
+    <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-10 rounded-lg text-lg shadow-xl transform hover:scale-105 transition-all duration-300 border border-purple-500/30" data-i18n="cta-button">
+        تواصل معنا الآن
+    </button>
+</div>
 
         </div>
     </section>
@@ -652,7 +658,7 @@
 
             <!-- Text Column - Sticky -->
             <div class="text-column" >
-                <h1>
+                <h1 data-i18n="We-create">
            نبدع من أجل التأثير
                 </h1>
         </div>
@@ -674,13 +680,13 @@
    
     <div class="container mx-auto max-w-7xl relative z-10">
         <!-- Section Header -->
-        <div class="text-center mb-16">
-            <p class="section-subtitle mb-2">من نفتخر بالعمل معهم</p>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
-                شركاء <span class="gradient-accent">النجاح</span>
-            </h2>
-            <div class="decorative-line"></div>
-        </div>
+      <div class="text-center mb-16">
+    <p class="section-subtitle mb-2" data-i18n="partners-subtitle">من نفتخر بالعمل معهم</p>
+    <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
+        <span data-i18n="partners-title">شركاء</span> <span class="gradient-accent" data-i18n="partners-title-accent">النجاح</span>
+    </h2>
+    <div class="decorative-line"></div>
+</div>
 
         <!-- Scrolling Partners -->
         <div class="scroll-container" dir="ltr">
@@ -712,12 +718,6 @@
     </div>
 </section>
 
-<section id="coming-soon" class="coming-section">
-  <div class="coming-content">
-
-    <p class="coming-text"> المزيد من الأقسام قريباً...</p>
-  </div>
-</section>
 
 
    <footer class="footer-gradient py-16 px-6">
@@ -726,72 +726,70 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 
                 <!-- Logo & Description -->
-                <div class="space-y-4">
-                   <img src="/public/assets/images/logo.webp" width="100px" alt="شعار جسور">
-                    <p class="text-gray-400 text-sm leading-relaxed" dir="rtl" 
-                       data-ar="حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة"
-                       data-en="Where Vision Meets Reality... We build bridges between ideas and events, between planning and execution, creating memorable experiences">
-                        حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة
-                    </p>
-                </div>
+            <div class="space-y-4">
+    <img src="/public/assets/images/logo.webp" width="100px" alt="شعار جسور">
+    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="footer-description">
+        حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة
+    </p>
+</div>
 
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
-                    <ul class="space-y-3" dir="rtl">
+                    <h3 class="text-lg font-semibold text-white mb-5" data-i18n="Quick-links">روابط سريعة</h3>
+                    <ul class="space-y-3" >
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                               data-i18n="Home">الرئيسية</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="أعمالنا" data-en="Our Work">أعمالنا</a>
+                               data-i18n="Works">أعمالنا</a>
                         </li>
                          <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="من نحن" data-en="About Us">من نحن</a>
+                               data-i18n="About">من نحن</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Services -->
                 <div>
-                    <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="الخدمات" data-en="Services">الخدمات</h3>
-                    <ul class="space-y-3" dir="rtl">
+                    <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Services">الخدمات</h3>
+                    <ul class="space-y-3" >
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="تنظيم الفعاليات" data-en="Event Planning">المسرح المتنقل</a>
+                               data-i18n="Mobile-Theater">المسرح المتنقل</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="إدارة المشاريع" data-en="Project Management">تنظيم المعارض والمؤتمرات</a>
+                               data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="التصميم الإبداعي" data-en="Creative Design">الإنتاج والتسويق</a>
+                               data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                         </li>
                         <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="الاستشارات" data-en="Consulting">الاستشارات</a>
+                               data-i18n="Consulting">الاستشارات</a>
                         </li>
                          <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="التجهيزات التقنية المتكاملة" data-en="Consulting">التجهيزات التقنية المتكاملة</a>
+                               data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
                         </li>
                          <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="إدارة وتفعيل الفعاليات" data-en="Consulting">إدارة وتفعيل الفعاليات</a>
+                               data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
                         </li>
                          <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-ar="تصميم وتنفيذ الإجنحة والمعارض التجارية" data-en="Consulting">تصميم وتنفيذ الإجنحة والمعارض التجارية</a>
+                               data-i18n="Booth-and-Trade-Exhibition-Design-&-Execution">تصميم وتنفيذ الإجنحة والمعارض التجارية</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Contact Info -->
                <div>
-        <h3 class="text-lg font-semibold text-white mb-5" dir="rtl" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
+        <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Contact-us">تواصل معنا</h3>
         <ul class="space-y-4">
           <li class="contact-item flex items-center gap-2">
     <div class="contact-icon">
@@ -816,7 +814,7 @@
             <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
         </svg>
     </div>
-    <span class="text-gray-400 text-sm" data-ar="الرياض، السعودية" data-en="Riyadh, Saudi Arabia">الرياض، السعودية</span>
+    <span class="text-gray-400 text-sm" data-i18n="Location">الرياض، السعودية</span>
 </li>
         </ul>
     </div>
@@ -865,7 +863,7 @@
 
                 <!-- Copyright -->
                 <div class="text-center text-gray-400 text-sm">
-                    <p data-ar="© 2024 جسور. جميع الحقوق محفوظة" data-en="© 2024 Jusoor. All rights reserved.">© 2024 جسور. جميع الحقوق محفوظة</p>
+<p data-i18n="footer-copyright">© 2024 جسور. جميع الحقوق محفوظة</p>
                 </div>
 
                
