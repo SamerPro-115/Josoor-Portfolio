@@ -278,7 +278,7 @@ https://cdnjs.com/libraries/i18next"> </script>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-6 pt-[0.4rem] flex justify-between items-center">
             <div class="logo-text" >
                 <img src="/public/assets/images/logo.webp" 
                      class="w-20 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw] h-auto" 
@@ -311,7 +311,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                     <a href="#works" class="nav-link" data-i18n="Works">أعمالنا</a>
                 </li>
                   <li class="nav-item lg:pr-5">
-                    <a href="#about" class="nav-link" data-i18n="About">من نحن</a>
+                    <a href="#about" class="nav-link" data-i18n="About-nav">من نحن</a>
                 </li>
                 <button class="lang-toggle lang-toggle-mobile" onclick="changeLang()">
     <span class="flag-icon">
@@ -489,7 +489,7 @@ https://cdnjs.com/libraries/i18next"> </script>
 
 
   <!-- Services -->
- <section class=" py-24 px-6">
+ <section class="py-24 px-6">
         <div class="container mx-auto max-w-7xl relative z-10">
             <!-- Section Header -->
          <div class="text-center mb-20 animate-in delay-1">
@@ -634,37 +634,532 @@ https://cdnjs.com/libraries/i18next"> </script>
     </section>
 
 
+    <div style="background: linear-gradient(180deg, #0f0a1e 0%, #1a0f2e 50%, #0f0a1e 100%);  position: relative;" >
+     
+    <div class="particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+        </div>
+
+        <!-- Stats Section -->
+        <section class="pt-20 px-4 relative z-10">
+            <div class="max-w-7xl mx-auto">
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+    <div class="stat-card rounded-2xl p-6 md:p-8 text-center animate-fade-in-up delay-100">
+        <div class="stat-number gradient-text mb-3" data-target="250">0</div>
+        <div class="h-px w-12 mx-auto mb-3" style="background: linear-gradient(to right, transparent, #F69959, transparent);"></div>
+        <p class="text-gray-400 text-xs md:text-sm tracking-wide" data-i18n="Stats.SuccessfulEvents">فعالية ناجحة</p>
+    </div>
+    <div class="stat-card rounded-2xl p-6 md:p-8 text-center animate-fade-in-up delay-200">
+        <div class="stat-number gradient-text mb-3" data-target="150">0</div>
+        <div class="h-px w-12 mx-auto mb-3" style="background: linear-gradient(to right, transparent, #F69959, transparent);"></div>
+        <p class="text-gray-400 text-xs md:text-sm tracking-wide" data-i18n="Stats.SatisfiedClients">عميل راضٍ</p>
+    </div>
+    <div class="stat-card rounded-2xl p-6 md:p-8 text-center animate-fade-in-up delay-300">
+        <div class="stat-number gradient-text mb-3" data-target="8">0</div>
+        <div class="h-px w-12 mx-auto mb-3" style="background: linear-gradient(to right, transparent, #F69959, transparent);"></div>
+        <p class="text-gray-400 text-xs md:text-sm tracking-wide" data-i18n="Stats.YearsExperience">سنوات خبرة</p>
+    </div>
+    <div class="stat-card rounded-2xl p-6 md:p-8 text-center animate-fade-in-up delay-400">
+        <div class="stat-number gradient-text mb-3" data-target="50">0</div>
+        <div class="h-px w-12 mx-auto mb-3" style="background: linear-gradient(to right, transparent, #F69959, transparent);"></div>
+        <p class="text-gray-400 text-xs md:text-sm tracking-wide" data-i18n="Stats.SuccessPartners">شريك نجاح</p>
+    </div>
+</div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission Section -->
+        <section class="pt-20 px-4 relative z-10">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+                    <!-- Vision Card -->
+                    <div class="vision-card">
+                        <div class="vision-card-corner top-left"></div>
+                        <div class="vision-card-corner bottom-right"></div>
+                        <div class="vision-card-dots"></div>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6 md:mb-8 leading-tight">
+                            <span class="gradient-text" data-i18n="About.VisionTitle">رؤيتنا</span>
+
+                        </h3>
+                        <div class="section-line mb-6 md:mb-8"></div>
+                        <p class="text-gray-300 leading-loose text-base md:text-lg font-light" data-i18n="About.VisionText">
+                            نتطلّع أن نكون الخيار الأول لتنظيم الفعاليات في المملكة، عبر حلول مبتكرة تدعم رؤية السعودية 2030 لتحويل كل حدث إلى تجربة استثنائية.
+                        </p>
+                    </div>
+
+                    <!-- Mission Card -->
+                    <div class="vision-card">
+                        <div class="vision-card-corner top-left"></div>
+                        <div class="vision-card-corner bottom-right"></div>
+                        <div class="vision-card-dots"></div>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6 md:mb-8 leading-tight">
+                            <span class="gradient-text" data-i18n="About.MissionTitle">رسالتنا</span>
+                        </h3>
+                        <div class="section-line mb-6 md:mb-8"></div>
+                        <p class="text-gray-300 leading-loose text-base md:text-lg font-light" data-i18n="About.MissionText">
+                            نُبدع من أجل التأثير: نحول الأفكار إلى تجارب حيّة من خلال تنظيم احترافي يعتمد على الإبداع، الجودة، والدقة في كل خطوة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="pt-20 pb-20 px-4 relative z-10">
+           <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 md:mb-16 lg:mb-20">
+        <h2 class="section-title mb-6">
+            <span class="text-white" data-i18n="Values.Title">قيمنا </span>
+            <span class="gradient-text" data-i18n="Values.SubTitle">الأساسية</span>
+        </h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <!-- Innovation -->
+        <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
+            <div class="value-icon">
+                <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">01</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+                <span class="gradient-text" data-i18n="Values.Innovation.Title">الابتكار</span>
+            </h4>
+            <p class="text-gray-400 leading-relaxed text-sm font-light" data-i18n="Values.Innovation.Text">
+                كل فعالية مساحة جديدة لإبداع فارق.
+            </p>
+        </div>
+
+        <!-- Professionalism -->
+        <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
+            <div class="value-icon">
+                <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">02</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+                <span class="gradient-text" data-i18n="Values.Professionalism.Title">الاحتراف</span>
+            </h4>
+            <p class="text-gray-400 leading-relaxed text-sm font-light" data-i18n="Values.Professionalism.Text">
+                نهتم بالتفاصيل لأن التفاصيل تصنع الفرق.
+            </p>
+        </div>
+
+        <!-- Flexibility -->
+        <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
+            <div class="value-icon">
+                <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">03</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+                <span class="gradient-text" data-i18n="Values.Flexibility.Title">المرونة</span>
+            </h4>
+            <p class="text-gray-400 leading-relaxed text-sm font-light" data-i18n="Values.Flexibility.Text">
+                حلول مخصّصة لكل عميل ولكل نوع فعالية.
+            </p>
+        </div>
+
+        <!-- Credibility -->
+        <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
+            <div class="value-icon">
+                <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">04</span>
+            </div>
+            <h4 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+                <span class="gradient-text" data-i18n="Values.Credibility.Title">المصداقية</span>
+            </h4>
+            <p class="text-gray-400 leading-relaxed text-sm font-light" data-i18n="Values.Credibility.Text">
+                نعد فنلتزم وننجز بأعلى جودة.
+            </p>
+        </div>
+    </div>
+</div>
+        </section>
+
+    </div>
 
 
-        <section class="gallery-section text-white w-full" data-aos="fade-up" data-aos-delay="300">
-            <div class="animated-background"></div>
-        <div class="gallery-grid px-4 lg:px-8">
+    <!-- Steps -->
+     <div class="max-w-7xl mx-auto py-40">
+        <!-- Header -->
+        <div class="text-center mb-24 section-header">
+            <h2 class="text-2xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+               <span class="text-white" data-i18n="Process.Title">كيف نصنع</span> <span class="gradient-title" data-i18n="Process.TitleHighlight"> فعالية لا تُنسى؟</span> 
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-i18n="Process.Subtitle">من الفكرة إلى التنفيذ، سبع خطوات متكاملة لتحويل رؤيتك إلى تجربة استثنائية</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-wrapper">
+            <div class="timeline-line" id="timelineLine"></div>
             
-            <!-- Images Column - Each figure is sticky -->
-            <div class="images-column" >
-                <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/24.webp" alt="صورة فعاليات 1" loading="lazy">
-                </figure>
-                <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/29.webp" alt="صورة فعاليات 2" loading="lazy">
-                </figure>
-                <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/30.webp" alt="صورة فعاليات 3" loading="lazy">
-                </figure>
-                <figure class="sticky-figure">
-                    <img src="/public/assets/images/home/section2/19.webp" alt="صورة فعاليات 4" loading="lazy">
-                </figure>
+            <!-- Step 1 -->
+            <div class="timeline-item left" data-step="1">
+                <div class="step-container">
+                    <div class="content-box left-content">
+                        <span class="phase-label" data-i18n="Process.Step1.Phase">المرحلة التأسيسية</span>
+                        <h3 class="step-title" data-i18n="Process.Step1.Title">اكتشاف الأهداف</h3>
+                        <p class="step-description" data-i18n="Process.Step1.Description">نبدأ بفهم عميق لرسالتك، جمهورك، والنتائج المتوقعة من الحدث</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step1.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                                تحليل الاحتياجات
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step1.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                                دراسة الجمهور
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="step-circle purple">
+                        <span class="step-number">01</span>
+                        <span class="step-label" data-i18n="Process.Step1.Label">البداية</span>
+                    </div>
+                    
+                    <div class="content-box right-content">
+                        <span class="phase-label" data-i18n="Process.Step1.Phase">المرحلة التأسيسية</span>
+                        <h3 class="step-title" data-i18n="Process.Step1.Title">اكتشاف الأهداف</h3>
+                        <p class="step-description" data-i18n="Process.Step1.Description">نبدأ بفهم عميق لرسالتك، جمهورك، والنتائج المتوقعة من الحدث</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step1.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                                تحليل الاحتياجات
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step1.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                                دراسة الجمهور
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Text Column - Sticky -->
-            <div class="text-column" >
-                <h1 data-i18n="We-create">
-           نبدع من أجل التأثير
-                </h1>
+            <!-- Step 2 -->
+            <div class="timeline-item right" data-step="2">
+                <div class="step-container">
+                    <div class="content-box left-content">
+                        <span class="phase-label" data-i18n="Process.Step2.Phase">مرحلة التخطيط</span>
+                        <h3 class="step-title" data-i18n="Process.Step2.Title">اختيار المكان</h3>
+                        <p class="step-description" data-i18n="Process.Step2.Description">نختار الموقع المثالي الذي يتماشى مع أهداف التجربة ويضمن انسيابية الحركة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step2.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                زيارات ميدانية
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step2.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                </svg>
+                                تقييم السعة
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="step-circle orange">
+                        <span class="step-number">02</span>
+                        <span class="step-label" data-i18n="Process.Step2.Label">المكان</span>
+                    </div>
+                    
+                    <div class="content-box right-content">
+                        <span class="phase-label" data-i18n="Process.Step2.Phase">مرحلة التخطيط</span>
+                        <h3 class="step-title" data-i18n="Process.Step2.Title">اختيار المكان</h3>
+                        <p class="step-description" data-i18n="Process.Step2.Description">نختار الموقع المثالي الذي يتماشى مع أهداف التجربة ويضمن انسيابية الحركة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step2.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                زيارات ميدانية
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step2.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                </svg>
+                                تقييم السعة
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-item left" data-step="3">
+                <div class="step-container">
+                    <div class="content-box left-content">
+                        <span class="phase-label" data-i18n="Process.Step3.Phase">مرحلة الإبداع</span>
+                        <h3 class="step-title" data-i18n="Process.Step3.Title">تصميم التجربة</h3>
+                        <p class="step-description" data-i18n="Process.Step3.Description">نصمم هوية بصرية مميزة ومخططات تدفق تعزز التفاعل والمشاركة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step3.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                </svg>
+                                تصميم جرافيك
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step3.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                                </svg>
+                                خطة التدفق
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="step-circle pink">
+                        <span class="step-number">03</span>
+                        <span class="step-label" data-i18n="Process.Step3.Label">التصميم</span>
+                    </div>
+                    
+                    <div class="content-box right-content">
+                        <span class="phase-label" data-i18n="Process.Step3.Phase">مرحلة الإبداع</span>
+                        <h3 class="step-title" data-i18n="Process.Step3.Title">تصميم التجربة</h3>
+                        <p class="step-description" data-i18n="Process.Step3.Description">نصمم هوية بصرية مميزة ومخططات تدفق تعزز التفاعل والمشاركة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step3.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                </svg>
+                                تصميم جرافيك
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step3.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                                </svg>
+                                خطة التدفق
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-item right" data-step="4">
+                <div class="step-container">
+                    <div class="content-box left-content">
+                        <span class="phase-label" data-i18n="Process.Step4.Phase">مرحلة التجهيز</span>
+                        <h3 class="step-title" data-i18n="Process.Step4.Title">التجهيزات التقنية</h3>
+                        <p class="step-description" data-i18n="Process.Step4.Description">نوفر أحدث أنظمة الصوت والإضاءة والشاشات بتقنيات احترافية موثوقة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step4.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                                </svg>
+                                أنظمة صوت
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step4.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                                حلول إضاءة
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="step-circle purple">
+                        <span class="step-number">04</span>
+                        <span class="step-label" data-i18n="Process.Step4.Label">التقنية</span>
+                    </div>
+                    
+                    <div class="content-box right-content">
+                        <span class="phase-label" data-i18n="Process.Step4.Phase">مرحلة التجهيز</span>
+                        <h3 class="step-title" data-i18n="Process.Step4.Title">التجهيزات التقنية</h3>
+                        <p class="step-description" data-i18n="Process.Step4.Description">نوفر أحدث أنظمة الصوت والإضاءة والشاشات بتقنيات احترافية موثوقة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step4.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                                </svg>
+                                أنظمة صوت
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step4.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                                حلول إضاءة
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="timeline-item left" data-step="5">
+                <div class="step-container">
+                    <div class="content-box left-content">
+                        <span class="phase-label" data-i18n="Process.Step5.Phase">مرحلة التنفيذ</span>
+                        <h3 class="step-title" data-i18n="Process.Step5.Title">إدارة اليوم الكامل</h3>
+                        <p class="step-description" data-i18n="Process.Step5.Description">نشرف على كل تفصيل من التشغيل الميداني إلى البروتوكول والضيافة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step5.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                جدول زمني دقيق
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step5.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                                إدارة الفريق
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="step-circle orange">
+                        <span class="step-number">05</span>
+                        <span class="step-label" data-i18n="Process.Step5.Label">التنفيذ</span>
+                    </div>
+                    
+                    <div class="content-box right-content">
+                        <span class="phase-label" data-i18n="Process.Step5.Phase">مرحلة التنفيذ</span>
+                        <h3 class="step-title" data-i18n="Process.Step5.Title">إدارة اليوم الكامل</h3>
+                        <p class="step-description" data-i18n="Process.Step5.Description">نشرف على كل تفصيل من التشغيل الميداني إلى البروتوكول والضيافة</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step5.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                جدول زمني دقيق
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step5.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                                إدارة الفريق
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="timeline-item right" data-step="6">
+                <div class="step-container">
+                    <div class="content-box left-content">
+                        <span class="phase-label" data-i18n="Process.Step6.Phase">مرحلة التوثيق</span>
+                        <h3 class="step-title" data-i18n="Process.Step6.Title">التوثيق والتغطية</h3>
+                        <p class="step-description" data-i18n="Process.Step6.Description">نلتقط كل لحظة مميزة بتصوير احترافي ونصنع محتوى رقمي يروي قصة حدثك</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step6.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                تصوير احترافي
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step6.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                                محتوى رقمي
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="step-circle pink">
+                        <span class="step-number">06</span>
+                        <span class="step-label" data-i18n="Process.Step6.Label">التوثيق</span>
+                    </div>
+                    
+                    <div class="content-box right-content">
+                        <span class="phase-label" data-i18n="Process.Step6.Phase">مرحلة التوثيق</span>
+                        <h3 class="step-title" data-i18n="Process.Step6.Title">التوثيق والتغطية</h3>
+                        <p class="step-description" data-i18n="Process.Step6.Description">نلتقط كل لحظة مميزة بتصوير احترافي ونصنع محتوى رقمي يروي قصة حدثك</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step6.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                تصوير احترافي
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step6.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                                محتوى رقمي
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="timeline-item left" data-step="7">
+                <div class="step-container">
+                    <div class="content-box left-content">
+                        <span class="phase-label" data-i18n="Process.Step7.Phase">مرحلة التقييم</span>
+                        <h3 class="step-title" data-i18n="Process.Step7.Title">ما بعد الحدث</h3>
+                        <p class="step-description" data-i18n="Process.Step7.Description">نقدم تقارير تحليلية شاملة مع توصيات لتحسين التجارب المستقبلية</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step7.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                تقارير تحليلية
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step7.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                توصيات التطوير
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="step-circle purple">
+                        <span class="step-number">07</span>
+                        <span class="step-label" data-i18n="Process.Step7.Label">التقييم</span>
+                    </div>
+                    
+                    <div class="content-box right-content">
+                        <span class="phase-label" data-i18n="Process.Step7.Phase">مرحلة التقييم</span>
+                        <h3 class="step-title" data-i18n="Process.Step7.Title">ما بعد الحدث</h3>
+                        <p class="step-description" data-i18n="Process.Step7.Description">نقدم تقارير تحليلية شاملة مع توصيات لتحسين التجارب المستقبلية</p>
+                        <div class="step-details">
+                            <div class="detail-item" data-i18n="Process.Step7.Detail1">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                تقارير تحليلية
+                            </div>
+                            <div class="detail-item" data-i18n="Process.Step7.Detail2">
+                                <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                توصيات التطوير
+                            </div>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-       
-    </section>
+    </div>
+   
 
 
 
@@ -747,7 +1242,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                         </li>
                          <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-i18n="About">من نحن</a>
+                               data-i18n="About-nav">من نحن</a>
                         </li>
                     </ul>
                 </div>

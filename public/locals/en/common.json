@@ -9,7 +9,7 @@
     "Production-&-Marketing": "Production & Marketing",
     "Booth-and-Trade-Exhibition-Design-&-Execution": "Booth and Trade Exhibition Design & Execution",
     "Works": "Works",
-    "About": "About",
+    "About-nav": "About",
     
      "hero-title": "Jusoor",
     "hero-subtitle": "Where Vision Meets Reality..",
@@ -86,5 +86,102 @@
 
     "Contact-us": "Contact Us",
     "Quick-links": "Quick Links",
-    "Location": "Riyadh, Saudi Arabia"
+    "Location": "Riyadh, Saudi Arabia",
+
+     "Stats": {
+        "SuccessfulEvents": "Successful Events",
+        "SatisfiedClients": "Satisfied Clients",
+        "YearsExperience": "Years of Experience",
+        "SuccessPartners": "Success Partners"
+    },
+
+     "About": {
+        "VisionTitle": "Our Vision",
+        "VisionText": "We aspire to be the first choice for event organization in the Kingdom, through innovative solutions that support Saudi Vision 2030 to transform every event into an exceptional experience.",
+        "MissionTitle": "Our Mission",
+        "MissionText": "We create for impact: We transform ideas into living experiences through professional organization based on creativity, quality, and precision in every step."
+    },
+
+    "Values": {
+        "Title": "Our",
+        "SubTitle": "Core Values",
+        "Innovation": {
+            "Title": "Innovation",
+            "Text": "Every event is a new space to create a difference."
+        },
+        "Professionalism": {
+            "Title": "Professionalism",
+            "Text": "We care about details because details make the difference."
+        },
+        "Flexibility": {
+            "Title": "Flexibility",
+            "Text": "Customized solutions for every client and every type of event."
+        },
+        "Credibility": {
+            "Title": "Credibility",
+            "Text": "We promise, commit, and deliver with the highest quality."
+        }
+    },
+
+     "Process": {
+        "Title": "How We Create",
+        "TitleHighlight": "An Unforgettable Event?",
+        "Subtitle": "From idea to execution, seven integrated steps to transform your vision into an exceptional experience",
+        "Step1": {
+            "Phase": "Foundation Phase",
+            "Title": "Discovering Objectives",
+            "Description": "We begin with a deep understanding of your message, audience, and expected outcomes from the event",
+            "Detail1": "Needs Analysis",
+            "Detail2": "Audience Study",
+            "Label": "Start"
+        },
+        "Step2": {
+            "Phase": "Planning Phase",
+            "Title": "Venue Selection",
+            "Description": "We choose the ideal location that aligns with the experience objectives and ensures smooth flow",
+            "Detail1": "Site Visits",
+            "Detail2": "Capacity Assessment",
+            "Label": "Venue"
+        },
+        "Step3": {
+            "Phase": "Creative Phase",
+            "Title": "Experience Design",
+            "Description": "We design a distinctive visual identity and flow plans that enhance interaction and engagement",
+            "Detail1": "Graphic Design",
+            "Detail2": "Flow Plan",
+            "Label": "Design"
+        },
+        "Step4": {
+            "Phase": "Setup Phase",
+            "Title": "Technical Setup",
+            "Description": "We provide the latest sound, lighting, and screen systems with reliable professional technologies",
+            "Detail1": "Sound Systems",
+            "Detail2": "Lighting Solutions",
+            "Label": "Technical"
+        },
+        "Step5": {
+            "Phase": "Execution Phase",
+            "Title": "Full Day Management",
+            "Description": "We oversee every detail from field operations to protocol and hospitality",
+            "Detail1": "Precise Timeline",
+            "Detail2": "Team Management",
+            "Label": "Execution"
+        },
+        "Step6": {
+            "Phase": "Documentation Phase",
+            "Title": "Documentation & Coverage",
+            "Description": "We capture every special moment with professional photography and create digital content that tells your event's story",
+            "Detail1": "Professional Photography",
+            "Detail2": "Digital Content",
+            "Label": "Documentation"
+        },
+        "Step7": {
+            "Phase": "Evaluation Phase",
+            "Title": "Post-Event",
+            "Description": "We provide comprehensive analytical reports with recommendations to improve future experiences",
+            "Detail1": "Analytical Reports",
+            "Detail2": "Development Recommendations",
+            "Label": "Evaluation"
+        }
+    }
 }

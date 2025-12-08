@@ -299,3 +299,88 @@ function updateContent() {
 
   
 }
+
+
+  $(document).ready(function() {
+            // Animated Counter Function
+            function animateCounter($element, target) {
+                $({ counter: 0 }).animate({ counter: target }, {
+                    duration: 2500,
+                    easing: 'swing',
+                    step: function() {
+                        $element.text(Math.ceil(this.counter));
+                    },
+                    complete: function() {
+                        $element.text(target);
+                    }
+                });
+            }
+
+            // Intersection Observer for counter animation
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !$(entry.target).hasClass('animated')) {
+                        const target = parseInt($(entry.target).data('target'));
+                        animateCounter($(entry.target), target);
+                        $(entry.target).addClass('animated');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all stat numbers
+            $('.stat-number').each(function() {
+                observer.observe(this);
+            });
+
+            // Add scroll reveal animation
+            const fadeElements = $('.animate-fade-in-up');
+            
+            const fadeObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $(entry.target).css('animation-play-state', 'running');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            fadeElements.each(function() {
+                fadeObserver.observe(this);
+            });
+        });
+
+         $(document).ready(function() {
+            const $timelineLine = $('#timelineLine');
+            const $timelineItems = $('.timeline-item');
+            
+            function updateTimeline() {
+                const scrollTop = $(window).scrollTop();
+                const windowHeight = $(window).height();
+                
+                const timelineStart = $timelineItems.first().offset().top - 100;
+                const timelineEnd = $timelineItems.last().offset().top;
+                const scrollProgress = Math.max(0, scrollTop - timelineStart + windowHeight * 0.5);
+                const totalHeight = timelineEnd - timelineStart;
+                const lineHeight = Math.min(scrollProgress, totalHeight);
+                
+                $timelineLine.css('height', lineHeight + 'px');
+                
+                $timelineItems.each(function() {
+                    const $item = $(this);
+                    const itemTop = $item.offset().top;
+                    const triggerPoint = scrollTop + windowHeight * 0.7;
+                    
+                    if (triggerPoint > itemTop) {
+                        $item.addClass('active');
+                    }
+                });
+            }
+            
+            updateTimeline();
+            $(window).on('scroll', updateTimeline);
+            $(window).on('resize', updateTimeline);
+        });
