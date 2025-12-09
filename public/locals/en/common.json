@@ -70,7 +70,9 @@
 
 
     "cta-question": "Have an upcoming event?",
-    "cta-button": "Contact Us Now",
+    "cta-button": "Request a Quote!",
+
+     "About-Title": "About",
     "We-create": "We create for impact",
 
      "partners-subtitle": "Those We're Proud to Work With",
@@ -173,7 +175,7 @@
             "Description": "We capture every special moment with professional photography and create digital content that tells your event's story",
             "Detail1": "Professional Photography",
             "Detail2": "Digital Content",
-            "Label": "Documentation"
+            "Label": "Coverage"
         },
         "Step7": {
             "Phase": "Evaluation Phase",

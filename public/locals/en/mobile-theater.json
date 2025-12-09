@@ -1,0 +1,93 @@
+{
+     "Hero": {
+    "Badge": "Mobile Solutions",
+    "Title": "Mobile Theater",
+    "Subtitle": "A portable theater... bringing events to any location",
+    "Description": "Complete solution for open spaces without complex construction work",
+    "Buttons": {
+      "ExploreSolution": "Explore Solution",
+      "GetInTouch": "Get in Touch"
+    }
+  },
+  "Overview": {
+    "Badge": "Complete Solution",
+    "Title": "Professional Mobile",
+    "TitleHighlight": "Theater System",
+    "Description": "Professional platform, LED screen, sound and lighting systems, and quick response - everything you need in one integrated solution",
+    "Features": {
+      "Feature1": {
+        "Title": "Instant Readiness",
+        "Description": "High flexibility in installation and transport to any location"
+      },
+      "Feature2": {
+        "Title": "Complete Experience",
+        "Description": "Audio and visual at the highest levels"
+      },
+      "Feature3": {
+        "Title": "Cost Savings",
+        "Description": "Economical solution compared to traditional construction"
+      }
+    },
+    "ImageAlt": "Mobile Theater Setup"
+  },
+  "Features": {
+    "SectionTitle": "What We",
+    "SectionTitleHighlight": "Provide",
+    "Feature1": {
+      "Title": "Professional Stage",
+      "Description": "Professional portable platform with advanced engineering design",
+      "ImageAlt": "Professional Stage"
+    },
+    "Feature2": {
+      "Title": "LED Display",
+      "Description": "High-resolution LED screens for the perfect visual experience",
+      "ImageAlt": "LED Screen"
+    },
+    "Feature3": {
+      "Title": "Sound & Lighting",
+      "Description": "Advanced professional audio and lighting systems",
+      "ImageAlt": "Sound System"
+    },
+    "Feature4": {
+      "Title": "Rapid Setup",
+      "Description": "Quick and efficient installation without complex construction work",
+      "ImageAlt": "Quick Setup"
+    }
+  },
+    "CTA": {
+    "Title": "Any Place Into a",
+    "TitleHighlight": "Stage"
+    },
+
+    "UseCases": {
+    "SectionTitle": "Perfect",
+    "SectionTitleHighlight": "For",
+    "SectionDescription": "Suitable for a wide range of events and occasions",
+    "UseCase1": {
+      "Title": "National Events",
+      "Description": "And major seasonal celebrations"
+    },
+    "UseCase2": {
+      "Title": "Universities & Schools",
+      "Description": "For educational and cultural events"
+    },
+    "UseCase3": {
+      "Title": "Outdoor Festivals",
+      "Description": "Musical, artistic, and entertainment"
+    },
+    "UseCase4": {
+      "Title": "Mobile Campaigns",
+      "Description": "Marketing and promotional"
+    }
+  },
+
+  "FinalCTA": {
+    "Title": "Ready to Get",
+    "TitleHighlight": "Started?",
+    "Description": "Let us turn your vision into reality with our advanced mobile solutions",
+    "Buttons": {
+      "RequestQuote": "Request Quote",
+      "ViewPortfolio": "View Portfolio"
+    }
+  }
+}

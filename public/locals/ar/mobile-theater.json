@@ -1,0 +1,94 @@
+{
+    "Hero": {
+    "Badge": "حلول متنقلة",
+    "Title": "المسرح المتنقل",
+    "Subtitle": "مسرح متنقل... يجلب الحدث إلى أي مكان",
+    "Description": "حل متكامل للمساحات المفتوحة بدون أعمال بناء معقدة",
+    "Buttons": {
+      "ExploreSolution": "استكشف الحل",
+      "GetInTouch": "تواصل معنا"
+    }
+  },
+
+  "Overview": {
+    "Badge": "حل متكامل",
+    "Title": "نظام مسرح متنقل",
+    "TitleHighlight": "احترافي",
+    "Description": "منصة احترافية، شاشة LED، أنظمة صوت وإضاءة، واستجابة سريعة - كل ما تحتاجه في حل واحد متكامل",
+    "Features": {
+      "Feature1": {
+        "Title": "جاهزية فورية",
+        "Description": "مرونة عالية في التثبيت والنقل لأي موقع"
+      },
+      "Feature2": {
+        "Title": "تجربة متكاملة",
+        "Description": "سمعية وبصرية على أعلى المستويات"
+      },
+      "Feature3": {
+        "Title": "توفير التكاليف",
+        "Description": "حل اقتصادي مقارنة بالبناء التقليدي"
+      }
+    },
+    "ImageAlt": "إعداد المسرح المتنقل"
+  },
+
+   "Features": {
+    "SectionTitle": "ما",
+    "SectionTitleHighlight": "نوفره",
+    "Feature1": {
+      "Title": "منصة احترافية",
+      "Description": "منصة احترافية متنقلة مع تصميم هندسي متقدم",
+      "ImageAlt": "منصة احترافية"
+    },
+    "Feature2": {
+      "Title": "شاشة LED",
+      "Description": "شاشات LED عالية الدقة للتجربة البصرية المثالية",
+      "ImageAlt": "شاشة LED"
+    },
+    "Feature3": {
+      "Title": "صوت وإضاءة",
+      "Description": "أنظمة صوتية وإضاءة متطورة احترافية",
+      "ImageAlt": "نظام الصوت"
+    },
+    "Feature4": {
+      "Title": "تركيب سريع",
+      "Description": "تركيب سريع وفعال بدون أعمال بناء معقدة",
+      "ImageAlt": "تركيب سريع"
+    }
+  },
+  "CTA": {
+    "Title": "أي مكان يصبح",
+    "TitleHighlight": "مسرحاً"
+    },
+    "UseCases": {
+    "SectionTitle": "مثالي",
+    "SectionTitleHighlight": "من أجل",
+    "SectionDescription": "يناسب مجموعة واسعة من الفعاليات والمناسبات",
+    "UseCase1": {
+      "Title": "الفعاليات الوطنية",
+      "Description": "والاحتفالات الموسمية الكبرى"
+    },
+    "UseCase2": {
+      "Title": "الجامعات والمدارس",
+      "Description": "للفعاليات التعليمية والثقافية"
+    },
+    "UseCase3": {
+      "Title": "المهرجانات الخارجية",
+      "Description": "الموسيقية والفنية والترفيهية"
+    },
+    "UseCase4": {
+      "Title": "الحملات المتنقلة",
+      "Description": "التسويقية والترويجية"
+    }
+  },
+
+   "FinalCTA": {
+    "Title": "جاهز",
+    "TitleHighlight": "للبدء؟",
+    "Description": "دعنا نحول رؤيتك إلى واقع مع حلولنا المتنقلة المتطورة",
+    "Buttons": {
+      "RequestQuote": "اطلب عرض سعر",
+      "ViewPortfolio": "شاهد أعمالنا"
+    }
+  }
+}

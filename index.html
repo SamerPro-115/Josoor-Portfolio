@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جسور</title>
+    <title>جسور | الرئيسية</title>
 
      <style>
         /* Prevent flash of content */
@@ -245,8 +245,11 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="style.css"></noscript>
+<link rel="preload" href="/public/assets/style/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/public/assets/style/home.css"></noscript>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/public/assets/style/navbar.css">
+<link rel="stylesheet" href="/public/assets/style/footer.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Font Awesome Free -->
 
@@ -299,7 +302,7 @@ https://cdnjs.com/libraries/i18next"> </script>
         </svg>
     </a>
                     <div class="dropdown-content">
-                        <a href="#mobile-theater" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        <a href="/pages/mobile-theater.html" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
                         <a href="#technical-setup" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
                         <a href="#exhibition" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
                         <a href="#event-management" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
@@ -366,7 +369,8 @@ https://cdnjs.com/libraries/i18next"> </script>
     </section>
 
 
-        <button
+        <a
+        href="https://wa.me/+966503667534" target="_blank" rel="noopener noreferrer"
       class="
         fixed bottom-5 
          right-6
@@ -399,7 +403,7 @@ https://cdnjs.com/libraries/i18next"> </script>
         
       </div>
     
-    </button>
+    </a>
 
 <section class="py-12 pt-30 relative" id="about">
     <img src="/public/assets/images/smoke.webp" fetchpriority="high" class="smoke-effect" alt="صورة تأثير دخان">
@@ -481,7 +485,10 @@ https://cdnjs.com/libraries/i18next"> </script>
           <div class="slide-overlay-2"></div>
         </div>
       </div>
+
     </div>
+
+
   </section>
     
 
@@ -626,7 +633,7 @@ https://cdnjs.com/libraries/i18next"> </script>
            <div class="text-center mt-20 animate-in delay-6">
     <p class="text-gray-400 mb-6 text-lg" data-i18n="cta-question">هل لديك فعالية قادمة؟</p>
     <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-10 rounded-lg text-lg shadow-xl transform hover:scale-105 transition-all duration-300 border border-purple-500/30" data-i18n="cta-button">
-        تواصل معنا الآن
+       اطلب عرض سعر!
     </button>
 </div>
 
@@ -635,15 +642,10 @@ https://cdnjs.com/libraries/i18next"> </script>
 
 
     <div style="background: linear-gradient(180deg, #0f0a1e 0%, #1a0f2e 50%, #0f0a1e 100%);  position: relative;" >
-     
-    <div class="particles">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-        </div>
+  
 
         <!-- Stats Section -->
-        <section class="pt-20 px-4 relative z-10">
+        <section class="pt-20 px-4 relative">
             <div class="max-w-7xl mx-auto">
               <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
     <div class="stat-card rounded-2xl p-6 md:p-8 text-center animate-fade-in-up delay-100">
@@ -779,7 +781,7 @@ https://cdnjs.com/libraries/i18next"> </script>
     <!-- Steps -->
      <div class="max-w-7xl mx-auto py-40">
         <!-- Header -->
-        <div class="text-center mb-24 section-header">
+        <div class="text-center mb-24 section-header px-2">
             <h2 class="text-2xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
                <span class="text-white" data-i18n="Process.Title">كيف نصنع</span> <span class="gradient-title" data-i18n="Process.TitleHighlight"> فعالية لا تُنسى؟</span> 
             </h2>
@@ -1252,7 +1254,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                     <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Services">الخدمات</h3>
                     <ul class="space-y-3" >
                         <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/pages/mobile-theater.html" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Mobile-Theater">المسرح المتنقل</a>
                         </li>
                         <li>
@@ -1263,10 +1265,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                         </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
-                               data-i18n="Consulting">الاستشارات</a>
-                        </li>
+                       
                          <li>
                             <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
@@ -1301,7 +1300,7 @@ https://cdnjs.com/libraries/i18next"> </script>
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
         </svg>
     </div>
-    <span class="text-gray-400 text-sm">+966 XX XXX XXXX</span>
+    <a href="tel:+966503667534" target="_blank" class="text-gray-400 text-sm" dir="ltr">+966 50 366 7534</a>
 </li>
 <li class="contact-item flex items-center gap-2">
     <div class="contact-icon">
@@ -1323,33 +1322,20 @@ https://cdnjs.com/libraries/i18next"> </script>
                 
                <!-- Social Media Icons -->
     <div class="flex gap-3 justify-center md:justify-start">
-        <a href="#" class="social-icon facebook w-10 h-10 rounded-lg text-white flex items-center justify-center">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-    </svg>
-</a>
-
-       <a href="#" class="social-icon instagram w-10 h-10 rounded-lg text-white flex items-center justify-center">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-    </svg>
-</a>
-      <a href="#" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
+     
+      <a href="https://x.com/JusoorEvents" target="_blank" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
     </svg>
 </a>
-       <a href="#" class="social-icon linkedin w-10 h-10 rounded-lg text-white flex items-center justify-center">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-    </svg>
+<a href="https://www.snapchat.com/add/jusoorevents" target="_blank" class="social-icon snapchat w-10 h-10 rounded-lg text-white flex items-center justify-center">
+       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"  viewBox="0 0 24 24" fill="none">
+<path d="M5.82901 4.533C5.22901 5.877 5.46601 8.285 5.56201 9.969C4.91401 10.328 4.08201 9.698 3.61101 9.698C3.12101 9.698 2.53601 10.02 2.44401 10.5C2.37801 10.846 2.53301 11.35 3.64501 11.789C4.07501 11.959 5.09801 12.159 5.33501 12.717C5.66801 13.501 3.62501 17.12 0.417012 17.648C0.166012 17.689 -0.0129883 17.913 0.00101167 18.167C0.0570117 19.142 2.24301 19.524 3.21201 19.674C3.31101 19.808 3.39101 20.374 3.51801 20.805C3.57501 20.998 3.72201 21.229 4.10001 21.229C4.59301 21.229 5.41201 20.849 6.83801 21.085C8.23601 21.318 9.55001 23.3 12.073 23.3C14.418 23.3 15.817 21.309 17.163 21.085C17.942 20.956 18.611 20.997 19.359 21.143C19.874 21.244 20.336 21.3 20.483 20.794C20.612 20.357 20.691 19.802 20.788 19.671C21.748 19.522 23.944 19.141 23.999 18.166C24.013 17.912 23.834 17.689 23.583 17.647C20.429 17.127 18.324 13.519 18.665 12.716C18.901 12.159 19.917 11.961 20.355 11.788C21.169 11.467 21.577 11.072 21.568 10.615C21.557 10.03 20.853 9.681 20.335 9.681C19.808 9.681 19.051 10.305 18.438 9.967C18.534 8.269 18.77 5.872 18.171 4.529C17.036 1.986 14.511 0.699997 11.987 0.699997C9.47901 0.699997 6.97301 1.968 5.82901 4.533Z" fill="#fff"/>
+</svg>
 </a>
-        <a href="#" class="social-icon youtube w-10 h-10 rounded-lg text-white flex items-center justify-center">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-    </svg>
-</a>
-        <a href="#" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
+ 
+       
+        <a href="https://www.tiktok.com/@jusoorevents" target="_blank" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
     </svg>
@@ -1370,6 +1356,7 @@ https://cdnjs.com/libraries/i18next"> </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="/index.js"></script>
+    <script src="/public/assets/js/home.js"></script>
 </body>
 </html>
 
