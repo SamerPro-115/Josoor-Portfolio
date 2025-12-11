@@ -1,19 +1,21 @@
 {
      "Hero": {
     "Badge": "Mobile Solutions",
-    "Title": "Mobile Theater",
+    "Title": "Mobile",
+    "Title2": "Theater",
     "Subtitle": "A portable theater... bringing events to any location",
     "Description": "Complete solution for open spaces without complex construction work",
     "Buttons": {
-      "ExploreSolution": "Explore Solution",
-      "GetInTouch": "Get in Touch"
-    }
+      "Quote": "Request Quote"
+        }
   },
   "Overview": {
     "Badge": "Complete Solution",
     "Title": "Professional Mobile",
     "TitleHighlight": "Theater System",
     "Description": "Professional platform, LED screen, sound and lighting systems, and quick response - everything you need in one integrated solution",
+    "Quality": "Premium Quality",
+    "Events": "Events",
     "Features": {
       "Feature1": {
         "Title": "Instant Readiness",

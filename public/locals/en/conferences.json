@@ -1,0 +1,152 @@
+{
+  "Hero": {
+    "Title": {
+      "Part1": "Exhibition & ",
+      "Part2": "Conference Organization"
+    },
+    "Subtitle": "Complete Exhibition and Conference Organization",
+    "Description": "From planning to execution.. We transform your vision into a professional, integrated event",
+    "CTA": "Request Quote"
+  },
+  "Services": {
+    "Badge": "Our Expertise",
+    "Title": {
+      "Part1": "What We ",
+      "Part2": "Organize"
+    },
+    "Description": "Comprehensive solutions for all types of professional events",
+    "Exhibition": {
+      "Label": "Exhibitions",
+      "Title": {
+        "Line1": "Trade",
+        "Line2": "Exhibitions"
+      },
+      "Subtitle": "Commercial and Industrial Exhibitions",
+      "Features": {
+        "Booth": {
+          "Title": "Booth Design & Construction",
+          "Description": "Professional booth design and construction to highest standards"
+        },
+        "Floor": {
+          "Title": "Floor Planning & Layout",
+          "Description": "Optimal exhibition space planning and layout"
+        },
+        "Visitor": {
+          "Title": "Visitor Management",
+          "Description": "Visitor management and electronic registration systems"
+        }
+      }
+    },
+    "Conference": {
+      "Label": "Conferences",
+      "Title": {
+        "Line1": "Professional",
+        "Line2": "Conferences"
+      },
+      "Subtitle": "Professional Conferences and Events",
+      "Features": {
+        "Venue": {
+          "Title": "Venue Selection & Setup",
+          "Description": "Selecting and equipping venues with latest technologies"
+        },
+        "Speaker": {
+          "Title": "Speaker Management",
+          "Description": "Speaker coordination and schedule management"
+        },
+        "Streaming": {
+          "Title": "Live Streaming & Recording",
+          "Description": "Professional live streaming and event recording"
+        }
+      }
+    }
+  },
+
+  "Parallax": {
+  "Title": {
+    "Part1": "From ",
+    "Part2": "Vision",
+    "Part3": " to Reality"
+  },
+  "Description": "We transform your ideas into exceptional events that leave a lasting impact",
+  "Stats": {
+    "Experience": "Years Experience",
+    "Satisfaction": "Client Satisfaction",
+    "Support": "Support Team"
+  }
+},
+
+
+"Comprehensive": {
+  "Title": {
+    "Part1": "From ",
+    "Part2": "Idea to Launch"
+  },
+  "Description": "Comprehensive management from concept to opening: space planning, crowd management, technical and visual setups, registration and reception, following professional protocol and consistent branding.",
+  "Elements": {
+    "SpacePlanning": {
+      "Title": "Space Planning & Visitor Journey Design",
+      "Description": "Integrated strategy for space design and visitor journey planning from entry to exit"
+    },
+    "CrowdManagement": {
+      "Title": "Flow Management & Session Coordination",
+      "Description": "Organizing attendee movement and managing sessions with high efficiency for a seamless experience"
+    },
+    "TechnicalSetup": {
+      "Title": "Technical Setup Aligned with Event Identity",
+      "Description": "Advanced technical and visual equipment reflecting the event's visual identity consistently"
+    },
+    "Registration": {
+      "Title": "Electronic & On-site Registration Solutions",
+      "Description": "Advanced registration systems and professional reception following protocol worthy of your event"
+    }
+  }
+},
+"CTA": {
+  "Title": {
+    "Part1": "Ready to ",
+    "Part2": "Organize",
+    "Part3": " Your Event?"
+  },
+  "Description": "Let us help you organize an exceptional event that achieves your goals and exceeds your expectations",
+  "Button": "Request Quote"
+},
+
+
+"Portfolio": {
+    "Title": {
+      "Part1": "Our",
+      "Part2": "Portfolio"
+    },
+    "Subtitle": "Successful projects reflecting our expertise and work quality",
+    "Items": {
+      "Item1": {
+        "Badge": "Event",
+        "Title": "Al-Monsiah Event",
+        "Description": "100+ visitors, mobile stage",
+        "Location": "📍 Riyadh",
+        "Year": "📅 2024"
+      },
+      "Item2": {
+        "Badge": "Event",
+        "Title": "Al-Kanari Garden",
+        "Description": "4-day event, children's activities",
+        "Location": "📍 Riyadh",
+        "Year": "📅 2024"
+      },
+      "Item3": {
+        "Badge": "Event",
+        "Title": "Al-Doha Park",
+        "Description": "LED screens, children's activities, mobile stage",
+        "Location": "📍 Riyadh",
+        "Year": "📅 2024"
+      },
+      "Item4": {
+        "Badge": "Event",
+        "Title": "Al-Liwan Garden",
+        "Description": "Mobile stage, lighting systems, sound systems",
+        "Location": "📍 Riyadh",
+        "Year": "📅 2024"
+      }
+    }
+  }
+}

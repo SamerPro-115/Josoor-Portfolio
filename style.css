@@ -101,10 +101,9 @@ html {
     transform: translateZ(0)
 }
 
-.orb {
+/* .orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(40px);
     opacity: .2;
     will-change: transform;
     transform: translateZ(0);
@@ -112,22 +111,13 @@ html {
 }
 
 .orb-1 {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     background: radial-gradient(circle, #ffa349, transparent 70%);
-    top: -10%;
-    right: -5%;
+    top: 10%;
+    right: 5%;
     animation-delay: 0s
-}
-
-.orb-2 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, #7B4FA3, transparent 70%);
-    bottom: -15%;
-    left: -10%;
-    animation-delay: 7s
-}
+} */
 
 @keyframes float-orb {
 

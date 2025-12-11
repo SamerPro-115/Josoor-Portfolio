@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="/public/assets/style/mobileTheater.css">
 
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <script src="
     https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
     
@@ -23,7 +22,7 @@ https://cdnjs.com/libraries/i18next"> </script>
 
   <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
 </head>
-<body>
+<body> 
 
         <!-- Navbar -->
     <nav class="navbar">
@@ -50,7 +49,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                     <div class="dropdown-content">
                         <a href="/pages/mobile-theater.html" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
                         <a href="#technical-setup" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
-                        <a href="#exhibition" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        <a href="/Pages/conferences.html" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
                         <a href="#event-management" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
                         <a href="#production" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                         <a href="#booth-design" class="dropdown-item" data-i18n="Booth-and-Trade-Exhibition-Design-&-Execution">تصميم وتنفيذ الأجنحة والمعارض التجارية</a>
@@ -87,6 +86,41 @@ https://cdnjs.com/libraries/i18next"> </script>
             </div>
         </div>
     </nav>
+          <a
+        href="https://wa.me/+966503667534" target="_blank" rel="noopener noreferrer"
+      class="
+        fixed bottom-5 
+         right-6
+        group
+        overflow-hidden
+        cursor-pointer
+    " style="z-index: 999;"
+    >
+      <div class="
+        relative
+        text-white
+        p-2
+        rounded-full
+        shadow-xl hover:shadow-2xl
+        transition-all duration-300
+        transform hover:scale-102
+        border-2 border-white/20
+        cursor-pointer
+      " style="
+       background-color: #25D366;
+  background-image: linear-gradient(to bottom right, #25D366, #1ea952);
+  background-repeat: no-repeat;">
+        <svg
+          class="w-7 h-7 relative z-10 transition-transform duration-300 group-hover:scale-110"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        
+      </div>
+    
+    </a>
 
    <div class="bg-layer">
         <div class="orb orb-1"></div>
@@ -106,13 +140,13 @@ https://cdnjs.com/libraries/i18next"> </script>
     
 <!-- Hero Content -->
 <div class="relative z-10 max-w-6xl mx-auto px-4 text-center fade-in-up">
-  <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-orange-500/20 mb-8">
+  <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-orange-500/20 mb-8">
     <div class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
     <span class="text-sm text-gray-300" data-i18n="mobile-theater:Hero.Badge">Mobile Solutions</span>
   </div>
   
-  <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight" data-i18n="mobile-theater:Hero.Title">
-    Mobile Theater
+  <h1 class="text-5xl md:text-6xl font-bold mb-6 header-title tracking-tight" >
+    <span data-i18n="mobile-theater:Hero.Title">Mobile</span> <span data-i18n="mobile-theater:Hero.Title2" class="gradient-text">Theater</span>
   </h1>
   
   <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-light" data-i18n="mobile-theater:Hero.Subtitle">
@@ -125,23 +159,15 @@ https://cdnjs.com/libraries/i18next"> </script>
   
   <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
     <a href="#overview" class="btn-primary">
-      <span data-i18n="mobile-theater:Hero.Buttons.ExploreSolution">Explore Solution</span>
+      <span data-i18n="mobile-theater:Hero.Buttons.Quote">Request Quote</span>
       <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
       </svg>
     </a>
-    <a href="#contact" class="btn-secondary" data-i18n="mobile-theater:Hero.Buttons.GetInTouch">
-      Get in Touch
-    </a>
   </div>
 </div>
     
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-      <div class="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-2">
-        <div class="w-1 h-3 bg-orange-500 rounded-full scroll-dot"></div>
-      </div>
-    </div>
+
   </section>
 
   <!-- Overview Section -->
@@ -153,11 +179,11 @@ https://cdnjs.com/libraries/i18next"> </script>
             <div class="inline-block px-4 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 mb-6">
       <span class="text-sm text-orange-400" data-i18n="mobile-theater:Overview.Badge">Complete Solution</span>
     </div>
-    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 md:leading-tight">
       <span data-i18n="mobile-theater:Overview.Title">Professional Mobile</span>
       <span class="gradient-text" data-i18n="mobile-theater:Overview.TitleHighlight">Theater System</span>
     </h2>
-        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+        <p data-i18n="mobile-theater:Overview.Description" class="text-lg text-gray-300 mb-8 leading-relaxed">
           منصة احترافية، شاشة LED، أنظمة صوت وإضاءة، واستجابة سريعة - كل ما تحتاجه في حل واحد متكامل
         </p>
         
@@ -169,8 +195,8 @@ https://cdnjs.com/libraries/i18next"> </script>
               </svg>
             </div>
             <div>
-              <h3 class="text-lg font-semibold mb-1">جاهزية فورية</h3>
-              <p class="text-gray-400 text-sm">مرونة عالية في التثبيت والنقل لأي موقع</p>
+              <h3 data-i18n="mobile-theater:Overview.Features.Feature1.Title" class="text-lg font-semibold mb-1">جاهزية فورية</h3>
+              <p class="text-gray-400 text-sm" data-i18n="mobile-theater:Overview.Features.Feature1.Description">مرونة عالية في التثبيت والنقل لأي موقع</p>
             </div>
           </div>
           
@@ -181,8 +207,8 @@ https://cdnjs.com/libraries/i18next"> </script>
               </svg>
             </div>
             <div>
-              <h3 class="text-lg font-semibold mb-1">تجربة متكاملة</h3>
-              <p class="text-gray-400 text-sm">سمعية وبصرية على أعلى المستويات</p>
+              <h3 class="text-lg font-semibold mb-1" data-i18n="mobile-theater:Overview.Features.Feature2.Title">تجربة متكاملة</h3>
+              <p class="text-gray-400 text-sm" data-i18n="mobile-theater:Overview.Features.Feature2.Description">سمعية وبصرية على أعلى المستويات</p>
             </div>
           </div>
           
@@ -193,8 +219,8 @@ https://cdnjs.com/libraries/i18next"> </script>
               </svg>
             </div>
             <div>
-              <h3 class="text-lg font-semibold mb-1">توفير التكاليف</h3>
-              <p class="text-gray-400 text-sm">حل اقتصادي مقارنة بالبناء التقليدي</p>
+              <h3 class="text-lg font-semibold mb-1" data-i18n="mobile-theater:Overview.Features.Feature3.Title">توفير التكاليف</h3>
+              <p class="text-gray-400 text-sm" data-i18n="mobile-theater:Overview.Features.Feature3.Description">حل اقتصادي مقارنة بالبناء التقليدي</p>
             </div>
           </div>
         </div>
@@ -203,55 +229,36 @@ https://cdnjs.com/libraries/i18next"> </script>
       <!-- Right Image - IMPRESSIVE VERSION - FULLY RESPONSIVE -->
       <div class="relative tilt-container">
         
-        <!-- Rotating gradient border - responsive sizing -->
-        <div class="absolute -inset-4 md:-inset-6 lg:-inset-8 rotating-border opacity-50">
-          <div class="w-full h-full rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 blur-xl md:blur-2xl"></div>
-        </div>
-
-        <!-- Floating decorative elements - hidden on mobile -->
-        <div class="hidden md:block absolute -top-8 lg:-top-12 -right-8 lg:-right-12 w-24 md:w-28 lg:w-32 h-24 md:h-28 lg:h-32 bg-gradient-to-br from-orange-500/30 to-transparent rounded-full blur-2xl lg:blur-3xl floating-element"></div>
-        <div class="hidden md:block absolute -bottom-8 lg:-bottom-12 -left-8 lg:-left-12 w-32 md:w-36 lg:w-40 h-32 md:h-36 lg:h-40 bg-gradient-to-tr from-pink-500/30 to-transparent rounded-full blur-2xl lg:blur-3xl floating-element" style="animation-delay: 1s;"></div>
-
-        <!-- Pulsing glow behind image -->
-        <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-pink-500/20 to-purple-500/20 rounded-2xl md:rounded-3xl blur-2xl md:blur-3xl pulse-glow"></div>
-
+     
         <!-- Main image container with glass effect -->
-        <div class="relative glass-card rounded-2xl md:rounded-3xl p-2 md:p-3 overflow-hidden">
+        <div class="relative rounded-2xl md:rounded-3xl p-2 md:p-3 overflow-hidden">
           
-          <!-- Shimmer effect overlay -->
-          <div class="shimmer-overlay rounded-xl md:rounded-2xl"></div>
+        
 
-          <!-- Corner accents - responsive sizing -->
-          <div class="absolute top-2 md:top-4 left-2 md:left-4 w-10 md:w-12 lg:w-16 h-10 md:h-12 lg:h-16 border-t-2 border-l-2 border-orange-500/50 rounded-tl-xl md:rounded-tl-2xl"></div>
-          <div class="absolute bottom-2 md:bottom-4 right-2 md:right-4 w-10 md:w-12 lg:w-16 h-10 md:h-12 lg:h-16 border-b-2 border-r-2 border-pink-500/50 rounded-br-xl md:rounded-br-2xl"></div>
-
-          <!-- Dots pattern overlay on corners - responsive -->
-          <div class="absolute top-0 right-0 w-16 md:w-20 lg:w-24 h-16 md:h-20 lg:h-24 dots-pattern opacity-30 rounded-tr-xl md:rounded-tr-2xl"></div>
-          <div class="absolute bottom-0 left-0 w-16 md:w-20 lg:w-24 h-16 md:h-20 lg:h-24 dots-pattern opacity-30 rounded-bl-xl md:rounded-bl-2xl"></div>
 
           <!-- Main Image -->
           <img 
             src="/public/assets/images/home/mobileTheater/Mobile-Theater-1.jpg" 
             alt="Mobile Theater Setup" 
-            class="relative rounded-xl md:rounded-2xl shadow-2xl w-full h-auto tilt-image"
+            class="relative rounded-xl h-[200px] lg:h-[400px] md:rounded-2xl shadow-2xl w-full sm:h-auto tilt-image"
             style="filter: brightness(0.9) contrast(1.1);">
 
           <!-- Gradient overlay on image -->
           <div class="absolute inset-2 md:inset-3 bg-gradient-to-t from-[#1a0b2e]/60 via-transparent to-transparent rounded-xl md:rounded-2xl pointer-events-none"></div>
 
           <!-- Floating badge on image - responsive positioning and sizing -->
-          <div class="absolute bottom-4 md:bottom-6 lg:bottom-8 left-4 md:left-6 lg:left-8 glass-card rounded-full px-3 py-1.5 md:px-4 md:py-2 floating-element" style="animation-delay: 0.5s;">
+          <div class="absolute bottom-4 md:bottom-6 lg:bottom-8 left-4 md:left-6 lg:left-8 bg-black rounded-full px-3 py-1.5 md:px-4 md:py-2 floating-element" style="animation-delay: 0.5s;">
             <div class="flex items-center gap-1.5 md:gap-2">
-              <div class="w-1.5 md:w-2 h-1.5 md:h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span class="text-[10px] md:text-xs font-semibold text-white">Premium Quality</span>
+              <div class="w-1.5 md:w-2 h-1.5 md:h-2 bg-green-400 rounded-full"></div>
+              <span class="text-[10px] md:text-xs font-semibold text-white" data-i18n="mobile-theater:Overview.Quality">Premium Quality</span>
             </div>
           </div>
 
           <!-- Stats overlay - responsive positioning and sizing -->
-          <div class="absolute top-4 md:top-6 lg:top-8 right-4 md:right-6 lg:right-8 glass-card rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 floating-element" style="animation-delay: 1.5s;">
+          <div class="absolute top-4 md:top-6 lg:top-8 right-4 md:right-6 lg:right-8 bg-black rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 floating-element" style="animation-delay: 1.5s;">
             <div class="text-center">
               <div class="text-xl md:text-2xl font-bold gradient-text">10+</div>
-              <div class="text-[10px] md:text-xs text-gray-300">Events</div>
+              <div class="text-[10px] md:text-xs text-gray-300" data-i18n="mobile-theater:Overview.Events">Events</div>
             </div>
           </div>
         </div>
@@ -269,10 +276,9 @@ https://cdnjs.com/libraries/i18next"> </script>
     
  <div class="max-w-7xl mx-auto relative z-10">
     <div class="text-center mb-20">
-      <div class="section-badge">✨ Premium Features</div>
       <h2 class="text-5xl md:text-6xl font-bold mb-6">
-        <span class="text-white">What We</span>
-        <span class="gradient-text"> Provide</span>
+        <span class="text-white" data-i18n="mobile-theater:Features.SectionTitle">What We</span>
+        <span class="gradient-text" data-i18n="mobile-theater:Features.SectionTitleHighlight"> Provide</span>
       </h2>
       <div class="decorative-line"></div>
     </div>
@@ -282,15 +288,15 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.1s">
         <div class="feature-image-wrapper">
           <img 
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" 
+            src="/public/assets/images/home/mobileTheater/Mobile-Theater.webp" 
             alt="Professional Stage" 
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
         <div class="feature-content">
           <div class="feature-number">01</div>
-          <h3 class="feature-title">Professional Stage</h3>
-          <p class="feature-description">منصة احترافية متنقلة مع تصميم هندسي متقدم وجودة استثنائية</p>
+          <h3 data-i18n="mobile-theater:Features.Feature1.Title" class="feature-title">Professional Stage</h3>
+          <p class="feature-description" data-i18n="mobile-theater:Features.Feature1.Description">منصة احترافية متنقلة مع تصميم هندسي متقدم وجودة استثنائية</p>
         </div>
       </div>
 
@@ -298,15 +304,15 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.2s">
         <div class="feature-image-wrapper">
           <img 
-            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800" 
+            src="/public/assets/images/home/mobileTheater/LED.jpg" 
             alt="LED Screen" 
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
         <div class="feature-content">
           <div class="feature-number">02</div>
-          <h3 class="feature-title">LED Display</h3>
-          <p class="feature-description">شاشات LED عالية الدقة للتجربة البصرية المثالية والمبهرة</p>
+          <h3 class="feature-title" data-i18n="mobile-theater:Features.Feature2.Title">LED Display</h3>
+          <p class="feature-description" data-i18n="mobile-theater:Features.Feature2.Description">شاشات LED عالية الدقة للتجربة البصرية المثالية والمبهرة</p>
         </div>
       </div>
 
@@ -314,15 +320,15 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.3s">
         <div class="feature-image-wrapper">
           <img 
-            src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800" 
+            src="/public/assets/images/home/mobileTheater/Sound.jpg" 
             alt="Sound System" 
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
         <div class="feature-content">
           <div class="feature-number">03</div>
-          <h3 class="feature-title">Sound & Lighting</h3>
-          <p class="feature-description">أنظمة صوتية وإضاءة متطورة احترافية بتقنية عالمية</p>
+          <h3 class="feature-title" data-i18n="mobile-theater:Features.Feature3.Title">Sound & Lighting</h3>
+          <p class="feature-description" data-i18n="mobile-theater:Features.Feature3.Description">أنظمة صوتية وإضاءة متطورة احترافية بتقنية عالمية</p>
         </div>
       </div>
 
@@ -330,15 +336,15 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.4s">
         <div class="feature-image-wrapper">
           <img 
-            src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800" 
+            src="/public/assets/images/home/mobileTheater/setup.jpg" 
             alt="Quick Setup" 
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
         <div class="feature-content">
           <div class="feature-number">04</div>
-          <h3 class="feature-title">Rapid Setup</h3>
-          <p class="feature-description">تركيب سريع وفعال بدون أعمال بناء معقدة في وقت قياسي</p>
+          <h3 class="feature-title" data-i18n="mobile-theater:Features.Feature4.Title">Rapid Setup</h3>
+          <p class="feature-description" data-i18n="mobile-theater:Features.Feature4.Description">تركيب سريع وفعال بدون أعمال بناء معقدة في وقت قياسي</p>
         </div>
       </div>
     </div>
@@ -360,16 +366,15 @@ https://cdnjs.com/libraries/i18next"> </script>
 </section>
 
   <!-- Use Cases -->
-  <section class="relative">
+  <section class="relative pt-[15rem] pb-[5rem] px-4">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-24 fade-in-up">
-        <div class="section-badge">🎯 Perfect Solutions</div>
         <h2 class="text-5xl md:text-6xl font-bold mb-8">
-          <span class="text-white">Perfect</span>
-          <span class="gradient-text"> For</span>
+          <span class="text-white" data-i18n="mobile-theater:UseCases.SectionTitle">Perfect</span>
+          <span class="gradient-text" data-i18n="mobile-theater:UseCases.SectionTitleHighlight"> For</span>
         </h2>
         <div class="decorative-line"></div>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        <p data-i18n="mobile-theater:UseCases.SectionDescription" class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
           يناسب مجموعة واسعة من الفعاليات والمناسبات
         </p>
       </div>
@@ -384,8 +389,8 @@ https://cdnjs.com/libraries/i18next"> </script>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
               </svg>
             </div>
-            <h3 class="use-case-title">الفعاليات الوطنية</h3>
-            <p class="use-case-description">والاحتفالات الموسمية الكبرى</p>
+            <h3 data-i18n="mobile-theater:UseCases.UseCase1.Title" class="use-case-title">الفعاليات الوطنية</h3>
+            <p data-i18n="mobile-theater:UseCases.UseCase1.Description" class="use-case-description">والاحتفالات الموسمية الكبرى</p>
           </div>
         </div>
 
@@ -398,8 +403,8 @@ https://cdnjs.com/libraries/i18next"> </script>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
               </svg>
             </div>
-            <h3 class="use-case-title">الجامعات والمدارس</h3>
-            <p class="use-case-description">للفعاليات التعليمية والثقافية</p>
+            <h3 class="use-case-title" data-i18n="mobile-theater:UseCases.UseCase2.Title">الجامعات والمدارس</h3>
+            <p class="use-case-description" data-i18n="mobile-theater:UseCases.UseCase2.Description">للفعاليات التعليمية والثقافية</p>
           </div>
         </div>
 
@@ -412,8 +417,8 @@ https://cdnjs.com/libraries/i18next"> </script>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
               </svg>
             </div>
-            <h3 class="use-case-title">المهرجانات الخارجية</h3>
-            <p class="use-case-description">الموسيقية والفنية والترفيهية</p>
+            <h3 class="use-case-title" data-i18n="mobile-theater:UseCases.UseCase3.Title">المهرجانات الخارجية</h3>
+            <p class="use-case-description" data-i18n="mobile-theater:UseCases.UseCase3.Description">الموسيقية والفنية والترفيهية</p>
           </div>
         </div>
 
@@ -426,8 +431,8 @@ https://cdnjs.com/libraries/i18next"> </script>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
               </svg>
             </div>
-            <h3 class="use-case-title">الحملات المتنقلة</h3>
-            <p class="use-case-description">التسويقية والترويجية</p>
+            <h3 class="use-case-title" data-i18n="mobile-theater:UseCases.UseCase4.Title">الحملات المتنقلة</h3>
+            <p class="use-case-description" data-i18n="mobile-theater:UseCases.UseCase4.Description">التسويقية والترويجية</p>
           </div>
         </div>
       </div>
@@ -607,7 +612,6 @@ https://cdnjs.com/libraries/i18next"> </script>
     
 
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="/index.js"></script>
     <script src="/public/assets/js/mobileTheater.js"></script>

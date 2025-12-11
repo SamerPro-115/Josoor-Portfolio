@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعارض والمؤتمرات</title>
+
+          <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/public/assets/style/navbar.css">
+    <link rel="stylesheet" href="/public/assets/style/footer.css">
+
+    <link rel="stylesheet" href="/public/assets/style/conferences.css">
+
+   <script src="
+    https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
+    
+    <script src="
+    
+https://cdnjs.com/libraries/i18next"> </script>
+
+  <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
+</head>
+<body>
+    
+
+            <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container mx-auto px-6 pt-[0.4rem] flex justify-between items-center">
+            <div class="logo-text" >
+                <img src="/public/assets/images/logo.webp" 
+                     class="w-20 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw] h-auto" 
+                     alt="شعار جسور">
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link"  data-i18n="Home">الرئيسية</a>
+                </li>
+              
+                <li class="nav-item dropdown " style="padding-bottom: 0 !important;">
+                  <a class="nav-link dropdown-trigger">
+        <span class="nav-text" data-i18n="Services">خدماتنا</span>
+        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </a>
+                    <div class="dropdown-content">
+                        <a href="/pages/mobile-theater.html" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        <a href="#technical-setup" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        <a href="/Pages/conferences.html" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        <a href="#event-management" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
+                        <a href="/Pages/production-&-marketing.html" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                        <a href="#booth-design" class="dropdown-item" data-i18n="Booth-and-Trade-Exhibition-Design-&-Execution">تصميم وتنفيذ الأجنحة والمعارض التجارية</a>
+                    </div>
+                </li>
+                <li class="nav-item desktop-works">
+                    <a href="#works" class="nav-link" data-i18n="Works">أعمالنا</a>
+                </li>
+                  <li class="nav-item lg:pr-5">
+                    <a href="#about" class="nav-link" data-i18n="About-nav">من نحن</a>
+                </li>
+                <button class="lang-toggle lang-toggle-mobile" onclick="changeLang()">
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png"  alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
+</button>
+            </ul>
+
+           <button class="lang-toggle lang-toggle-desktop" onclick="changeLang()">
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png"  alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
+</button>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+          <a
+        href="https://wa.me/+966503667534" target="_blank" rel="noopener noreferrer"
+      class="
+        fixed bottom-5 
+         right-6
+        group
+        overflow-hidden
+        cursor-pointer
+    " style="z-index: 999;"
+    >
+      <div class="
+        relative
+        text-white
+        p-2
+        rounded-full
+        shadow-xl hover:shadow-2xl
+        transition-all duration-300
+        transform hover:scale-102
+        border-2 border-white/20
+        cursor-pointer
+      " style="
+       background-color: #25D366;
+  background-image: linear-gradient(to bottom right, #25D366, #1ea952);
+  background-repeat: no-repeat;">
+        <svg
+          class="w-7 h-7 relative z-10 transition-transform duration-300 group-hover:scale-110"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        
+      </div>
+    
+    </a>
+       <div class="bg-layer">
+        <div class="orb orb-1"></div>
+        <div class="grid-pattern"></div>
+        <div class="diagonal-lines"></div>
+    </div>
+
+    <!-- Main Container -->
+<div class="min-h-screen  text-white">
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image with Parallax -->
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1920');">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#1a0b2e]/90 via-[#2d1b4e]/85 to-[#1a0b2e]/95"></div>
+    </div>
+    
+    <!-- Hero Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 text-center fade-in-up">
+   
+  <h1 class="text-3xl sm:text-4xl md:text-5xl hero-title font-bold mb-6 tracking-tight leading-tight">
+    <span data-i18n="conferences:Hero.Title.Part1">Exhibition & </span>
+    <span class="gradient-text-purple block" data-i18n="conferences:Hero.Title.Part2">Conference Organization</span>
+  </h1>
+  
+  <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-light" data-i18n="conferences:Hero.Subtitle">
+    تنظيم المعارض والمؤتمرات بكل تفاصيلها
+  </p>
+  
+  <p class="text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed" data-i18n="conferences:Hero.Description">
+    من التخطيط إلى التنفيذ.. نحول رؤيتك إلى فعالية احترافية متكاملة
+  </p>
+  
+  <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+    <a href="#contact" class="btn-secondary-purple group" data-i18n="conferences:Hero.CTA">
+      Request Quote
+    </a>
+  </div>
+</div>
+      
+     
+    
+    
+  </section>
+
+  
+
+
+<!-- What We Organize Section -->
+<section id="services" class="py-32 px-4 relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full  animate-pulse-slow"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-pink-500/5 rounded-full  animate-pulse-slow"></div>
+  
+  <div class="max-w-7xl mx-auto relative z-10 mb-20">
+    <div class="text-center fade-in-up">
+      <div class="inline-block px-4 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6">
+        <span class="text-sm text-purple-400" data-i18n="conferences:Services.Badge">Our Expertise</span>
+      </div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">
+        <span data-i18n="conferences:Services.Title.Part1">What We </span>
+        <span class="gradient-text-purple" data-i18n="conferences:Services.Title.Part2">Organize</span>
+      </h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto" data-i18n="conferences:Services.Description">
+        نقدم حلولاً متكاملة لجميع أنواع الفعاليات المهنية
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto">
+    <div class="service-split rounded-3xl overflow-hidden" style="box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);">
+      <!-- Exhibition Panel -->
+      <div class="service-panel group">
+        <div class="service-bg" style="background-image: url('/public/assets/images/conferences/Trade.png')"></div>
+        <div class="service-overlay"></div>
+  
+        <div class="service-content">
+          <div class="service-label" data-i18n="conferences:Services.Exhibition.Label">Exhibitions</div>
+          <h3 class="service-title md:text-4xl text-2xl">
+            <span data-i18n="conferences:Services.Exhibition.Title.Line1">Trade</span>
+            <span data-i18n="conferences:Services.Exhibition.Title.Line2">Exhibitions</span>
+          </h3>
+          <p class="service-subtitle" data-i18n="conferences:Services.Exhibition.Subtitle">المعارض التجارية والصناعية</p>
+          
+          <div class="feature-grid">
+            <div class="feature-row">
+              <div class="feature-icon-circle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4 data-i18n="conferences:Services.Exhibition.Features.Booth.Title">Booth Design & Construction</h4>
+                <p data-i18n="conferences:Services.Exhibition.Features.Booth.Description">تصميم وتنفيذ الأجنحة بمعايير احترافية</p>
+              </div>
+            </div>
+            
+            <div class="feature-row">
+              <div class="feature-icon-circle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4 data-i18n="conferences:Services.Exhibition.Features.Floor.Title">Floor Planning & Layout</h4>
+                <p data-i18n="conferences:Services.Exhibition.Features.Floor.Description">تخطيط مساحات العرض بشكل مثالي</p>
+              </div>
+            </div>
+            
+            <div class="feature-row">
+              <div class="feature-icon-circle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4 data-i18n="conferences:Services.Exhibition.Features.Visitor.Title">Visitor Management</h4>
+                <p data-i18n="conferences:Services.Exhibition.Features.Visitor.Description">أنظمة إدارة الزوار والتسجيل الإلكتروني</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="diagonal-separator"></div>
+      </div>
+
+      <!-- Conference Panel -->
+      <div class="service-panel group">
+        <div class="service-bg" style="background-image: url('/public/assets/images/conferences/Conference.jpg')"></div>
+        <div class="service-overlay"></div>
+        
+      
+        
+        <div class="service-content">
+          <div class="service-label" data-i18n="conferences:Services.Conference.Label">Conferences</div>
+          <h3 class="service-title md:text-4xl text-2xl">
+            <span data-i18n="conferences:Services.Conference.Title.Line1">Professional</span>
+            <span data-i18n="conferences:Services.Conference.Title.Line2">Conferences</span>
+          </h3>
+          <p class="service-subtitle" data-i18n="conferences:Services.Conference.Subtitle">المؤتمرات والفعاليات المهنية</p>
+          
+          <div class="feature-grid">
+            <div class="feature-row">
+              <div class="feature-icon-circle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4 data-i18n="conferences:Services.Conference.Features.Venue.Title">Venue Selection & Setup</h4>
+                <p data-i18n="conferences:Services.Conference.Features.Venue.Description">اختيار وتجهيز القاعات بأحدث التقنيات</p>
+              </div>
+            </div>
+            
+            <div class="feature-row">
+              <div class="feature-icon-circle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4 data-i18n="conferences:Services.Conference.Features.Speaker.Title">Speaker Management</h4>
+                <p data-i18n="conferences:Services.Conference.Features.Speaker.Description">إدارة المتحدثين والجدول الزمني</p>
+              </div>
+            </div>
+            
+            <div class="feature-row">
+              <div class="feature-icon-circle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4 data-i18n="conferences:Services.Conference.Features.Streaming.Title">Live Streaming & Recording</h4>
+                <p data-i18n="conferences:Services.Conference.Features.Streaming.Description">بث مباشر واحترافي للفعالية</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comprehensive Service Details Section -->
+<section class="py-32 px-4 relative overflow-hidden">
+
+  
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="max-w-4xl mx-auto text-center mb-20 fade-in-up">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        <span data-i18n="conferences:Comprehensive.Title.Part1">From </span>
+        <span class="gradient-text-purple" data-i18n="conferences:Comprehensive.Title.Part2">Idea to Launch</span>
+      </h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
+      <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto" data-i18n="conferences:Comprehensive.Description">
+        إدارة شاملة من الفكرة حتى الافتتاح: تخطيط المساحات، إدارة الحشود، التجهيزات الفنية والبصرية، التسجيل والاستقبال، وفق بروتوكول احترافي وهوية متناسقة.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Service Element 1 -->
+      <div class="comprehensive-card group">
+        <div class="comprehensive-card-glow"></div>
+        <div class="comprehensive-card-content">
+          <div class="comprehensive-icon-wrapper">
+            <div class="comprehensive-icon-bg"></div>
+            <svg class="comprehensive-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+          </div>
+          <div class="comprehensive-text">
+            <h3 class="comprehensive-title" data-i18n="conferences:Comprehensive.Elements.SpacePlanning.Title">تصميم مخططات المساحات ورحلة الزائر</h3>
+            <p class="comprehensive-description" data-i18n="conferences:Comprehensive.Elements.SpacePlanning.Description">استراتيجية متكاملة لتصميم المساحات وتخطيط رحلة الزائر من الدخول حتى الخروج</p>
+          </div>
+          <div class="comprehensive-arrow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Element 2 -->
+      <div class="comprehensive-card group">
+        <div class="comprehensive-card-glow"></div>
+        <div class="comprehensive-card-content">
+          <div class="comprehensive-icon-wrapper">
+            <div class="comprehensive-icon-bg"></div>
+            <svg class="comprehensive-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <div class="comprehensive-text">
+            <h3 class="comprehensive-title" data-i18n="conferences:Comprehensive.Elements.CrowdManagement.Title">إدارة الحركة وتنسيق الجلسات</h3>
+            <p class="comprehensive-description" data-i18n="conferences:Comprehensive.Elements.CrowdManagement.Description">تنظيم حركة الحضور وإدارة الجلسات بكفاءة عالية لضمان تجربة سلسة</p>
+          </div>
+          <div class="comprehensive-arrow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Element 3 -->
+      <div class="comprehensive-card group">
+        <div class="comprehensive-card-glow"></div>
+        <div class="comprehensive-card-content">
+          <div class="comprehensive-icon-wrapper">
+            <div class="comprehensive-icon-bg"></div>
+            <svg class="comprehensive-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="comprehensive-text">
+            <h3 class="comprehensive-title" data-i18n="conferences:Comprehensive.Elements.TechnicalSetup.Title">تجهيزات تقنية متوافقة مع هوية الحدث</h3>
+            <p class="comprehensive-description" data-i18n="conferences:Comprehensive.Elements.TechnicalSetup.Description">تجهيزات فنية وبصرية متطورة تعكس الهوية البصرية للفعالية بشكل متناسق</p>
+          </div>
+          <div class="comprehensive-arrow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Element 4 -->
+      <div class="comprehensive-card group">
+        <div class="comprehensive-card-glow"></div>
+        <div class="comprehensive-card-content">
+          <div class="comprehensive-icon-wrapper">
+            <div class="comprehensive-icon-bg"></div>
+            <svg class="comprehensive-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <div class="comprehensive-text">
+            <h3 class="comprehensive-title" data-i18n="conferences:Comprehensive.Elements.Registration.Title">حلول تسجيل واستقبال إلكترونية وحضورية</h3>
+            <p class="comprehensive-description" data-i18n="conferences:Comprehensive.Elements.Registration.Description">أنظمة تسجيل متقدمة واستقبال احترافي وفق بروتوكول يليق بفعاليتك</p>
+          </div>
+          <div class="comprehensive-arrow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full Width Parallax Section -->
+<section class="relative h-[70vh] min-h-[600px] overflow-hidden">
+  <div class="parallax-img" style="background-image: url('/public/assets/images/Stage.jpg');">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#1a0b2e]/50 via-[#2d1b4e]/50 to-[#1a0b2e]/40 flex items-center justify-center px-4 py-12">
+      <div class="text-center fade-in-up max-w-4xl w-full">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          <span data-i18n="conferences:Parallax.Title.Part1">From </span>
+          <span class="gradient-text-purple" data-i18n="conferences:Parallax.Title.Part2">Vision</span>
+          <span data-i18n="conferences:Parallax.Title.Part3"> to Reality</span>
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 px-4 leading-relaxed" data-i18n="conferences:Parallax.Description">
+          نحول أفكارك إلى فعاليات استثنائية تترك أثراً دائماً
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+          <div class="stat-badge-purple-responsive">
+            <div class="text-2xl sm:text-3xl font-bold gradient-text-purple mb-1">15+</div>
+            <div class="text-xs sm:text-sm text-gray-400" data-i18n="conferences:Parallax.Stats.Experience">Years Experience</div>
+          </div>
+          <div class="stat-badge-purple-responsive">
+            <div class="text-2xl sm:text-3xl font-bold gradient-text-purple mb-1">100%</div>
+            <div class="text-xs sm:text-sm text-gray-400" data-i18n="conferences:Parallax.Stats.Satisfaction">Client Satisfaction</div>
+          </div>
+          <div class="stat-badge-purple-responsive">
+            <div class="text-2xl sm:text-3xl font-bold gradient-text-purple mb-1">24/7</div>
+            <div class="text-xs sm:text-sm text-gray-400" data-i18n="conferences:Parallax.Stats.Support">Support Team</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Gallery Section -->
+  <section class="py-32 px-4 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full "></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/5 rounded-full"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-20 fade-in-up">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          <span data-i18n="conferences:Portfolio.Title.Part1">Our</span> <span class="gradient-text-purple" data-i18n="conferences:Portfolio.Title.Part2">Portfolio</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto" data-i18n="conferences:Portfolio.Subtitle">
+          مشاريع ناجحة تعكس خبرتنا وجودة عملنا
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item group">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+            <img src="/public/assets/images/works/المونسية-الرياض.jpg" alt="Tech Expo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="gallery-overlay-purple">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="px-2 py-1 bg-purple-500 text-white text-xs font-bold rounded" data-i18n="conferences:Portfolio.Items.Item1.Badge">فعالية</span>
+                </div>
+                <h3 class="text-xl font-bold mb-1" data-i18n="conferences:Portfolio.Items.Item1.Title">فعالية المونسية</h3>
+                <p class="text-sm text-gray-300 mb-3" data-i18n="conferences:Portfolio.Items.Item1.Description">100+ زائر، مسرح متنقل</p>
+                <div class="flex items-center gap-4 text-xs text-gray-400">
+                  <span data-i18n="conferences:Portfolio.Items.Item1.Location">📍 الرياض</span>
+                  <span data-i18n="conferences:Portfolio.Items.Item1.Year">📅 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item group">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+            <img src="/public/assets/images/works/حديقة-الكناري-الرياض.png" alt="Conference" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="gallery-overlay-purple">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="px-2 py-1 bg-purple-500 text-white text-xs font-bold rounded" data-i18n="conferences:Portfolio.Items.Item2.Badge">فعالية</span>
+                </div>
+                <h3 class="text-xl font-bold mb-1" data-i18n="conferences:Portfolio.Items.Item2.Title">حديقة الكناري</h3>
+                <p class="text-sm text-gray-300 mb-3" data-i18n="conferences:Portfolio.Items.Item2.Description">فعالية لمدة 4-أيام، فعالية للأطفال</p>
+                <div class="flex items-center gap-4 text-xs text-gray-400">
+                  <span data-i18n="conferences:Portfolio.Items.Item2.Location">📍 الرياض</span>
+                  <span data-i18n="conferences:Portfolio.Items.Item2.Year">📅 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item group">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+            <img src="/public/assets/images/works/طويق.png" alt="Academic Conference" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="gallery-overlay-purple">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="px-2 py-1 bg-purple-500 text-white text-xs font-bold rounded" data-i18n="conferences:Portfolio.Items.Item3.Badge">فعالية</span>
+                </div>
+                <h3 class="text-xl font-bold mb-1" data-i18n="conferences:Portfolio.Items.Item3.Title">منتزه الدوح</h3>
+                <p class="text-sm text-gray-300 mb-3" data-i18n="conferences:Portfolio.Items.Item3.Description">شاشات LED، فعاليات للأطفال، مسرح متنقل</p>
+                <div class="flex items-center gap-4 text-xs text-gray-400">
+                  <span data-i18n="conferences:Portfolio.Items.Item3.Location">📍 الرياض</span>
+                  <span data-i18n="conferences:Portfolio.Items.Item3.Year">📅 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item group">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+            <img src="/public/assets/images/works/حديقة-الليوان.png" alt="Trade Show" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="gallery-overlay-purple">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="px-2 py-1 bg-purple-500 text-white text-xs font-bold rounded" data-i18n="conferences:Portfolio.Items.Item4.Badge">فعالية</span>
+                </div>
+                <h3 class="text-xl font-bold mb-1" data-i18n="conferences:Portfolio.Items.Item4.Title">حديقة الليوان</h3>
+                <p class="text-sm text-gray-300 mb-3" data-i18n="conferences:Portfolio.Items.Item4.Description">مسرح متنقل، انظمة اضاءة، انظمة صوت</p>
+                <div class="flex items-center gap-4 text-xs text-gray-400">
+                  <span data-i18n="conferences:Portfolio.Items.Item4.Location">📍 الرياض</span>
+                  <span data-i18n="conferences:Portfolio.Items.Item4.Year">📅 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- CTA Section -->
+<section class="py-32 px-4 relative">
+  <div class="max-w-4xl mx-auto text-center fade-in-up">
+    <div class="relative">
+      <!-- Background Glow -->
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-purple-500/10 rounded-3xl"></div>
+      
+      <div class="relative bg-white/5 border border-white/10 rounded-3xl p-12 md:p-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">
+          <span data-i18n="conferences:CTA.Title.Part1">Ready to </span>
+          <span class="gradient-text-purple" data-i18n="conferences:CTA.Title.Part2">Organize</span>
+          <span data-i18n="conferences:CTA.Title.Part3"> Your Event?</span>
+        </h2>
+        <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto" data-i18n="conferences:CTA.Description">
+          دعنا نساعدك في تنظيم فعالية استثنائية تحقق أهدافك وتتجاوز توقعاتك
+        </p>
+        <div class="flex justify-center">
+          <a href="#contact" class="btn-primary-purple group">
+            <span data-i18n="conferences:CTA.Button">Request Quote</span>
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+
+        <!-- footer -->
+   <footer class="footer-gradient py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Logo & Description -->
+            <div class="space-y-4">
+    <img src="/public/assets/images/logo.webp" width="100px" alt="شعار جسور">
+    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="footer-description">
+        حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة
+    </p>
+</div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5" data-i18n="Quick-links">روابط سريعة</h3>
+                    <ul class="space-y-3" >
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Home">الرئيسية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Works">أعمالنا</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="About-nav">من نحن</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Services">الخدمات</h3>
+                    <ul class="space-y-3" >
+                        <li>
+                            <a href="/pages/mobile-theater.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                        </li>
+                       
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Booth-and-Trade-Exhibition-Design-&-Execution">تصميم وتنفيذ الإجنحة والمعارض التجارية</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+               <div>
+        <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Contact-us">تواصل معنا</h3>
+        <ul class="space-y-4">
+          <li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        </svg>
+    </div>
+    <span class="text-gray-400 text-sm">info@jusoor.com</span>
+</li>
+          <li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+    </div>
+    <a href="tel:+966503667534" target="_blank" class="text-gray-400 text-sm" dir="ltr">+966 50 366 7534</a>
+</li>
+<li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+        </svg>
+    </div>
+    <span class="text-gray-400 text-sm" data-i18n="Location">الرياض، السعودية</span>
+</li>
+        </ul>
+    </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider mb-10"></div>
+
+            <!-- Bottom Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                
+               <!-- Social Media Icons -->
+    <div class="flex gap-3 justify-center md:justify-start">
+     
+      <a href="https://x.com/JusoorEvents" target="_blank" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+</a>
+<a href="https://www.snapchat.com/add/jusoorevents" target="_blank" class="social-icon snapchat w-10 h-10 rounded-lg text-white flex items-center justify-center">
+       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"  viewBox="0 0 24 24" fill="none">
+<path d="M5.82901 4.533C5.22901 5.877 5.46601 8.285 5.56201 9.969C4.91401 10.328 4.08201 9.698 3.61101 9.698C3.12101 9.698 2.53601 10.02 2.44401 10.5C2.37801 10.846 2.53301 11.35 3.64501 11.789C4.07501 11.959 5.09801 12.159 5.33501 12.717C5.66801 13.501 3.62501 17.12 0.417012 17.648C0.166012 17.689 -0.0129883 17.913 0.00101167 18.167C0.0570117 19.142 2.24301 19.524 3.21201 19.674C3.31101 19.808 3.39101 20.374 3.51801 20.805C3.57501 20.998 3.72201 21.229 4.10001 21.229C4.59301 21.229 5.41201 20.849 6.83801 21.085C8.23601 21.318 9.55001 23.3 12.073 23.3C14.418 23.3 15.817 21.309 17.163 21.085C17.942 20.956 18.611 20.997 19.359 21.143C19.874 21.244 20.336 21.3 20.483 20.794C20.612 20.357 20.691 19.802 20.788 19.671C21.748 19.522 23.944 19.141 23.999 18.166C24.013 17.912 23.834 17.689 23.583 17.647C20.429 17.127 18.324 13.519 18.665 12.716C18.901 12.159 19.917 11.961 20.355 11.788C21.169 11.467 21.577 11.072 21.568 10.615C21.557 10.03 20.853 9.681 20.335 9.681C19.808 9.681 19.051 10.305 18.438 9.967C18.534 8.269 18.77 5.872 18.171 4.529C17.036 1.986 14.511 0.699997 11.987 0.699997C9.47901 0.699997 6.97301 1.968 5.82901 4.533Z" fill="#fff"/>
+</svg>
+</a>
+ 
+       
+        <a href="https://www.tiktok.com/@jusoorevents" target="_blank" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+    </svg>
+</a>
+    </div>
+
+                <!-- Copyright -->
+                <div class="text-center text-gray-400 text-sm">
+<p data-i18n="footer-copyright">© 2024 جسور. جميع الحقوق محفوظة</p>
+                </div>
+
+               
+            </div>
+        </div>
+    </footer>
+
+
+        <script src="/index.js"></script>
+        <script src="/public/assets/js/conferences.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

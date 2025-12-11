@@ -9,7 +9,6 @@ function throttle(func, wait) {
     timeout = setTimeout(later, wait);
   };
 }
-AOS.init({ once: !0, duration: 800, offset: 100 });
 function toggleMobileMenu() {
   $(".nav-menu").toggleClass("active");
   $("body").toggleClass("overflow-hidden");
@@ -88,8 +87,8 @@ i18next
   .init({
     lng: localStorage.getItem("lang") || 'ar',
     fallbackLng: 'ar',
-    debug: true,
-    ns: ['common', 'mobile-theater'], // Define all namespaces
+    debug: false,
+    ns: ['common', 'mobile-theater', 'conferences', 'marketing'], // Define all namespaces
     defaultNS: 'common', 
     backend: {
       loadPath: '/public/locals/{{lng}}/{{ns}}.json' // {{ns}} = namespace

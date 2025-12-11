@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "Production & Marketing",
+    "title": "Production &",
+    "titleHighlight": "Marketing",
+    "subtitle": "We document your event visually and create digital content that tells the story",
+    "description": "With outreach campaigns before, during, and after the event",
+    "cta": "Request Quote"
+  },
+  "stats": {
+    "coverage": {
+      "value": "360°",
+      "label": "Coverage"
+    },
+    "quality": {
+      "value": "4K",
+      "label": "Video Quality"
+    },
+    "management": {
+      "value": "24/7",
+      "label": "Social Management"
+    },
+    "alignment": {
+      "value": "100%",
+      "label": "Brand Alignment"
+    }
+  },
+  "services": {
+    "title": "Service",
+    "titleHighlight": "Elements",
+    "description": "Comprehensive service components",
+    "items": {
+      "production": {
+        "title": "Visual Production",
+        "description": "Professional photography and videography with aerial coverage and closing promo",
+        "features": [
+          "Professional photography/videography",
+          "Aerial drone coverage",
+          "Closing promo and highlights"
+        ]
+      },
+      "design": {
+        "title": "Creative Design",
+        "description": "Visual materials design that embodies the event atmosphere and reflects identity",
+        "features": [
+          "Visual materials that embody event atmosphere",
+          "Creative content reflecting identity",
+          "Motion graphics and animation"
+        ]
+      },
+      "writing": {
+        "title": "Content Writing",
+        "description": "Targeted marketing copy tailored to audience and platform",
+        "features": [
+          "Marketing copy tailored to audience and platform",
+          "Professional Arabic and English content",
+          "Comprehensive content strategy"
+        ]
+      },
+      "social": {
+        "title": "Social Media Management",
+        "description": "Complete digital platform management with precise performance analytics",
+        "features": [
+          "Publishing and engagement management",
+          "Targeted paid advertising",
+          "Performance analytics and comprehensive reports"
+        ]
+      }
+    }
+  },
+  "process": {
+    "title": "Our",
+    "titleHighlight": "Process",
+    "steps": {
+      "pre": {
+        "title": "Pre-Event",
+        "description": "Visual identity design and teaser campaigns before the event"
+      },
+      "during": {
+        "title": "During Event",
+        "description": "Live coverage with instant publishing on platforms"
+      },
+      "post": {
+        "title": "Post-Event",
+        "description": "Closing content and comprehensive performance analytics"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Tell Your",
+    "titleHighlight": "Story?",
+    "description": "Let us document your event and create impactful content",
+    "button": "Start Your Project"
+  }
+}
