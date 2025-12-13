@@ -1,0 +1,79 @@
+{
+    "hero": {
+    "title": "Event Management",
+    "title2": "& Activation",
+    "subtitle": "Transform your vision into unforgettable experiences. We create, manage, and activate events that leave lasting impressions.",
+    "cta": "Request Quote"
+  },
+
+   "expertise": {
+    "title": "Our Expertise",
+    "items": {
+      "children": {
+        "title": "Children's Events",
+        "description": "Interactive theater, educational corners, and engaging competitions designed for young audiences."
+      },
+      "national": {
+        "title": "National Events & Official Occasions",
+        "description": "Complete production services including sound, lighting, and performances for official ceremonies."
+      },
+      "outdoor": {
+        "title": "Outdoor Activities",
+        "description": "Events in parks, tourist destinations, and seasonal villages with full logistical support."
+      },
+      "construction": {
+        "title": "Stage & Temporary Space Construction",
+        "description": "Professional building and setup of theaters and temporary event spaces to your specifications."
+      },
+      "entertainment": {
+        "title": "Live Entertainment Shows",
+        "description": "Captivating live performances and interactive characters that bring your event to life."
+      },
+      "digital": {
+        "title": "Digital Integration",
+        "description": "Seamless integration of technology, social media, and digital touchpoints for hybrid events."
+      }
+    }
+  },
+
+   "stats": {
+    "eventsDelivered": "Events Delivered",
+    "happyClients": "Happy Clients",
+    "successRate": "Success Rate %",
+    "teamMembers": "Team Members"
+  },
+  "gallery": {
+    "title": "Event Showcase",
+    "items": {
+      "corporate": {
+        "title": "Corporate Events",
+        "subtitle": "Professional & Impactful"
+      },
+      "concerts": {
+        "title": "Live Concerts",
+        "subtitle": "Unforgettable Performances"
+      },
+      "awards": {
+        "title": "Award Ceremonies",
+        "subtitle": "Prestigious & Elegant"
+      },
+      "festivals": {
+        "title": "Festival Activations",
+        "subtitle": "Energy & Excitement"
+      },
+      "launches": {
+        "title": "Product Launches",
+        "subtitle": "Innovation Unveiled"
+      },
+      "tradeShows": {
+        "title": "Trade Shows",
+        "subtitle": "Engagement & Connection"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Create The Moment?",
+    "subtitle": "Let's bring your event vision to life. Contact us today for a consultation.",
+    "button": "Get Started Now"
+  }
+}

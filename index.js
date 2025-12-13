@@ -88,7 +88,7 @@ i18next
     lng: localStorage.getItem("lang") || 'ar',
     fallbackLng: 'ar',
     debug: false,
-    ns: ['common', 'mobile-theater', 'conferences', 'marketing'], // Define all namespaces
+    ns: ['common', 'mobile-theater', 'conferences', 'marketing', 'technical', "event-management"], // Define all namespaces
     defaultNS: 'common', 
     backend: {
       loadPath: '/public/locals/{{lng}}/{{ns}}.json' // {{ns}} = namespace
@@ -148,3 +148,6 @@ function updateContent() {
 
   
 }
+
+
+

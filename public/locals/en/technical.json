@@ -1,0 +1,130 @@
+{
+      "Hero": {
+    "Badge": "Technical Solutions",
+    "Title": {
+      "Part1": "Comprehensive",
+      "Part2": "Technical Setup"
+    },
+    "Subtitle": "A complete technical presentation... illuminating the event from within",
+    "Description": "A permanent solution for halls and exhibitions integrating pure sound, smart lighting, and giant screens",
+    "CTA": "Request Quote"
+  },
+
+  "Components": {
+    "Title": {
+      "Part1": "Technical",
+      "Part2": "Components"
+    },
+    "Cards": {
+      "Sound": {
+        "Badge": "Audio",
+        "Title": "Sound Systems",
+        "Description": "Precise sound systems covering the hall with clarity",
+        "Specs": {
+          "Spec1": "Line array speakers",
+          "Spec2": "Wireless microphones",
+          "Spec3": "Digital mixing"
+        }
+      },
+      "Lighting": {
+        "Badge": "Lighting",
+        "Title": "Intelligent Lighting",
+        "Description": "Programmable lighting with visual dimensions",
+        "Specs": {
+          "Spec1": "Moving head lights",
+          "Spec2": "LED fixtures",
+          "Spec3": "DMX control"
+        }
+      },
+      "Display": {
+        "Badge": "Display",
+        "Title": "LED Screens",
+        "Description": "High-definition screens for day and night",
+        "Specs": {
+          "Spec1": "4K/8K displays",
+          "Spec2": "Indoor/outdoor",
+          "Spec3": "Video processors"
+        }
+      }
+    }
+  },
+
+  "Showcase": {
+    "Title": {
+      "Part1": "Our",
+      "Part2": "Technology",
+      "Part3": "Showcase"
+    },
+    "Items": {
+      "Video": {
+        "Badge": "Video",
+        "Title": "Complete Setup Tour",
+        "Description": "Comprehensive walkthrough of our professional equipment and technical capabilities"
+      },
+      "Lighting": {
+        "Badge": "Lighting",
+        "Title": "LED Array System",
+        "Description": "High-power intelligent lighting fixtures"
+      },
+      "Audio": {
+        "Badge": "Audio",
+        "Title": "Sound System",
+        "Description": "Professional audio equipment"
+      },
+      "Display": {
+        "Badge": "Display",
+        "Title": "LED Panels",
+        "Description": "4K/8K display technology"
+      },
+      "Control": {
+        "Badge": "Control",
+        "Title": "DMX Console",
+        "Description": "Central control system"
+      },
+      "Setup": {
+        "Badge": "Setup",
+        "Title": "Complete Installation",
+        "Description": "Full stage and equipment setup for major events"
+      },
+      "Event": {
+        "Badge": "Event",
+        "Title": "Live Production",
+        "Description": "Equipment in action during live event coverage"
+      }
+    }
+  },
+
+  "UseCases": {
+    "Title": {
+      "Part1": "Perfect",
+      "Part2": "For"
+    },
+    "Items": {
+      "Conferences": {
+        "Title": "Conferences",
+        "Description": "Comprehensive professional conferences"
+      },
+      "Exhibitions": {
+        "Title": "Exhibitions",
+        "Description": "Distinguished trade exhibitions"
+      },
+      "Galas": {
+        "Title": "Galas",
+        "Description": "Elegant formal celebrations"
+      },
+      "Launches": {
+        "Title": "Product Launches",
+        "Description": "Spectacular launch events"
+      }
+    }
+  },
+  "cta": {
+    "title": {
+      "part1": "Ready to Elevate Your",
+      "highlight": "Event?",
+      "part2": ""
+    },
+    "description": "Let us illuminate your event with the latest audio-visual technologies",
+    "button": "Get Started"
+  }
+}

@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-
-          <script src="https://cdn.tailwindcss.com"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/public/assets/style/navbar.css">
     <link rel="stylesheet" href="/public/assets/style/footer.css">
 
-        <link rel="stylesheet" href="/public/assets/style/marketing.css">
+    <link rel="stylesheet" href="/public/assets/style/event-management.css">
 
-    
    <script src="
     https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
     
@@ -23,10 +20,10 @@
 https://cdnjs.com/libraries/i18next"> </script>
 
   <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
+
+    <title>Document</title>
 </head>
 <body class="text-white">
-
-    
             <!-- Navbar -->
     <nav class="navbar">
         <div class="container mx-auto px-6 pt-[0.4rem] flex justify-between items-center">
@@ -51,10 +48,10 @@ https://cdnjs.com/libraries/i18next"> </script>
     </a>
                     <div class="dropdown-content">
                         <a href="/pages/mobile-theater.html" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
-                        <a href="/Pages/comprehensive-technical.html" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        <a href="#technical-setup" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
                         <a href="/Pages/conferences.html" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
                         <a href="#event-management" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
-                        <a href="/Pages/production-&-marketing.html" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                        <a href="#production" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                     </div>
                 </li>
                 <li class="nav-item desktop-works">
@@ -123,253 +120,165 @@ https://cdnjs.com/libraries/i18next"> </script>
       </div>
     
     </a>
-       <div class="bg-layer">
+ <div class="bg-layer">
         <div class="grid-pattern"></div>
         <div class="diagonal-lines"></div>
+      
     </div>
 
-      <!-- Animated Canvas Background -->
-  <canvas id="bgCanvas"></canvas>
 
-  <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  
-  <!-- Hero Content -->
-  <div class="relative z-10 max-w-6xl mx-auto px-4 text-center fade-in-up">
-    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-orange-500/20 mb-8 glow-badge">
-      <div class="w-2 h-2 rounded-full bg-gradient-to-r from-[#F69959] to-[#8E4A8C] animate-pulse"></div>
-      <span class="text-sm text-gray-300" data-i18n="marketing:hero.badge">Production & Marketing</span>
+
+      <!-- Hero Section -->
+ <section class="hero-section">
+    <canvas id="spotlightCanvas"></canvas>
+
+    <div class="max-w-7xl mx-auto text-center relative z-10">
+        <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl gradient-text" >
+            <span data-i18n="event-management:hero.title"></span>
+            <br>
+            <span data-i18n="event-management:hero.title2"></span>
+        </h1>
+        <p class="subtitle text-xl text-gray-300 mt-6 max-w-3xl mx-auto" data-i18n="event-management:hero.subtitle"></p>
+        <button class="cta-button mt-10" data-i18n="event-management:hero.cta"></button>
     </div>
-    
-    <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight hero-title">
-      <span data-i18n="marketing:hero.title">Production &</span> <span class="gradient-text" data-i18n="marketing:hero.titleHighlight">Marketing</span>
-    </h1>
-    
-    <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-light" data-i18n="marketing:hero.subtitle">
-      نُوثّق الحدث بصريًا ونصنع محتوى رقمي يروي القصة
-    </p>
-    
-    <p class="text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed" data-i18n="marketing:hero.description">
-      مع حملات انتشار قبل وأثناء وبعد الفعالية
-    </p>
-    
-    <a href="#services" class="btn-primary">
-      <span data-i18n="marketing:hero.cta">Request Quote</span>
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-      </svg>
-    </a>
-  </div>
-
 </section>
 
-  <!-- Stats Section -->
-  <section class="py-20 px-4 relative">
+
+    <!-- Features Section -->
+<section class="py-20 px-4 relative z-10">
     <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
-    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.coverage.value">360°</div>
-    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.coverage.label">Coverage</p>
-  </div>
-  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
-    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.quality.value">4K</div>
-    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.quality.label">Video Quality</p>
-  </div>
-  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
-    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.management.value">24/7</div>
-    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.management.label">Social Management</p>
-  </div>
-  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
-    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.alignment.value">100%</div>
-    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.alignment.label">Brand Alignment</p>
-  </div>
-</div>
+        <h2 class="section-title gradient-text text-center mb-16" data-i18n="event-management:expertise.title"></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <span class="text-5xl font-bold gradient-text">01</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" data-i18n="event-management:expertise.items.children.title"></h3>
+                <p class="text-gray-400" data-i18n="event-management:expertise.items.children.description"></p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <span class="text-5xl font-bold gradient-text">02</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" data-i18n="event-management:expertise.items.national.title"></h3>
+                <p class="text-gray-400" data-i18n="event-management:expertise.items.national.description"></p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <span class="text-5xl font-bold gradient-text">03</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" data-i18n="event-management:expertise.items.outdoor.title"></h3>
+                <p class="text-gray-400" data-i18n="event-management:expertise.items.outdoor.description"></p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <span class="text-5xl font-bold gradient-text">04</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" data-i18n="event-management:expertise.items.construction.title"></h3>
+                <p class="text-gray-400" data-i18n="event-management:expertise.items.construction.description"></p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <span class="text-5xl font-bold gradient-text">05</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" data-i18n="event-management:expertise.items.entertainment.title"></h3>
+                <p class="text-gray-400" data-i18n="event-management:expertise.items.entertainment.description"></p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <span class="text-5xl font-bold gradient-text">06</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" data-i18n="event-management:expertise.items.digital.title"></h3>
+                <p class="text-gray-400" data-i18n="event-management:expertise.items.digital.description"></p>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-32 px-4 relative">
-  <div class="max-w-7xl mx-auto">
-  <div class="text-center mb-20 fade-in-up">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-      <span data-i18n="marketing:services.title">Service</span> <span class="gradient-text" data-i18n="marketing:services.titleHighlight">Elements</span>
-    </h2>
-    <div class="w-20 h-1 mx-auto" style="background: linear-gradient(to right, #F69959 0%, #8E4A8C 100%);"></div>
-    <p class="text-lg text-gray-400 max-w-2xl mx-auto mt-6" data-i18n="marketing:services.description">
-      عناصر الخدمة المتكاملة
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-8">
-    <!-- Service 1 -->
-    <div class="service-card">
-      <div class="service-icon">
-        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
-        </svg>
-      </div>
-      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.production.title">Visual Production</h3>
-      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.production.description">
-        تصوير فوتوغرافي وفيديو احترافي مع تغطية جوية وبرومو الختام
-      </p>
-      <div class="space-y-3">
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.production.features.0">تصوير فوتوغرافي/فيديو احترافي</p>
+</section>
+<!-- Stats Section -->
+<section class="py-20 px-4 relative z-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="feature-card">
+                <div class="stats-number gradient-text counter" data-target="500">0</div>
+                <p class="text-xl text-gray-300" data-i18n="event-management:stats.eventsDelivered"></p>
+            </div>
+            <div class="feature-card">
+                <div class="stats-number gradient-text counter" data-target="150">0</div>
+                <p class="text-xl text-gray-300" data-i18n="event-management:stats.happyClients"></p>
+            </div>
+            <div class="feature-card">
+                <div class="stats-number gradient-text counter" data-target="98">0</div>
+                <p class="text-xl text-gray-300" data-i18n="event-management:stats.successRate"></p>
+            </div>
+            <div class="feature-card">
+                <div class="stats-number gradient-text counter" data-target="50">0</div>
+                <p class="text-xl text-gray-300" data-i18n="event-management:stats.teamMembers"></p>
+            </div>
         </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.production.features.1">تغطية جوية بالدرون</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.production.features.2">برومو الختام والهايلايتس</p>
-        </div>
-      </div>
     </div>
+</section>
 
-    <!-- Service 2 -->
-    <div class="service-card">
-      <div class="service-icon">
-        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-        </svg>
-      </div>
-      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.design.title">Creative Design</h3>
-      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.design.description">
-        تصميم مواد مرئية تُجسّد أجواء الحدث وتعكس الهوية
-      </p>
-      <div class="space-y-3">
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.design.features.0">تصميم مواد مرئية تُجسّد أجواء الحدث</p>
+<!-- Gallery Section -->
+<section class="py-20 px-4 relative z-10">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="section-title gradient-text text-center mb-16" data-i18n="event-management:gallery.title"></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="image-card">
+                <span class="text-6xl relative z-10">🎉</span>
+                <div class="absolute bottom-4 left-4 right-4 z-10">
+                    <h4 class="text-xl font-bold" data-i18n="event-management:gallery.items.corporate.title"></h4>
+                    <p class="text-sm text-gray-300" data-i18n="event-management:gallery.items.corporate.subtitle"></p>
+                </div>
+            </div>
+            <div class="image-card">
+                <span class="text-6xl relative z-10">🎵</span>
+                <div class="absolute bottom-4 left-4 right-4 z-10">
+                    <h4 class="text-xl font-bold" data-i18n="event-management:gallery.items.concerts.title"></h4>
+                    <p class="text-sm text-gray-300" data-i18n="event-management:gallery.items.concerts.subtitle"></p>
+                </div>
+            </div>
+            <div class="image-card">
+                <span class="text-6xl relative z-10">🏆</span>
+                <div class="absolute bottom-4 left-4 right-4 z-10">
+                    <h4 class="text-xl font-bold" data-i18n="event-management:gallery.items.awards.title"></h4>
+                    <p class="text-sm text-gray-300" data-i18n="event-management:gallery.items.awards.subtitle"></p>
+                </div>
+            </div>
+            <div class="image-card">
+                <span class="text-6xl relative z-10">🎪</span>
+                <div class="absolute bottom-4 left-4 right-4 z-10">
+                    <h4 class="text-xl font-bold" data-i18n="event-management:gallery.items.festivals.title"></h4>
+                    <p class="text-sm text-gray-300" data-i18n="event-management:gallery.items.festivals.subtitle"></p>
+                </div>
+            </div>
+            <div class="image-card">
+                <span class="text-6xl relative z-10">🚀</span>
+                <div class="absolute bottom-4 left-4 right-4 z-10">
+                    <h4 class="text-xl font-bold" data-i18n="event-management:gallery.items.launches.title"></h4>
+                    <p class="text-sm text-gray-300" data-i18n="event-management:gallery.items.launches.subtitle"></p>
+                </div>
+            </div>
+            <div class="image-card">
+                <span class="text-6xl relative z-10">💼</span>
+                <div class="absolute bottom-4 left-4 right-4 z-10">
+                    <h4 class="text-xl font-bold" data-i18n="event-management:gallery.items.tradeShows.title"></h4>
+                    <p class="text-sm text-gray-300" data-i18n="event-management:gallery.items.tradeShows.subtitle"></p>
+                </div>
+            </div>
         </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.design.features.1">محتوى إبداعي يعكس الهوية</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.design.features.2">موشن جرافيكس وانيميشن</p>
-        </div>
-      </div>
     </div>
+</section>
 
-    <!-- Service 3 -->
-    <div class="service-card">
-      <div class="service-icon">
-        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
-        </svg>
-      </div>
-      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.writing.title">Content Writing</h3>
-      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.writing.description">
-        نصوص تسويقية مُوجّهة وفق الجمهور والمنصة
-      </p>
-      <div class="space-y-3">
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.writing.features.0">نصوص تسويقية وفق الجمهور والمنصة</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.writing.features.1">محتوى عربي وإنجليزي احترافي</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.writing.features.2">استراتيجية محتوى متكاملة</p>
-        </div>
-      </div>
+<!-- CTA Section -->
+<section class="py-32 px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="section-title gradient-text mb-6" data-i18n="event-management:cta.title"></h2>
+        <p class="text-xl text-gray-300 mb-10" data-i18n="event-management:cta.subtitle"></p>
+        <button class="cta-button glow text-sm md:text-lg px-12 py-4" data-i18n="event-management:cta.button"></button>
     </div>
+</section>
 
-    <!-- Service 4 -->
-    <div class="service-card">
-      <div class="service-icon">
-        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-        </svg>
-      </div>
-      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.social.title">Social Media Management</h3>
-      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.social.description">
-        إدارة شاملة للمنصات الرقمية مع تحليلات أداء دقيقة
-      </p>
-      <div class="space-y-3">
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.social.features.0">إدارة نشر وتفاعل على المنصات</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.social.features.1">إعلانات ممولة مُستهدفة</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-bullet"></div>
-          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.social.features.2">تحليلات أداء وتقارير شاملة</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <!-- Process Timeline -->
-  <section class="py-32 px-4 relative overflow-hidden">
-   <div class="max-w-5xl mx-auto relative z-10">
-  <div class="text-center mb-20 fade-in-up">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">
-      <span data-i18n="marketing:process.title">Our</span> <span class="gradient-text" data-i18n="marketing:process.titleHighlight">Process</span>
-    </h2>
-    <div class="w-20 h-1 mx-auto" style="background: linear-gradient(to right, #F69959 0%, #8E4A8C 100%);"></div>
-  </div>
-
-  <div class="space-y-8">
-    <div class="timeline-step">
-      <h3 class="text-2xl font-bold mb-2 text-white" data-i18n="marketing:process.steps.pre.title">Pre-Event</h3>
-      <p class="text-gray-400" data-i18n="marketing:process.steps.pre.description">تصميم هوية بصرية وحملات تشويقية قبل الفعالية</p>
-    </div>
-
-    <div class="timeline-step">
-      <h3 class="text-2xl font-bold mb-2 text-white" data-i18n="marketing:process.steps.during.title">During Event</h3>
-      <p class="text-gray-400" data-i18n="marketing:process.steps.during.description">تغطية حية ومباشرة مع نشر لحظي على المنصات</p>
-    </div>
-
-    <div class="timeline-step">
-      <h3 class="text-2xl font-bold mb-2 text-white" data-i18n="marketing:process.steps.post.title">Post-Event</h3>
-      <p class="text-gray-400" data-i18n="marketing:process.steps.post.description">محتوى ختامي وتحليلات أداء شاملة</p>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-32 px-4 relative">
-    <div class="max-w-4xl mx-auto text-center fade-in-up">
-    <div class="relative">
-  <div class="absolute inset-0 bg-gradient-to-r from-[#F69959]/10 via-[#8E4A8C]/10 to-[#F69959]/10 rounded-3xl blur-3xl"></div>
-  
-  <div class="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-12 md:p-16">
-    <h2 class="text-4xl md:text-5xl font-bold mb-6">
-      <span data-i18n="marketing:cta.title">Ready to Tell Your</span> <span class="gradient-text" data-i18n="marketing:cta.titleHighlight">Story?</span>
-    </h2>
-    <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto" data-i18n="marketing:cta.description">
-      دعنا نوثّق حدثك ونصنع محتوى يترك أثرًا
-    </p>
-    <a href="#contact" class="btn-primary">
-      <span data-i18n="marketing:cta.button">Start Your Project</span>
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-      </svg>
-    </a>
-  </div>
-</div>
-    </div>
-  </section>
-
-
-  
-
-        <!-- footer -->
+     <!-- footer -->
    <footer class="footer-gradient py-16 px-6">
         <div class="max-w-7xl mx-auto">
             <!-- Main Footer Content -->
@@ -506,8 +415,10 @@ https://cdnjs.com/libraries/i18next"> </script>
     </footer>
     
 
-     <script src="/index.js"></script>
-        <script src="/public/assets/js/marketing.js"></script>
-    
+
+
+    <script src="/index.js"></script>
+        <script src="/public/assets/js/event-management.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Technical Show/Setup</title>
+
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/public/assets/style/navbar.css">
+    <link rel="stylesheet" href="/public/assets/style/footer.css">
+
+
+    <link rel="stylesheet" href="/public/assets/style/technical.css">
+
+
+
+  <script src="
+    https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
+    
+    <script src="
+    
+https://cdnjs.com/libraries/i18next"> </script>
+
+  <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
+
+</head>
+<body class=" text-white overflow-x-hidden">
+
+                <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container mx-auto px-6 pt-[0.4rem] flex justify-between items-center">
+            <div class="logo-text" >
+                <img src="/public/assets/images/logo.webp" 
+                     class="w-20 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw] h-auto" 
+                     alt="شعار جسور">
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link"  data-i18n="Home">الرئيسية</a>
+                </li>
+              
+                <li class="nav-item dropdown " style="padding-bottom: 0 !important;">
+                  <a class="nav-link dropdown-trigger">
+        <span class="nav-text" data-i18n="Services">خدماتنا</span>
+        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </a>
+                    <div class="dropdown-content">
+                        <a href="/pages/mobile-theater.html" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        <a href="/Pages/comprehensive-technical.html" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        <a href="/Pages/conferences.html" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        <a href="/Pages/event-management.html" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
+                        <a href="/Pages/production-&-marketing.html" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                    </div>
+                </li>
+                <li class="nav-item desktop-works">
+                    <a href="#works" class="nav-link" data-i18n="Works">أعمالنا</a>
+                </li>
+                  <li class="nav-item lg:pr-5">
+                    <a href="#about" class="nav-link" data-i18n="About-nav">من نحن</a>
+                </li>
+                <button class="lang-toggle lang-toggle-mobile" onclick="changeLang()">
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png"  alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
+</button>
+            </ul>
+
+           <button class="lang-toggle lang-toggle-desktop" onclick="changeLang()">
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png"  alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
+</button>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+          <a
+        href="https://wa.me/+966503667534" target="_blank" rel="noopener noreferrer"
+      class="
+        fixed bottom-5 
+         right-6
+        group
+        overflow-hidden
+        cursor-pointer
+    " style="z-index: 999;"
+    >
+      <div class="
+        relative
+        text-white
+        p-2
+        rounded-full
+        shadow-xl hover:shadow-2xl
+        transition-all duration-300
+        transform hover:scale-102
+        border-2 border-white/20
+        cursor-pointer
+      " style="
+       background-color: #25D366;
+  background-image: linear-gradient(to bottom right, #25D366, #1ea952);
+  background-repeat: no-repeat;">
+        <svg
+          class="w-7 h-7 relative z-10 transition-transform duration-300 group-hover:scale-110"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        
+      </div>
+    
+    </a>
+    
+ 
+        <div class="circuit-bg"></div>
+
+
+     <!-- Hero -->
+  <section class="relative min-h-screen z-999999999 flex items-center justify-center overflow-hidden">
+
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="tech-line" style="top:20%;width:300px;animation-delay:0s"></div>
+      <div class="tech-line" style="top:40%;width:400px;animation-delay:1s"></div>
+      <div class="tech-line" style="top:60%;width:350px;animation-delay:2s"></div>
+      <div class="tech-line" style="top:80%;width:450px;animation-delay:.5s"></div>
+    </div>
+    
+  <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-purple-500/20 mb-8 glow-badge">
+        <div class="w-2 h-2 rounded-full bg-gradient-to-r from-[#8354c4] to-[#de57e3] animate-pulse"></div>
+        <span class="text-sm text-gray-300" data-i18n="technical:Hero.Badge">Technical Solutions</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-7xl font-bold mb-6 tracking-tight z-30">
+        <span data-i18n="technical:Hero.Title.Part1">Comprehensive</span> <span class="gradient-text" data-text="technical:Hero.Title.Part2" data-i18n="technical:Hero.Title.Part2">Technical Setup</span>
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-light" data-i18n="technical:Hero.Subtitle">
+        عرض تقني متكامل... يُضيء الحدث من الداخل
+      </p>
+      
+      <p class="text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed" data-i18n="technical:Hero.Description">
+        حل ثابت للقاعات والمعارض يدمج بين الصوت النقي، الإضاءة الذكية، والشاشات العملاقة
+      </p>
+      
+      <a href="#components" class="btn-primary">
+        <span data-i18n="technical:Hero.CTA"></span>
+      </a>
+    </div>
+    
+  </section>
+
+
+
+   <section class="components-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>
+          <span data-i18n="technical:Components.Title.Part1">Technical</span> 
+          <span class="gradient-text" data-i18n="technical:Components.Title.Part2">Components</span>
+        </h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="components-grid">
+        <!-- Sound Systems -->
+        <div class="tech-card">
+          <span class="tech-badge" data-i18n="technical:Components.Cards.Sound.Badge">Audio</span>
+          <div class="tech-icon-wrapper">
+            <div class="tech-icon-border"></div>
+            <div class="tech-icon-bg"></div>
+            <svg class="tech-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+            </svg>
+          </div>
+          <div class="tech-header">
+            <h3 class="tech-title" data-i18n="technical:Components.Cards.Sound.Title">Sound Systems</h3>
+            <p class="tech-description" data-i18n="technical:Components.Cards.Sound.Description">أنظمة صوتية دقيقة تغطي القاعة بوضوح</p>
+          </div>
+          <div class="specs-list">
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Sound.Specs.Spec1">Line array speakers</p>
+            </div>
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Sound.Specs.Spec2">Wireless microphones</p>
+            </div>
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Sound.Specs.Spec3">Digital mixing</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intelligent Lighting -->
+        <div class="tech-card">
+          <span class="tech-badge" data-i18n="technical:Components.Cards.Lighting.Badge">Lighting</span>
+          <div class="tech-icon-wrapper">
+            <div class="tech-icon-border"></div>
+            <div class="tech-icon-bg"></div>
+            <svg class="tech-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <div class="tech-header">
+            <h3 class="tech-title" data-i18n="technical:Components.Cards.Lighting.Title">Intelligent Lighting</h3>
+            <p class="tech-description" data-i18n="technical:Components.Cards.Lighting.Description">إضاءة قابلة للبرمجة بأبعاد بصرية</p>
+          </div>
+          <div class="specs-list">
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Lighting.Specs.Spec1">Moving head lights</p>
+            </div>
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Lighting.Specs.Spec2">LED fixtures</p>
+            </div>
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Lighting.Specs.Spec3">DMX control</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LED Screens -->
+        <div class="tech-card">
+          <span class="tech-badge" data-i18n="technical:Components.Cards.Display.Badge">Display</span>
+          <div class="tech-icon-wrapper">
+            <div class="tech-icon-border"></div>
+            <div class="tech-icon-bg"></div>
+            <svg class="tech-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="tech-header">
+            <h3 class="tech-title" data-i18n="technical:Components.Cards.Display.Title">LED Screens</h3>
+            <p class="tech-description" data-i18n="technical:Components.Cards.Display.Description">شاشات عالية الدقة نهاراً وليلاً</p>
+          </div>
+          <div class="specs-list">
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Display.Specs.Spec1">4K/8K displays</p>
+            </div>
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Display.Specs.Spec2">Indoor/outdoor</p>
+            </div>
+            <div class="spec-item">
+              <div class="spec-indicator"></div>
+              <p class="spec-text" data-i18n="technical:Components.Cards.Display.Specs.Spec3">Video processors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+<section class="showcase-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>
+          <span data-i18n="technical:Showcase.Title.Part1">Our</span> <span class="gradient-text" data-i18n="technical:Showcase.Title.Part2">Technology</span> <span data-i18n="technical:Showcase.Title.Part3">Showcase</span>
+        </h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Large Video Item -->
+        <div class="media-item large">
+          <span class="media-badge" data-i18n="technical:Showcase.Items.Video.Badge">Video</span>
+          <div class="media-content">
+    
+            <!-- Replace with: <video src="your-video.mp4" poster="thumbnail.jpg"></video> -->
+          </div>
+          <div class="play-button"></div>
+          <div class="media-overlay">
+            <div class="media-info">
+              <h3 class="media-title" data-i18n="technical:Showcase.Items.Video.Title">Complete Setup Tour</h3>
+              <p class="media-description" data-i18n="technical:Showcase.Items.Video.Description">Comprehensive walkthrough of our professional equipment and technical capabilities</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium Image Item -->
+        <div class="media-item medium">
+          <span class="media-badge" data-i18n="technical:Showcase.Items.Lighting.Badge">Lighting</span>
+          <div class="media-content">
+            <!-- Replace with: <img src="lighting-setup.jpg" alt="Lighting"> -->
+          </div>
+          <div class="media-overlay">
+            <div class="media-info">
+              <h3 class="media-title" data-i18n="technical:Showcase.Items.Lighting.Title">LED Array System</h3>
+              <p class="media-description" data-i18n="technical:Showcase.Items.Lighting.Description">High-power intelligent lighting fixtures</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small Image Items -->
+        <div class="media-item small">
+          <span class="media-badge" data-i18n="technical:Showcase.Items.Audio.Badge">Audio</span>
+          <div class="media-content">
+            <!-- Replace with: <img src="audio-system.jpg" alt="Audio"> -->
+          </div>
+          <div class="media-overlay">
+            <div class="media-info">
+              <h3 class="media-title" data-i18n="technical:Showcase.Items.Audio.Title">Sound System</h3>
+              <p class="media-description" data-i18n="technical:Showcase.Items.Audio.Description">Professional audio equipment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-item small">
+          <span class="media-badge" data-i18n="technical:Showcase.Items.Display.Badge">Display</span>
+          <div class="media-content">
+            <!-- Replace with: <img src="led-screen.jpg" alt="Display"> -->
+          </div>
+          <div class="media-overlay">
+            <div class="media-info">
+              <h3 class="media-title" data-i18n="technical:Showcase.Items.Display.Title">LED Panels</h3>
+              <p class="media-description" data-i18n="technical:Showcase.Items.Display.Description">4K/8K display technology</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-item small">
+          <span class="media-badge" data-i18n="technical:Showcase.Items.Control.Badge">Control</span>
+          <div class="media-content">
+            <!-- Replace with: <img src="control-desk.jpg" alt="Control"> -->
+          </div>
+          <div class="media-overlay">
+            <div class="media-info">
+              <h3 class="media-title" data-i18n="technical:Showcase.Items.Control.Title">DMX Console</h3>
+              <p class="media-description" data-i18n="technical:Showcase.Items.Control.Description">Central control system</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wide Items -->
+        <div class="media-item wide">
+          <span class="media-badge" data-i18n="technical:Showcase.Items.Setup.Badge">Setup</span>
+          <div class="media-content">
+            <!-- Replace with: <img src="full-setup.jpg" alt="Setup"> -->
+          </div>
+          <div class="media-overlay">
+            <div class="media-info">
+              <h3 class="media-title" data-i18n="technical:Showcase.Items.Setup.Title">Complete Installation</h3>
+              <p class="media-description" data-i18n="technical:Showcase.Items.Setup.Description">Full stage and equipment setup for major events</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-item wide">
+          <span class="media-badge" data-i18n="technical:Showcase.Items.Event.Badge">Event</span>
+          <div class="media-content">
+            <!-- Replace with: <img src="live-event.jpg" alt="Event"> -->
+          </div>
+          <div class="media-overlay">
+            <div class="media-info">
+              <h3 class="media-title" data-i18n="technical:Showcase.Items.Event.Title">Live Production</h3>
+              <p class="media-description" data-i18n="technical:Showcase.Items.Event.Description">Equipment in action during live event coverage</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Use Cases -->
+  <section class="py-32 px-4 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          <span data-i18n="technical:UseCases.Title.Part1">Perfect</span> <span class="gradient-text" data-i18n="technical:UseCases.Title.Part2">For</span>
+        </h2>
+        <div class="w-20 h-1 mx-auto" style="background:linear-gradient(to right,#8354c4 0%,#de57e3 100%)"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 relative z-10" data-i18n="technical:UseCases.Items.Conferences.Title">المؤتمرات</h3>
+          <p class="text-gray-400 text-sm relative z-10" data-i18n="technical:UseCases.Items.Conferences.Description">مؤتمرات احترافية متكاملة</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 relative z-10" data-i18n="technical:UseCases.Items.Exhibitions.Title">المعارض</h3>
+          <p class="text-gray-400 text-sm relative z-10" data-i18n="technical:UseCases.Items.Exhibitions.Description">معارض تجارية مميزة</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 relative z-10" data-i18n="technical:UseCases.Items.Galas.Title">الحفلات</h3>
+          <p class="text-gray-400 text-sm relative z-10" data-i18n="technical:UseCases.Items.Galas.Description">حفلات رسمية راقية</p>
+        </div>
+
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 relative z-10" data-i18n="technical:UseCases.Items.Launches.Title">إطلاق المنتجات</h3>
+          <p class="text-gray-400 text-sm relative z-10" data-i18n="technical:UseCases.Items.Launches.Description">حفلات إطلاق مبهرة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- CTA -->
+<section class="py-32 px-4 relative">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="relative">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#8354c4]/10 via-[#de57e3]/10 to-[#8354c4]/10 rounded-3xl blur-3xl"></div>
+      <div class="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl sm:p-12 p-8 md:p-16">
+        <h2 class="text-2xl md:text-5xl font-bold mb-6">
+          <span data-i18n="technical:cta.title.part1"></span> <span class="gradient-text" data-i18n="technical:cta.title.highlight"></span><span data-i18n="technical:cta.title.part2"></span>
+        </h2>
+        <p class="text-md text-gray-300 mb-10 max-w-2xl mx-auto" data-i18n="technical:cta.description">
+        </p>
+        <a href="#contact" class="btn-primary">
+          <span data-i18n="technical:cta.button"></span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    
+        <!-- footer -->
+   <footer class="footer-gradient py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Logo & Description -->
+            <div class="space-y-4">
+    <img src="/public/assets/images/logo.webp" width="100px" alt="شعار جسور">
+    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="footer-description">
+        حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة
+    </p>
+</div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5" data-i18n="Quick-links">روابط سريعة</h3>
+                    <ul class="space-y-3" >
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Home">الرئيسية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Works">أعمالنا</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="About-nav">من نحن</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Services">الخدمات</h3>
+                    <ul class="space-y-3" >
+                        <li>
+                            <a href="/pages/mobile-theater.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                        </li>
+                       
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
+                        </li>
+                         <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-white text-sm" 
+                               data-i18n="Booth-and-Trade-Exhibition-Design-&-Execution">تصميم وتنفيذ الإجنحة والمعارض التجارية</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+               <div>
+        <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Contact-us">تواصل معنا</h3>
+        <ul class="space-y-4">
+          <li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        </svg>
+    </div>
+    <span class="text-gray-400 text-sm">info@jusoor.com</span>
+</li>
+          <li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+    </div>
+    <a href="tel:+966503667534" target="_blank" class="text-gray-400 text-sm" dir="ltr">+966 50 366 7534</a>
+</li>
+<li class="contact-item flex items-center gap-2">
+    <div class="contact-icon">
+        <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+        </svg>
+    </div>
+    <span class="text-gray-400 text-sm" data-i18n="Location">الرياض، السعودية</span>
+</li>
+        </ul>
+    </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider mb-10"></div>
+
+            <!-- Bottom Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                
+               <!-- Social Media Icons -->
+    <div class="flex gap-3 justify-center md:justify-start">
+     
+      <a href="https://x.com/JusoorEvents" target="_blank" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+</a>
+<a href="https://www.snapchat.com/add/jusoorevents" target="_blank" class="social-icon snapchat w-10 h-10 rounded-lg text-white flex items-center justify-center">
+       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"  viewBox="0 0 24 24" fill="none">
+<path d="M5.82901 4.533C5.22901 5.877 5.46601 8.285 5.56201 9.969C4.91401 10.328 4.08201 9.698 3.61101 9.698C3.12101 9.698 2.53601 10.02 2.44401 10.5C2.37801 10.846 2.53301 11.35 3.64501 11.789C4.07501 11.959 5.09801 12.159 5.33501 12.717C5.66801 13.501 3.62501 17.12 0.417012 17.648C0.166012 17.689 -0.0129883 17.913 0.00101167 18.167C0.0570117 19.142 2.24301 19.524 3.21201 19.674C3.31101 19.808 3.39101 20.374 3.51801 20.805C3.57501 20.998 3.72201 21.229 4.10001 21.229C4.59301 21.229 5.41201 20.849 6.83801 21.085C8.23601 21.318 9.55001 23.3 12.073 23.3C14.418 23.3 15.817 21.309 17.163 21.085C17.942 20.956 18.611 20.997 19.359 21.143C19.874 21.244 20.336 21.3 20.483 20.794C20.612 20.357 20.691 19.802 20.788 19.671C21.748 19.522 23.944 19.141 23.999 18.166C24.013 17.912 23.834 17.689 23.583 17.647C20.429 17.127 18.324 13.519 18.665 12.716C18.901 12.159 19.917 11.961 20.355 11.788C21.169 11.467 21.577 11.072 21.568 10.615C21.557 10.03 20.853 9.681 20.335 9.681C19.808 9.681 19.051 10.305 18.438 9.967C18.534 8.269 18.77 5.872 18.171 4.529C17.036 1.986 14.511 0.699997 11.987 0.699997C9.47901 0.699997 6.97301 1.968 5.82901 4.533Z" fill="#fff"/>
+</svg>
+</a>
+ 
+       
+        <a href="https://www.tiktok.com/@jusoorevents" target="_blank" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+    </svg>
+</a>
+    </div>
+
+                <!-- Copyright -->
+                <div class="text-center text-gray-400 text-sm">
+<p data-i18n="footer-copyright">© 2024 جسور. جميع الحقوق محفوظة</p>
+                </div>
+
+               
+            </div>
+        </div>
+    </footer>
+    
+
+     <script src="/index.js"></script>
+        <script src="/public/assets/js/technical.js"></script>
+
+    
+</body>
+</html>
