@@ -55,41 +55,34 @@
       "Part2": "Technology",
       "Part3": "Showcase"
     },
+    "Video": {
+      "SectionTitle": "Featured Video"
+    },
+    "Tools": {
+ "SectionTitle": "Technical Equipment"
+    },
     "Items": {
       "Video": {
-        "Badge": "Video",
-        "Title": "Complete Setup Tour",
-        "Description": "Comprehensive walkthrough of our professional equipment and technical capabilities"
+        "Title": "Equipment Overview"
+
       },
       "Lighting": {
-        "Badge": "Lighting",
-        "Title": "LED Array System",
-        "Description": "High-power intelligent lighting fixtures"
+        "Badge": "Lighting"
       },
       "Audio": {
-        "Badge": "Audio",
-        "Title": "Sound System",
-        "Description": "Professional audio equipment"
+        "Badge": "Audio"
       },
       "Display": {
-        "Badge": "Display",
-        "Title": "LED Panels",
-        "Description": "4K/8K display technology"
+        "Badge": "Display"
       },
       "Control": {
-        "Badge": "Control",
-        "Title": "DMX Console",
-        "Description": "Central control system"
+        "Badge": "Control"
       },
       "Setup": {
-        "Badge": "Setup",
-        "Title": "Complete Installation",
-        "Description": "Full stage and equipment setup for major events"
+        "Badge": "Setup"
       },
       "Event": {
-        "Badge": "Event",
-        "Title": "Live Production",
-        "Description": "Equipment in action during live event coverage"
+        "Badge": "Event"
       }
     }
   },

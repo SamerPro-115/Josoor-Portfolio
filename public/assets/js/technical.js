@@ -34,48 +34,38 @@
     counters.forEach(counter => observer.observe(counter));
 
 
-
-      // Video play functionality
-    document.querySelectorAll('.media-item').forEach(item => {
-      const video = item.querySelector('video');
-      const playButton = item.querySelector('.play-button');
-      
-      if (video && playButton) {
-        playButton.addEventListener('click', (e) => {
-          e.stopPropagation();
-          if (video.paused) {
-            video.play();
-            playButton.style.opacity = '0';
-          } else {
-            video.pause();
-            playButton.style.opacity = '1';
-          }
-        });
-
-        video.addEventListener('click', () => {
-          if (!video.paused) {
-            video.pause();
-            playButton.style.opacity = '1';
-          }
-        });
-
-        video.addEventListener('ended', () => {
-          playButton.style.opacity = '1';
-        });
-      }
+// Video play functionality
+document.querySelectorAll('.video-container').forEach(container => {
+  const video = container.querySelector('video');
+  const playButton = container.querySelector('.play-button');
+  const overlay = container.querySelector('.video-overlay');
+  
+  if (video && playButton) {
+    playButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      video.play();
     });
 
-    // Intersection Observer for animations
-    const mediaOb = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.media-item').forEach(item => {
-      mediaOb.observe(item);
+    video.addEventListener('play', () => {
+      container.classList.add('playing');
+      playButton.style.opacity = '0';
+      overlay.style.opacity = '0';
+      playButton.style.pointerEvents = 'none';      
     });
 
+    video.addEventListener('pause', () => {
+      container.classList.remove('playing');
+      playButton.style.opacity = '1';
+      overlay.style.opacity = '1';
+
+      playButton.style.pointerEvents = 'auto';
+    });
+
+    video.addEventListener('ended', () => {
+      container.classList.remove('playing');
+      playButton.style.opacity = '1';
+      playButton.style.pointerEvents = 'auto';
+    });
+  }
+});
 

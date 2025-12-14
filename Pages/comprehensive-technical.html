@@ -271,113 +271,156 @@ https://cdnjs.com/libraries/i18next"> </script>
   </section>
   
 
-
-
-<section class="showcase-section">
+ <section class="showcase-section">
     <div class="container">
       <div class="section-header">
         <h2>
-          <span data-i18n="technical:Showcase.Title.Part1">Our</span> <span class="gradient-text" data-i18n="technical:Showcase.Title.Part2">Technology</span> <span data-i18n="technical:Showcase.Title.Part3">Showcase</span>
+          <span data-i18n="technical:Showcase.Title.Part1">Our</span> 
+          <span class="gradient-text" data-i18n="technical:Showcase.Title.Part2">Technology</span> 
+          <span data-i18n="technical:Showcase.Title.Part3">Showcase</span>
         </h2>
         <div class="header-line"></div>
       </div>
 
-      <div class="gallery-grid">
-        <!-- Large Video Item -->
-        <div class="media-item large">
-          <span class="media-badge" data-i18n="technical:Showcase.Items.Video.Badge">Video</span>
-          <div class="media-content">
-    
-            <!-- Replace with: <video src="your-video.mp4" poster="thumbnail.jpg"></video> -->
-          </div>
-          <div class="play-button"></div>
-          <div class="media-overlay">
-            <div class="media-info">
-              <h3 class="media-title" data-i18n="technical:Showcase.Items.Video.Title">Complete Setup Tour</h3>
-              <p class="media-description" data-i18n="technical:Showcase.Items.Video.Description">Comprehensive walkthrough of our professional equipment and technical capabilities</p>
+      <!-- Video Section -->
+      <div class="video-section">
+        <h3 class="subsection-title" data-i18n="technical:Showcase.Items.Video.Title">Featured Video</h3>
+        <div class="video-container">
+        <div class="video-content">
+          <video src="/public/assets/videos/Tech-video.mp4" poster="/public/assets/images/tools/Video-thumb.png" controls style="width: 100%; height: 100%; object-fit: cover;">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+          <div class="video-overlay">
+                      <div class="play-button"></div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Medium Image Item -->
-        <div class="media-item medium">
-          <span class="media-badge" data-i18n="technical:Showcase.Items.Lighting.Badge">Lighting</span>
-          <div class="media-content">
-            <!-- Replace with: <img src="lighting-setup.jpg" alt="Lighting"> -->
-          </div>
-          <div class="media-overlay">
-            <div class="media-info">
-              <h3 class="media-title" data-i18n="technical:Showcase.Items.Lighting.Title">LED Array System</h3>
-              <p class="media-description" data-i18n="technical:Showcase.Items.Lighting.Description">High-power intelligent lighting fixtures</p>
+      <!-- Tools Section -->
+      <div class="tools-section">
+        <h3 class="subsection-title" data-i18n="technical:Showcase.Tools.SectionTitle">Technical Equipment</h3>
+        <div class="tools-showcase">
+          
+          <!-- Audio System -->
+          <div class="tool-item">
+
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Audio.Badge">Audio</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/Speakers-VA.png" alt="Audio System" class="tool-image">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name">VA-LAM DUAL</h4>
+              <p class="tool-desc" dir="ltr">10 inch 3-way line array</p>
             </div>
           </div>
-        </div>
 
-        <!-- Small Image Items -->
-        <div class="media-item small">
-          <span class="media-badge" data-i18n="technical:Showcase.Items.Audio.Badge">Audio</span>
-          <div class="media-content">
-            <!-- Replace with: <img src="audio-system.jpg" alt="Audio"> -->
-          </div>
-          <div class="media-overlay">
-            <div class="media-info">
-              <h3 class="media-title" data-i18n="technical:Showcase.Items.Audio.Title">Sound System</h3>
-              <p class="media-description" data-i18n="technical:Showcase.Items.Audio.Description">Professional audio equipment</p>
+          <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Lighting.Badge">Lighting</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/Lighting-2.png" alt="">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name" >LED wash</h4>
             </div>
           </div>
-        </div>
 
-        <div class="media-item small">
-          <span class="media-badge" data-i18n="technical:Showcase.Items.Display.Badge">Display</span>
-          <div class="media-content">
-            <!-- Replace with: <img src="led-screen.jpg" alt="Display"> -->
-          </div>
-          <div class="media-overlay">
-            <div class="media-info">
-              <h3 class="media-title" data-i18n="technical:Showcase.Items.Display.Title">LED Panels</h3>
-              <p class="media-description" data-i18n="technical:Showcase.Items.Display.Description">4K/8K display technology</p>
+          <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Display.Badge">Display</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/LED-Wide.webp" alt="">
+            </div>
+            <div class="tool-info">
+<h4 class="tool-name">LED Screen</h4>
+              <p class="tool-desc" dir="ltr">6m x 3m</p>
+
             </div>
           </div>
-        </div>
 
-        <div class="media-item small">
-          <span class="media-badge" data-i18n="technical:Showcase.Items.Control.Badge">Control</span>
-          <div class="media-content">
-            <!-- Replace with: <img src="control-desk.jpg" alt="Control"> -->
-          </div>
-          <div class="media-overlay">
-            <div class="media-info">
-              <h3 class="media-title" data-i18n="technical:Showcase.Items.Control.Title">DMX Console</h3>
-              <p class="media-description" data-i18n="technical:Showcase.Items.Control.Description">Central control system</p>
+             <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Control.Badge">Control</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+                  <img src="/public/assets/images/tools/Speakers-4.png" alt="وحدة تحكم بالصوت" class="tool-image">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name">Midas M32 mixer</h4>
+
             </div>
           </div>
-        </div>
 
-        <!-- Wide Items -->
-        <div class="media-item wide">
-          <span class="media-badge" data-i18n="technical:Showcase.Items.Setup.Badge">Setup</span>
-          <div class="media-content">
-            <!-- Replace with: <img src="full-setup.jpg" alt="Setup"> -->
-          </div>
-          <div class="media-overlay">
-            <div class="media-info">
-              <h3 class="media-title" data-i18n="technical:Showcase.Items.Setup.Title">Complete Installation</h3>
-              <p class="media-description" data-i18n="technical:Showcase.Items.Setup.Description">Full stage and equipment setup for major events</p>
+          <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Lighting.Badge">Lighting</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/Lighting-3.png" alt="اضاءة متحركة" class="tool-image">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name">Lighting Moving Head</h4>
             </div>
           </div>
-        </div>
 
-        <div class="media-item wide">
-          <span class="media-badge" data-i18n="technical:Showcase.Items.Event.Badge">Event</span>
-          <div class="media-content">
-            <!-- Replace with: <img src="live-event.jpg" alt="Event"> -->
-          </div>
-          <div class="media-overlay">
-            <div class="media-info">
-              <h3 class="media-title" data-i18n="technical:Showcase.Items.Event.Title">Live Production</h3>
-              <p class="media-description" data-i18n="technical:Showcase.Items.Event.Description">Equipment in action during live event coverage</p>
+          <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Lighting.Badge">Lighting</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/Lighting-COB-LED.png" alt="اضاءة متنوعة" class="tool-image">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name">COB LED</h4>
             </div>
           </div>
+
+           <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Audio.Badge">Audio</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/Speakers-VA-2.png" alt="" class="tool-image">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name">VA-S28 DUAL</h4>
+              <p class="tool-desc" dir="ltr">18-inch</p>
+            </div>
+          </div>
+
+
+            <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Audio.Badge">Audio</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/Speakers-VA-3.png" alt="" class="tool-image">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name">VA-DF8</h4>
+              <p class="tool-desc" dir="ltr">4in - 4out</p>
+            </div>
+          </div>
+
+            <div class="tool-item">
+           
+            <span class="tool-floating-badge" data-i18n="technical:Showcase.Items.Audio.Badge">Audio</span>
+            <div class="tool-image-container">
+              <div class="tool-orbital"></div>
+              <img src="/public/assets/images/tools/VA-15-Monitor.png" alt="" class="tool-image">
+            </div>
+            <div class="tool-info">
+              <h4 class="tool-name">VA-15-Monitor</h4>
+            </div>
+          </div>
+
+       
+
         </div>
       </div>
     </div>

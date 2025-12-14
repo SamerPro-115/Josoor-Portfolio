@@ -5,307 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Works - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #1a0b2e 100%);
-            color: #fff;
-            overflow-x: hidden;
-        }
+                <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/public/assets/style/navbar.css">
+    <link rel="stylesheet" href="/public/assets/style/footer.css">
 
-        .gradient-text {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 25%, #c44569 50%, #a8308f 75%, #7b2cbf 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    <link rel="stylesheet" href="/public/assets/style/works.css">
 
-        .hero-section {
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(26, 11, 46, 0.95) 0%, rgba(45, 27, 78, 0.95) 100%);
-        }
+   <script src="
+    https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
+    
+    <script src="
+    
+https://cdnjs.com/libraries/i18next"> </script>
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255, 107, 107, 0.15) 0%, transparent 70%);
-            top: -200px;
-            right: -200px;
-            border-radius: 50%;
-            animation: pulse 8s infinite ease-in-out;
-        }
+  <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
 
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(123, 44, 191, 0.15) 0%, transparent 70%);
-            bottom: -150px;
-            left: -150px;
-            border-radius: 50%;
-            animation: pulse 10s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.2); opacity: 0.5; }
-        }
-
-        .work-card {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            height: 400px;
-        }
-
-        .work-card:hover {
-            transform: translateY(-12px);
-            border-color: rgba(255, 107, 107, 0.4);
-            box-shadow: 0 25px 70px rgba(255, 107, 107, 0.2), 0 10px 30px rgba(123, 44, 191, 0.15);
-        }
-
-        .work-card img, .work-card video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .work-card:hover img, .work-card:hover video {
-            transform: scale(1.08);
-        }
-
-        .work-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(26, 11, 46, 0.98) 0%, rgba(26, 11, 46, 0.85) 60%, transparent 100%);
-            padding: 2.5rem;
-            transform: translateY(0);
-            transition: all 0.4s ease;
-        }
-
-        .work-card:hover .work-overlay {
-            background: linear-gradient(to top, rgba(26, 11, 46, 1) 0%, rgba(26, 11, 46, 0.95) 70%, transparent 100%);
-        }
-
-        .work-tag {
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            background: rgba(255, 107, 107, 0.15);
-            border: 1px solid rgba(255, 107, 107, 0.3);
-            border-radius: 30px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .work-card:hover .work-tag {
-            background: rgba(255, 107, 107, 0.25);
-            border-color: rgba(255, 107, 107, 0.5);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.96);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            animation: fadeIn 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            max-width: 1200px;
-            width: 100%;
-            background: linear-gradient(135deg, rgba(26, 11, 46, 0.98) 0%, rgba(45, 27, 78, 0.98) 100%);
-            border-radius: 24px;
-            padding: 3rem;
-            position: relative;
-            animation: slideUp 0.4s ease;
-            border: 1px solid rgba(255, 107, 107, 0.2);
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: rgba(255, 107, 107, 0.15);
-            border: 1px solid rgba(255, 107, 107, 0.3);
-            color: white;
-            font-size: 1.5rem;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .close-modal:hover {
-            background: rgba(255, 107, 107, 0.3);
-            transform: rotate(90deg);
-        }
-
-        .grid-masonry {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 2rem;
-            grid-auto-flow: dense;
-        }
-
-        .work-card.tall {
-            grid-row: span 2;
-            height: 820px;
-        }
-
-        .work-card.wide {
-            grid-column: span 2;
-        }
-
-        @media (max-width: 1024px) {
-            .work-card.wide {
-                grid-column: span 1;
-            }
-            .grid-masonry {
-                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            }
-        }
-
-        @media (max-width: 768px) {
-            .work-card.tall {
-                height: 400px;
-                grid-row: span 1;
-            }
-        }
-
-        .stats-section {
-            background: linear-gradient(135deg, rgba(255, 107, 107, 0.08) 0%, rgba(123, 44, 191, 0.08) 100%);
-            border-radius: 24px;
-            padding: 3rem;
-            margin: 4rem 0;
-            border: 1px solid rgba(255, 107, 107, 0.15);
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #c44569 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-        }
-
-        .play-button:hover {
-            transform: translate(-50%, -50%) scale(1.1);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
-        }
-
-        .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 20px solid white;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            margin-left: 5px;
-        }
-
-        .section-badge {
-            display: inline-block;
-            padding: 0.6rem 1.5rem;
-            background: rgba(255, 107, 107, 0.1);
-            border: 1px solid rgba(255, 107, 107, 0.3);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            color: #ff6b6b;
-        }
-
-        /* Custom scrollbar for modal */
-        .modal-content::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .modal-content::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-        }
-
-        .modal-content::-webkit-scrollbar-thumb {
-            background: rgba(255, 107, 107, 0.3);
-            border-radius: 10px;
-        }
-
-        .modal-content::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 107, 107, 0.5);
-        }
-    </style>
-
-    <style>
-        .hero-title {
-            transform-style: preserve-3d;
-            transition: transform 0.1s ease;
-            cursor: default;
-        }
-    </style>
 </head>
-<body>
+<body class="text-white">
+
+                <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container mx-auto px-6 pt-[0.4rem] flex justify-between items-center">
+            <div class="logo-text" >
+                <img src="/public/assets/images/logo.webp" 
+                     class="w-20 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw] h-auto" 
+                     alt="شعار جسور">
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link"  data-i18n="Home">الرئيسية</a>
+                </li>
+              
+                <li class="nav-item dropdown " style="padding-bottom: 0 !important;">
+                  <a class="nav-link dropdown-trigger">
+        <span class="nav-text" data-i18n="Services">خدماتنا</span>
+        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </a>
+                    <div class="dropdown-content">
+                        <a href="/pages/mobile-theater.html" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        <a href="#technical-setup" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        <a href="/Pages/conferences.html" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        <a href="#event-management" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
+                        <a href="#production" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                    </div>
+                </li>
+                <li class="nav-item desktop-works">
+                    <a href="#works" class="nav-link" data-i18n="Works">أعمالنا</a>
+                </li>
+                  <li class="nav-item lg:pr-5">
+                    <a href="#about" class="nav-link" data-i18n="About-nav">من نحن</a>
+                </li>
+                <button class="lang-toggle lang-toggle-mobile" onclick="changeLang()">
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png"  alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
+</button>
+            </ul>
+
+           <button class="lang-toggle lang-toggle-desktop" onclick="changeLang()">
+    <span class="flag-icon">
+        <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+        <img src="https://flagcdn.com/w40/us.png"  alt="English" class="flag-en">
+    </span>
+    <span class="lang-text" data-i18n="translation-text-flag">EN</span>
+</button>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+          <a
+        href="https://wa.me/+966503667534" target="_blank" rel="noopener noreferrer"
+      class="
+        fixed bottom-5 
+         right-6
+        group
+        overflow-hidden
+        cursor-pointer
+    " style="z-index: 999;"
+    >
+      <div class="
+        relative
+        text-white
+        p-2
+        rounded-full
+        shadow-xl hover:shadow-2xl
+        transition-all duration-300
+        transform hover:scale-102
+        border-2 border-white/20
+        cursor-pointer
+      " style="
+       background-color: #25D366;
+  background-image: linear-gradient(to bottom right, #25D366, #1ea952);
+  background-repeat: no-repeat;">
+        <svg
+          class="w-7 h-7 relative z-10 transition-transform duration-300 group-hover:scale-110"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        
+      </div>
+    
+    </a>
+
     <!-- Hero Section -->
     <section class="hero-section" id="heroSection">
         <div class="max-w-7xl mx-auto text-center px-4 relative z-10">
@@ -324,19 +141,19 @@
         <div class="stats-section">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <div class="text-5xl font-bold gradient-text mb-2">500+</div>
+                    <div class="text-5xl font-bold gradient-text mb-2 pt-2">500+</div>
                     <div class="text-gray-400 text-sm">Projects Completed</div>
                 </div>
                 <div>
-                    <div class="text-5xl font-bold gradient-text mb-2">50+</div>
+                    <div class="text-5xl font-bold gradient-text mb-2 pt-2">50+</div>
                     <div class="text-gray-400 text-sm">Countries Reached</div>
                 </div>
                 <div>
-                    <div class="text-5xl font-bold gradient-text mb-2">2M+</div>
+                    <div class="text-5xl font-bold gradient-text mb-2 pt-2">2M+</div>
                     <div class="text-gray-400 text-sm">Attendees</div>
                 </div>
                 <div>
-                    <div class="text-5xl font-bold gradient-text mb-2">15+</div>
+                    <div class="text-5xl font-bold gradient-text mb-2 pt-2">15+</div>
                     <div class="text-gray-400 text-sm">Years Experience</div>
                 </div>
             </div>
@@ -492,157 +309,10 @@
         </div>
     </div>
 
-    <script>
-        const works = {
-            1: {
-                title: 'Annual Tech Summit 2024',
-                description: 'A comprehensive 3-day international technology conference that brought together 5000+ industry leaders, innovators, and tech enthusiasts. The event featured keynote speeches, panel discussions, and networking opportunities.',
-                details: ['Duration: 3 days', 'Attendees: 5000+', 'Speakers: 50+', 'Workshops: 25'],
-                image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200'
-            },
-            2: {
-                title: 'Summer Music Festival',
-                description: 'An unforgettable outdoor music experience featuring multiple stages, international artists, and cutting-edge production. Over 50,000 fans enjoyed three days of non-stop entertainment.',
-                details: ['Stages: 5', 'Artists: 80+', 'Days: 3', 'Attendees: 50,000+'],
-                video: 'https://assets.mixkit.co/videos/preview/mixkit-concert-crowd-at-a-rock-show-4685-large.mp4'
-            },
-            3: {
-                title: 'Art & Design Expo',
-                description: 'An immersive exhibition showcasing contemporary art and innovative design. Featured interactive installations, live demonstrations, and works from 100+ artists.',
-                details: ['Artists: 100+', 'Installations: 50', 'Duration: 1 month', 'Visitors: 30,000+'],
-                image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200'
-            },
-            4: {
-                title: 'Luxury Brand Launch',
-                description: 'An exclusive VIP event for the unveiling of a luxury brand\'s flagship product line. The evening featured live performances, gourmet dining, and interactive brand experiences.',
-                details: ['VIP Guests: 200', 'Media Coverage: International', 'Entertainment: Live performances', 'Duration: 4 hours'],
-                image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200'
-            },
-            5: {
-                title: 'National Day Celebration',
-                description: 'A spectacular celebration of national heritage featuring a grand fireworks display, cultural performances, traditional music, and family-friendly activities.',
-                details: ['Fireworks: 30 minutes', 'Performers: 500+', 'Attendees: 100,000+', 'Coverage: National TV'],
-                video: 'https://assets.mixkit.co/videos/preview/mixkit-fireworks-at-a-festival-4158-large.mp4'
-            },
-            6: {
-                title: 'International Film Awards',
-                description: 'A prestigious red carpet gala honoring the year\'s best films and filmmakers. The star-studded event featured live performances, award presentations, and exclusive after-party.',
-                details: ['Attendees: 1000+', 'Awards: 25 categories', 'Broadcast: 50+ countries', 'Red Carpet: 100m'],
-                image: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=1200'
-            },
-            7: {
-                title: 'Electronic Music Night',
-                description: 'A high-energy electronic music event featuring world-renowned DJs, state-of-the-art sound systems, and mesmerizing visual effects that created an unforgettable audiovisual experience.',
-                details: ['DJs: 10 international', 'Sound: 150,000 watts', 'Visuals: 4K LED screens', 'Capacity: 8,000'],
-                image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200'
-            },
-            8: {
-                title: 'International Trade Expo',
-                description: 'A premier B2B exhibition connecting businesses worldwide. Featured 300+ exhibitors from 40 countries, networking events, and industry seminars.',
-                details: ['Exhibitors: 300+', 'Countries: 40', 'Visitors: 15,000+', 'Business Deals: $50M+'],
-                image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200'
-            },
-            9: {
-                title: 'Luxury Fashion Week',
-                description: 'A week-long celebration of haute couture featuring runway shows from international designers, exclusive previews, and industry networking events.',
-                details: ['Designers: 50+', 'Shows: 30', 'Models: 200+', 'Media: 500+ outlets'],
-                image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200'
-            },
-            10: {
-                title: 'Championship Finals',
-                description: 'A thrilling stadium event that brought together 80,000 passionate fans for the championship finals. Complete production with massive screens, sound, and entertainment.',
-                details: ['Capacity: 80,000', 'Screens: 4 mega LED', 'Sound: Stadium-grade', 'Duration: 5 hours'],
-                image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1200'
-            }
-        };
 
-        // Video hover play/pause
-        const videos = document.querySelectorAll('.work-card video');
-        videos.forEach(video => {
-            const card = video.closest('.work-card');
-            card.addEventListener('mouseenter', () => video.play());
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-
-        // Modal functionality
-        const workCards = document.querySelectorAll('.work-card');
-        workCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const workId = card.dataset.id;
-                const work = works[workId];
-                
-                let mediaHtml = '';
-                if (work.video) {
-                    mediaHtml = `<video controls autoplay style="width: 100%; border-radius: 16px; margin-bottom: 2rem;">
-                        <source src="${work.video}" type="video/mp4">
-                    </video>`;
-                } else {
-                    mediaHtml = `<img src="${work.image}" style="width: 100%; border-radius: 16px; margin-bottom: 2rem;">`;
-                }
-
-                document.getElementById('modalBody').innerHTML = `
-                    ${mediaHtml}
-                    <h2 class="text-4xl font-bold mb-4 gradient-text">${work.title}</h2>
-                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">${work.description}</p>
-                    <h3 class="text-2xl font-bold mb-4">Project Details</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        ${work.details.map(detail => `
-                            <div class="bg-white bg-opacity-5 p-4 rounded-xl border border-white border-opacity-10">
-                                <p class="text-gray-300">${detail}</p>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-                
-                document.getElementById('workModal').classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        function closeModal() {
-            document.getElementById('workModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal on backdrop click
-        document.getElementById('workModal').addEventListener('click', (e) => {
-            if (e.target.id === 'workModal') {
-                closeModal();
-            }
-        });
-
-          // 3D Tilt for Hero Title
-        const heroSection = document.getElementById('heroSection');
-        const heroTitle = document.getElementById('heroTitle');
-        
-        heroSection.addEventListener('mousemove', (e) => {
-            const rect = heroSection.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 30;
-            const rotateY = (centerX - x) / 30;
-            
-            heroTitle.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
-        });
-        
-        heroSection.addEventListener('mouseleave', () => {
-            heroTitle.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-        });
+    <script src="/index.js"></script>
+    <script src="/public/assets/js/works.js"></script>
 
 
-        // Close modal on ESC key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-    </script>
 </body>
 </html>
