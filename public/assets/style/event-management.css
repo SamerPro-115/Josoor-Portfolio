@@ -178,7 +178,7 @@
             border-radius: 8px;
             overflow: hidden;
             position: relative;
-            height: 300px;
+            height: 100%;
             background: rgba(20, 20, 40, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.08);
             display: flex;
@@ -196,7 +196,6 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(20, 20, 40, 0.9) 100%);
         }
 
 

@@ -43,33 +43,7 @@
     "teamMembers": "Team Members"
   },
   "gallery": {
-    "title": "Event Showcase",
-    "items": {
-      "corporate": {
-        "title": "Corporate Events",
-        "subtitle": "Professional & Impactful"
-      },
-      "concerts": {
-        "title": "Live Concerts",
-        "subtitle": "Unforgettable Performances"
-      },
-      "awards": {
-        "title": "Award Ceremonies",
-        "subtitle": "Prestigious & Elegant"
-      },
-      "festivals": {
-        "title": "Festival Activations",
-        "subtitle": "Energy & Excitement"
-      },
-      "launches": {
-        "title": "Product Launches",
-        "subtitle": "Innovation Unveiled"
-      },
-      "tradeShows": {
-        "title": "Trade Shows",
-        "subtitle": "Engagement & Connection"
-      }
-    }
+    "title": "Event Showcase"
   },
   "cta": {
     "title": "Ready to Create The Moment?",
