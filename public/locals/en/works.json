@@ -1,0 +1,155 @@
+{
+     "Hero": {
+    "Badge": "Works Portfolio",
+    "Title": {
+      "Part1": "Our",
+      "Part2": "Works"
+    },
+    "Description": "Explore our portfolio of exceptional events, productions, and experiences that have captivated audiences worldwide"
+  },
+  "Stats": {
+    "Projects": {
+      "Number": "30+",
+      "Label": "Projects Completed"
+    },
+    "Members": {
+      "Number": "50+",
+      "Label": "Members"
+    },
+    "Attendees": {
+      "Number": "500+",
+      "Label": "Attendees"
+    },
+    "Experience": {
+      "Number": "15+",
+      "Label": "Years Experience"
+    }
+  },
+
+  "Grid": {
+    "Item1": {
+      "Title": "Mobile Stage",
+      "Description": "The stage used in Al-Liwan Garden event",
+      "Tag1": "Quick Setup",
+      "Tag2": "Quality"
+    },
+    "Item2": {
+      "Title": "Al-Liwan Garden",
+      "Description": "Mobile stage, lighting systems, sound systems",
+      "Tag1": "Event",
+      "Tag2": "Riyadh"
+    },
+    "Item3": {
+      "Title": "Children's Theater Shows",
+      "Description": "An interactive live performance that brought children and audiences together in a theatrical experience full of movement and interaction",
+      "Tag1": "Live Shows",
+      "Tag2": "Audience Interaction"
+    },
+    "Item4": {
+      "Title": "Fireworks",
+      "Description": "Fireworks used at the launch moment of Al-Kanari Garden event",
+      "Tag1": "Stage Effects",
+      "Tag2": "Event Launch"
+    },
+    "Item5": {
+      "Title": "Al-Kanari Garden",
+      "Description": "A 4-day consecutive children's event",
+      "Tag1": "4-Days",
+      "Tag2": "Riyadh"
+    },
+    "Item6": {
+      "Title": "Al-Doha Park",
+      "Description": "A complete entertainment experience in an open space with balanced technical distribution",
+      "Tag1": "Family Entertainment",
+      "Tag2": "Open Spaces"
+    },
+    "Item7": {
+      "Title": "Diverse Events",
+      "Description": "A package of interactive events specially designed to suit different ages and interests",
+      "Tag1": "Children's Activities",
+      "Tag2": "Interactive Events"
+    },
+    "Item8": {
+      "Title": "Event Preparation",
+      "Description": "Complete and rapid setup including stage, lighting, and sound within hours",
+      "Tag1": "Quick Readiness",
+      "Tag2": "Event Production"
+    }
+  },
+
+   "Modal": {
+    "DetailsHeading": "Details",
+    "Works": {
+      "Work1": {
+        "Title": "Mobile Stage",
+        "Description": "Ultra-fast setup and dismantling, a complete mobile stage ready to operate within hours, without permanent construction.",
+        "Details": {
+          "Detail1": "Any location",
+          "Detail2": "Suitable for outdoor events",
+          "Detail3": "Complete stage, lighting and sound",
+          "Detail4": "Professional and attractive appearance"
+        }
+      },
+      "Work2": {
+        "Title": "Al-Liwan Garden Event",
+        "Description": "An outdoor event executed using our mobile stage, combining professional platform design, impactful lighting, and high-quality sound system to deliver a complete and attractive experience for attendees in an open atmosphere.",
+        "Details": {
+          "Detail1": "Mobile stage",
+          "Detail2": "Professional sound and lighting systems",
+          "Detail3": "More than 100 people",
+          "Detail4": "Various activities"
+        }
+      },
+      "Work3": {
+        "Title": "Diverse Children's Events",
+        "Description": "A collection of diverse entertainment events specially designed for children, combining interactive activities, movement performances, and educational experiences in a safe and fun environment.",
+        "Details": {
+          "Detail1": "Target audience: Children",
+          "Detail2": "Type: Interactive entertainment events",
+          "Detail3": "Style: Diverse and customizable activities",
+          "Detail4": "Suitable for: Events and festivals"
+        }
+      },
+      "Work4": {
+        "Title": "Cold Spark Effects",
+        "Description": "Safe cold spark effects used at the launch moment of Al-Kanari Garden event, adding a distinctive visual character synchronized with music and lighting.",
+        "Details": {
+          "Detail1": "Type: Cold spark effects",
+          "Detail2": "Usage: Launch moment",
+          "Detail3": "Event: Al-Kanari Garden",
+          "Detail4": "Location: Riyadh"
+        }
+      },
+      "Work5": {
+        "Title": "Al-Kanari Garden Event",
+        "Description": "A children's entertainment event held over four days, including theatrical performances, interactive activities, and complete entertainment facilities in a fun family atmosphere.",
+        "Details": {
+          "Detail1": "Duration: 4 days",
+          "Detail2": "Target audience: Children and families",
+          "Detail3": "Location: Riyadh - Al-Hamra District",
+          "Detail4": "Type: Entertainment event"
+        }
+      },
+      "Work6": {
+        "Title": "Al-Doha Park Events",
+        "Description": "A family entertainment event held in an open space, integrating the mobile stage with LED screens and thoughtful technical distribution to provide a smooth and enjoyable experience for various audiences.",
+        "Details": {
+          "Detail1": "Type: Family entertainment event",
+          "Detail2": "Setup: Mobile stage with open distribution",
+          "Detail3": "Elements: LED screens and audio-visual equipment",
+          "Detail4": "Location: Riyadh - Tuwaiq District"
+        }
+      },
+      "Work7": {
+        "Title": "Rapid Event Setup",
+        "Description": "A practical demonstration of rapid event execution and setup, where the mobile stage and technical systems including lighting and sound were installed within a few hours with full operational readiness.",
+        "Details": {
+          "Detail1": "Focus: Execution speed",
+          "Detail2": "Setup: Mobile stage and technical systems",
+          "Detail3": "Duration: Only hours",
+          "Detail4": "Use: Temporary events"
+        }
+      }
+    }
+  }
+}

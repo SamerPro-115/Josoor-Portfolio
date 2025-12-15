@@ -88,10 +88,10 @@ i18next
     lng: localStorage.getItem("lang") || 'ar',
     fallbackLng: 'ar',
     debug: false,
-    ns: ['common', 'mobile-theater', 'conferences', 'marketing', 'technical', "event-management"], // Define all namespaces
+    ns: ['common', 'mobile-theater', 'conferences', 'marketing', 'technical', "event-management", "works"], 
     defaultNS: 'common', 
     backend: {
-      loadPath: '/public/locals/{{lng}}/{{ns}}.json' // {{ns}} = namespace
+      loadPath: '/public/locals/{{lng}}/{{ns}}.json' 
     }
   }, function(err, t) {
     if (err) console.error('i18next initialization error:', err);
