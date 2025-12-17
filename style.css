@@ -101,24 +101,6 @@ html {
     transform: translateZ(0)
 }
 
-/* .orb {
-    position: absolute;
-    border-radius: 50%;
-    opacity: .2;
-    will-change: transform;
-    transform: translateZ(0);
-    animation: float-orb 20s infinite ease-in-out
-}
-
-.orb-1 {
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, #ffa349, transparent 70%);
-    top: 10%;
-    right: 5%;
-    animation-delay: 0s
-} */
-
 @keyframes float-orb {
 
     0%,
@@ -183,3 +165,4 @@ html {
         opacity: 0
     }
 }
+

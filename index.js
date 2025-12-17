@@ -88,7 +88,7 @@ i18next
     lng: localStorage.getItem("lang") || 'ar',
     fallbackLng: 'ar',
     debug: false,
-    ns: ['common', 'mobile-theater', 'conferences', 'marketing', 'technical', "event-management", "works"], 
+    ns: ['common', 'mobile-theater', 'conferences', 'marketing', 'technical', "event-management", "works", "contact"], 
     defaultNS: 'common', 
     backend: {
       loadPath: '/public/locals/{{lng}}/{{ns}}.json' 
@@ -98,20 +98,7 @@ i18next
     updateContent();
   });
 
-
-
-function changeLang() {
-  // Toggle between 'ar' and 'en'
-  const currentLang = i18next.language;
-  const newLang = currentLang === 'ar' ? 'en' : 'ar';
   
-  i18next.changeLanguage(newLang, function(err, t) {
-    if (err) console.error('Language change error:', err);
-    localStorage.setItem("lang", newLang);
-    updateContent();
-  });
-}
-
 function updateContent() {
   const currentLang = i18next.language;
   document.documentElement.lang = currentLang;
@@ -123,7 +110,31 @@ function updateContent() {
   // Update all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(function(element) {
     const key = element.getAttribute('data-i18n');
-    element.textContent = i18next.t(key);
+    
+    // Check if it's a placeholder translation
+    if (key.startsWith('[placeholder]')) {
+      const translationKey = key.replace('[placeholder]', '');
+      element.setAttribute('placeholder', i18next.t(translationKey));
+    }
+    // Check if it's a value translation (for input buttons)
+    else if (key.startsWith('[value]')) {
+      const translationKey = key.replace('[value]', '');
+      element.setAttribute('value', i18next.t(translationKey));
+    }
+    // Check if it's an aria-label translation
+    else if (key.startsWith('[aria-label]')) {
+      const translationKey = key.replace('[aria-label]', '');
+      element.setAttribute('aria-label', i18next.t(translationKey));
+    }
+    // Check if it's a title translation
+    else if (key.startsWith('[title]')) {
+      const translationKey = key.replace('[title]', '');
+      element.setAttribute('title', i18next.t(translationKey));
+    }
+    // Regular text content translation
+    else {
+      element.textContent = i18next.t(key);
+    }
   });
   
   // Update language toggle button text
@@ -144,9 +155,19 @@ function updateContent() {
       flagEn.style.display = 'none';
     }
   }
+}
 
 
+function changeLang() {
+  // Toggle between 'ar' and 'en'
+  const currentLang = i18next.language;
+  const newLang = currentLang === 'ar' ? 'en' : 'ar';
   
+  i18next.changeLanguage(newLang, function(err, t) {
+    if (err) console.error('Language change error:', err);
+    localStorage.setItem("lang", newLang);
+    updateContent();
+  });
 }
 
 

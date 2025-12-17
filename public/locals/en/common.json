@@ -29,11 +29,19 @@
     "about-intro-execution": "and execution",
     "about-intro-through": "through",
     "about-intro-planning": "smart planning",
-    "about-intro-smart": "and integrated operations, creating events that match our clients' ambitions and leave a lasting impact.",
+    "about-intro-smart": "    and integrated operations, transforming visions into exceptional experiences, delivering events that match our clients’ ambitions, achieve their goals, and leave a lasting, sustainable impact.",
     "about-more-btn": "Learn More",
      "services-title-our": "Our",
     "services-title-integrated": "Integrated Services",
     "services-description": "We provide comprehensive and integrated solutions for organizing and managing events, exhibitions, and conferences with the highest standards of professionalism",
+
+    "about-intro-smart-part1": "and integrated operations, transforming visions into",
+"about-intro-smart-highlight1": "exceptional experiences",
+"about-intro-smart-part2": ", delivering",
+"about-intro-smart-highlight2": "events",
+"about-intro-smart-part3": "that match our clients' ambitions, achieve their goals, and leave a",
+"about-intro-smart-highlight3": "lasting, sustainable impact",
+"about-intro-smart-part4": ".",
 
     "service-1-title": "Exhibition & Conference Management",
     "service-1-description": "Comprehensive design and execution of events from concept to opening, with strategic planning and management of all details",
@@ -58,11 +66,13 @@
     "service-4-feature-1": "OB Van",
     "service-4-feature-2": "Professional Direction",
     "service-4-feature-3": "High Quality",
-    "service-5-title": "Photography & Documentation",
-    "service-5-description": "Capture the most beautiful moments with the latest photographic, aerial, and creative filming techniques",
-    "service-5-feature-1": "Professional Photography",
-    "service-5-feature-2": "Aerial Photography",
-    "service-5-feature-3": "Promo Production",
+
+
+    "service-5-title": "Event Management & Activation",
+    "service-5-description": "Seamless event planning, management, and activation for impactful experiences.",
+    "service-5-feature-1": "Event Management",
+    "service-5-feature-2": "Audience Engagement",
+    "service-5-feature-3": "On-Ground Execution",
 
     "service-6-title": "Design & Decorations",
     "service-6-description": "Design and execution of custom decorations and stages with a modern and innovative style that reflects the event's identity",
@@ -187,5 +197,15 @@
             "Detail2": "Development Recommendations",
             "Label": "Evaluation"
         }
-    }
+    },
+
+    "video-tag": "We are Jusoor",
+    "video-title-1": "Transforming",
+    "video-title-highlight": "Ideas into Reality",
+    "video-title-2": "Exceptional",
+    "video-description": "We design unforgettable experiences and create moments that last. From planning to execution, we are your partner in success.",
+    "video-stat-1": "Successful Events",
+    "video-stat-2": "Years of Experience",
+    "video-stat-3": "Client Satisfaction"
+
 }

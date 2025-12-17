@@ -455,9 +455,6 @@ html[lang="en"] {
 @media (min-width:769px) {
     .navbar.scrolled {
         background: #ebebeb;
-        box-shadow: 4px 10px 22px -4px rgb(235 235 235 / .75);
-        -webkit-box-shadow: 4px 10px 22px -4px rgb(235 235 235 / .75);
-        -moz-box-shadow: 4px 10px 22px -4px rgb(235 235 235 / .75)
     }
 
     .navbar.scrolled .nav-link {

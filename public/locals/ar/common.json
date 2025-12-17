@@ -29,7 +29,15 @@
     "about-intro-execution": "والتنفيذ",
     "about-intro-through": "عبر",
     "about-intro-planning": "تخطيط",
-    "about-intro-smart": "ذكي وتشغيل متكامل، لنصنع حدثاً يليق بطموح عملائنا ويترك أثراً ممتداً.",
+    "about-intro-smart": "ذكي وتشغيل متكامل، لنحوّل الرؤى إلى تجارب استثنائية، ونصنع أحداثًا تليق بطموح عملائنا، وتحقق أهدافهم، وتترك أثرًا ممتدًا ومستدامًا.",
+
+    "about-intro-smart-part1": "ذكي وتشغيل متكامل، لنحوّل الرؤى إلى",
+"about-intro-smart-highlight1": "تجارب استثنائية",
+"about-intro-smart-part2": "، ونصنع",
+"about-intro-smart-highlight2": "أحداثًا",
+"about-intro-smart-part3": "تليق بطموح عملائنا، وتحقق أهدافهم، وتترك",
+"about-intro-smart-highlight3": "أثرًا ممتدًا",
+"about-intro-smart-part4": "ومستدامًا.",
     "about-more-btn": "المزيد",
      "services-title-our": "خدماتنا",
     "services-title-integrated": "المتكاملة",
@@ -59,11 +67,11 @@
     "service-4-feature-2": "إخراج احترافي",
     "service-4-feature-3": "جودة عالية",
 
-    "service-5-title": "التصوير والتوثيق",
-    "service-5-description": "توثيق أجمل اللحظات بأحدث تقنيات التصوير الفوتوغرافي والجوي والإبداعي",
-    "service-5-feature-1": "تصوير احترافي",
-    "service-5-feature-2": "تصوير جوي",
-    "service-5-feature-3": "إخراج برومو",
+    "service-5-title": "إدارة وتفعيل الفعاليات",
+    "service-5-description": "تخطيط وإدارة وتفعيل الفعاليات لتجارب مؤثرة وسلسة.",
+    "service-5-feature-1": "إدارة الفعاليات",
+    "service-5-feature-2": "تفعيل وتجربة الجمهور",
+    "service-5-feature-3": "تنفيذ ميداني",
 
      "service-6-title": "التصميم والديكورات",
     "service-6-description": "تصميم وتنفيذ ديكورات ومنصات خاصة بأسلوب عصري ومبتكر يعكس هوية الحدث",
@@ -184,6 +192,18 @@
             "Detail2": "توصيات التطوير",
             "Label": "التقييم"
         }
-    }
+    },
+
+
+
+    
+    "video-tag": "نحن جسور",
+    "video-title-1": "نحوّل",
+    "video-title-highlight": "الأفكار إلى واقع",
+    "video-title-2": "استثنائي",
+    "video-description": "نصمم تجارب لا تُنسى ونصنع لحظات تبقى في الذاكرة. من التخطيط إلى التنفيذ، نحن شريكك في صناعة النجاح.",
+    "video-stat-1": "فعالية ناجحة",
+    "video-stat-2": "عام من الخبرة",
+    "video-stat-3": "رضا العملاء"
 
 }

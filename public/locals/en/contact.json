@@ -1,0 +1,43 @@
+{
+
+  "infoCard": {
+    "title": "Contact Information",
+    "subtitle": "Reach out to us anytime"
+  },
+  "phone": {
+    "label": "Phone",
+    "value": "+966 50 366 7534"
+  },
+  "email": {
+    "label": "Email"
+  },
+  "address": {
+    "label": "Address",
+    "value": "Riyadh, Saudi Arabia"
+  },
+  "hours": {
+    "title": "Working Hours",
+    "weekdays": "Sunday - Thursday",
+    "weekdaysTime": "9:00 AM - 6:00 PM",
+    "weekend": "Friday - Saturday",
+    "closed": "Closed"
+  },
+ "followUs": "Follow us on",
+  "form": {
+    "title": "Send Us a Message",
+    "subtitle": "We'll get back to you as soon as possible",
+    "nameLabel": "Full Name",
+    "name": "Enter your full name",
+    "emailLabel": "Email",
+    "email": "example@email.com",
+    "phoneLabel": "Phone Number",
+    "phone": "+966 50 000 0000",
+    "companyLabel": "Company or Organization Name",
+    "company": "Your company or organization name",
+    "messageLabel": "Message",
+    "message": "Write your message here...",
+    "submit": "Submit",
+    "submitting": "Submitting..."
+  },
+  "messageSuccess": "Your message was sent successfully, thank you!"
+}

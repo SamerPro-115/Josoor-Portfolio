@@ -2,26 +2,7 @@
 
 
 
-$(document).ready(function () {
-  function createParticles() {
-    const about = $("#about");
-    for (let i = 0; i < 10; i++) {
-      const particle = $('<div class="particle"></div>');
-      const randomDelay = Math.random() * 15;
-      const randomDuration = 15 + Math.random() * 10;
-      const randomStart = -(Math.random() * 100);
-      particle.css({
-        left: Math.random() * 100 + "%",
-        bottom: randomStart + "vh",
-        animationDelay: randomDelay + "s",
-        animationDuration: randomDuration + "s",
-        willChange: "transform",
-      });
-      about.append(particle);
-    }
-  }
-  createParticles();
-});
+
 $(document).ready(function () {
   const $serviceCards = $(".service-card");
   const isMobile = window.innerWidth <= 768;

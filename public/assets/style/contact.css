@@ -1,0 +1,197 @@
+   /* Custom styles from original CSS */
+       .wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.contact-wrap h3 {
+    color: #ffffff !important;
+}
+
+.contact-wrap p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.form-control {
+    height: 40px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 16px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+    width: 100%;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.form-control:focus {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+textarea.form-control {
+    height: inherit !important;
+    resize: vertical;
+}
+
+.btn-primary {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    background: #ff6b9d !important;
+    border-color: #ff6b9d !important;
+    color: #fff;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    border-color: #ff4d84 !important;
+    background: #ff4d84 !important;
+    outline: none !important;
+}
+
+.dbox p span {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.dbox p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dbox p a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dbox p a:hover {
+    color: #ff6b9d;
+}
+
+#form-message-warning {
+    display: none;
+    color: #ff6b9d;
+    background: rgba(255, 107, 157, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#form-message-success {
+    display: none;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.1);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.submitting {
+    display: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff6b9d;
+    padding: 10px 0;
+}
+
+.error {
+    color: #ff6b9d;
+    font-size: 12px;
+    margin-top: 5px;
+    background: rgba(255, 107, 157, 0.1);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.info-wrap {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (max-width: 991px) {
+    .info-wrap {
+        height: 400px;
+    }
+}
+
+/* Modern Form Controls */
+.form-control-modern {
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.form-control-modern:focus {
+    outline: none;
+}
+
+.form-control-modern::placeholder {
+    color: #9ca3af;
+}
+
+/* Error Styles */
+.error {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.error:empty {
+    display: none;
+}
+
+
+
+/* Submitting State */
+.submitting.active {
+    display: flex !important;
+}
+
+/* RTL Support */
+[dir="rtl"] .form-control-modern {
+    text-align: right;
+}
+
+/* Animation for form submission */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#form-message-success:not(:empty),
+#form-message-warning:not(:empty) {
+    animation: fadeIn 0.3s ease;
+}
+
+
+
+
+
+
+[dir="rtl"] .left-side-icons-content{
+    margin-right: 1rem;
+}
+[dir="ltr"] .left-side-icons-content{
+    margin-left: 1rem;
+}
