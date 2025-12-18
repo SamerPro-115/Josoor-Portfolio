@@ -90,7 +90,6 @@ rgba(26, 11, 46, 0.8)
     left: 50%;
     transform: translateX(-50%) translateY(-20px);
     background: linear-gradient(145deg, rgb(30 12 48 / .92), rgb(42 26 79 / .88));
-    backdrop-filter: blur(20px);
     width: 750px;
     height: 400px;
     max-width: 90vw;
@@ -367,7 +366,6 @@ html[lang="en"] .flag-en {
         width: 100%;
         height: 100%;
                 background: #ebebeb;
-        backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: flex-start;
         padding: 2rem;

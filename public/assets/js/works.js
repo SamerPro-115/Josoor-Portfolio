@@ -29,10 +29,10 @@ workCards.forEach(card => {
         
         // Get media paths (these stay the same)
         const mediaPath = {
-            1: { type: 'image', src: '/public/assets/images/works/04.jpg' },
+            1: { type: 'image', src: '/public/assets/images/works/04.webp' },
             2: { type: 'video', src: '/public/assets/videos/حديقة الليوان بحي الفلاح.mp4' },
-            3: { type: 'image', src: '/public/assets/images/works/kids.jpg' },
-            4: { type: 'image', src: '/public/assets/images/works/حديقة-الكناري-الرياض.png' },
+            3: { type: 'image', src: '/public/assets/images/works/kids.webp' },
+            4: { type: 'image', src: '/public/assets/images/works/حديقة-الكناري-الرياض.webp' },
             5: { type: 'video', src: '/public/assets/videos/فعالية حديقة الكناري حي الحمراء.mp4' },
             6: { type: 'video', src: '/public/assets/videos/فعاليات منتزه الدوح حي طويق.mp4' },
             7: { type: 'video', src: '/public/assets/videos/تجهيز-الفعالية.mp4' }

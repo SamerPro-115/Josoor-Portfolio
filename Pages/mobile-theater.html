@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المسرح المتنقل</title>
+    <title>جسور | المسرح المتنقل</title>
 
         <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -21,6 +21,46 @@
 https://cdnjs.com/libraries/i18next"> </script>
 
   <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
+
+
+<link rel="icon" type="image/png" href="/public/assets/images/favicon.png">
+
+
+  <!-- Page Description -->
+<meta name="description" content="خدمة المسرح المتنقل من جسور لتقديم العروض والفعاليات في أي موقع بتجهيزات احترافية وتجربة متكاملة.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="جسور">
+<meta property="og:title" content="المسرح المتنقل | جسور">
+<meta property="og:description" content="نقدم خدمة المسرح المتنقل لتفعيل الفعاليات والعروض في أي موقع باحترافية عالية.">
+<meta property="og:url" content="https://jusoor.sa/mobile-theater">
+<meta property="og:image" content="https://jusoor.sa/public/assets/images/mobileTheater/Mobile-Theater-1.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="المسرح المتنقل | جسور">
+<meta name="twitter:description" content="حل مبتكر للمسرح المتنقل وتجهيز العروض والفعاليات في مختلف المواقع.">
+<meta name="twitter:image" content="https://jusoor.sa/public/public/assets/images/favicon.png">
+
+<!-- Structured Data: Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "المسرح المتنقل",
+  "provider": {
+    "@type": "Organization",
+    "name": "جسور",
+    "url": "https://jusoor.sa"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Saudi Arabia"
+  },
+  "description": "خدمة المسرح المتنقل لتجهيز وتنفيذ العروض والفعاليات في أي موقع مع أنظمة صوت وإضاءة ومرئيات متكاملة."
+}
+</script>
 </head>
 <body> 
 
@@ -51,7 +91,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                         <a href="/Pages/comprehensive-technical.html" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
                         <a href="/Pages/conferences.html" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
                         <a href="/Pages/event-management.html" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
-                        <a href="/Pages/production-&-marketing.html" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                        <a href="/Pages/production-and-marketing.html" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                     </div>
                 </li>
                 <li class="nav-item desktop-works">
@@ -133,7 +173,7 @@ https://cdnjs.com/libraries/i18next"> </script>
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Image with Parallax -->
-    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1920');">
+    <div class="hero-bg" style="background-image: url('/public/assets/images/mobileTheater/Mobile-Theater-bg.webp');">
       <div class="absolute inset-0 bg-gradient-to-b from-[#1a0b2e]/90 via-[#2d1b4e]/80 to-[#1a0b2e]/95"></div>
     </div>
     
@@ -157,7 +197,7 @@ https://cdnjs.com/libraries/i18next"> </script>
   </p>
   
   <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-    <a href="#overview" class="btn-primary">
+    <a href="/Pages/contact.html" class="btn-primary">
       <span data-i18n="mobile-theater:Hero.Buttons.Quote">Request Quote</span>
       <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -237,8 +277,9 @@ https://cdnjs.com/libraries/i18next"> </script>
 
           <!-- Main Image -->
           <img 
-            src="/public/assets/images/home/mobileTheater/Mobile-Theater-1.jpg" 
-            alt="Mobile Theater Setup" 
+            src="/public/assets/images/mobileTheater/Mobile-Theater-1.webp" 
+            alt="مسرح متنقل" 
+            loading="lazy"
             class="relative rounded-xl h-[200px] lg:h-[400px] md:rounded-2xl shadow-2xl w-full sm:h-auto tilt-image"
             style="filter: brightness(0.9) contrast(1.1);">
 
@@ -287,8 +328,9 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.1s">
         <div class="feature-image-wrapper">
           <img 
-            src="/public/assets/images/home/mobileTheater/Mobile-Theater.webp" 
-            alt="Professional Stage" 
+            src="/public/assets/images/mobileTheater/Mobile-Theater.webp" 
+            alt="صورة المسرح" 
+            loading="lazy"
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
@@ -303,8 +345,9 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.2s">
         <div class="feature-image-wrapper">
           <img 
-            src="/public/assets/images/home/mobileTheater/LED.jpg" 
-            alt="LED Screen" 
+            src="/public/assets/images/mobileTheater/LED.webp" 
+            alt="شاشة LED" 
+            loading="lazy"
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
@@ -319,8 +362,9 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.3s">
         <div class="feature-image-wrapper">
           <img 
-            src="/public/assets/images/home/mobileTheater/Sound.jpg" 
-            alt="Sound System" 
+            src="/public/assets/images/mobileTheater/Sound.webp" 
+            alt="نظام الصوت" 
+            loading="lazy"
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
@@ -335,8 +379,9 @@ https://cdnjs.com/libraries/i18next"> </script>
       <div class="feature-card" style="transition-delay: 0.4s">
         <div class="feature-image-wrapper">
           <img 
-            src="/public/assets/images/home/mobileTheater/setup.jpg" 
-            alt="Quick Setup" 
+            src="/public/assets/images/mobileTheater/setup.webp" 
+            alt="إعداد سريع" 
+            loading="lazy"
             class="feature-image">
           <div class="feature-overlay"></div>
         </div>
@@ -455,13 +500,13 @@ https://cdnjs.com/libraries/i18next"> </script>
       دعنا نحول رؤيتك إلى واقع مع حلولنا المتنقلة المتطورة
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#contact" class="btn-primary">
+      <a href="/Pages/contact.html" class="btn-primary">
         <span data-i18n="mobile-theater:FinalCTA.Buttons.RequestQuote">Request Quote</span>
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
       </a>
-      <a href="#portfolio" class="btn-secondary" data-i18n="mobile-theater:FinalCTA.Buttons.ViewPortfolio">
+      <a href="/Pages/works.html" class="btn-secondary" data-i18n="mobile-theater:FinalCTA.Buttons.ViewPortfolio">
         View Portfolio
       </a>
     </div>
@@ -481,7 +526,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                 
                 <!-- Logo & Description -->
             <div class="space-y-4">
-    <img src="/public/assets/images/logo.webp" width="100px" alt="شعار جسور">
+    <img src="/public/assets/images/logo.webp" loading="lazy" width="100px" alt="شعار جسور">
     <p class="text-gray-400 text-sm leading-relaxed" data-i18n="footer-description">
         حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة
     </p>
@@ -523,7 +568,7 @@ https://cdnjs.com/libraries/i18next"> </script>
                                data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
                         </li>
                         <li>
-                            <a href="/Pages/production-&-marketing.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/production-and-marketing.html" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                         </li>
                        

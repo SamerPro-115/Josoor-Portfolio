@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>أعمالنا | جسور</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>جسور | الإنتاج والتسويق</title>
 
-                <script src="https://cdn.tailwindcss.com"></script>
+
+          <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/public/assets/style/navbar.css">
     <link rel="stylesheet" href="/public/assets/style/footer.css">
 
-    <link rel="stylesheet" href="/public/assets/style/works.css">
+        <link rel="stylesheet" href="/public/assets/style/marketing.css">
 
+    
    <script src="
     https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
     
@@ -23,8 +24,8 @@ https://cdnjs.com/libraries/i18next"> </script>
 
   <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
 
-  <!-- Page Description -->
-<meta name="description" content="استعرض أعمال جسور في تنظيم الفعاليات والمعارض والمؤتمرات، وتجاربنا المميزة التي نفذناها باحترافية عالية.">
+<!-- Page Description -->
+<meta name="description" content="خدمات الإنتاج والتسويق من جسور تشمل صناعة المحتوى، التغطية الإعلامية، والتسويق الإبداعي لدعم الفعاليات والعلامات التجارية.">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/public/assets/images/favicon.png">
@@ -32,36 +33,40 @@ https://cdnjs.com/libraries/i18next"> </script>
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="جسور">
-<meta property="og:title" content="أعمالنا | جسور">
-<meta property="og:description" content="نماذج من أعمالنا وتجاربنا في تنظيم وتفعيل الفعاليات والمعارض والمؤتمرات.">
-<meta property="og:url" content="https://jusoor.sa/works">
-<meta property="og:image" content="https://jusoor.sa/public/assets/images/works/24.webp">
+<meta property="og:title" content="الإنتاج والتسويق | جسور">
+<meta property="og:description" content="حلول متكاملة في الإنتاج والتسويق لدعم الفعاليات وصناعة محتوى مؤثر.">
+<meta property="og:url" content="https://jusoor.sa/production-and-marketing">
+<meta property="og:image" content="https://jusoor.sa/public/assets/images/favicon.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="أعمالنا | جسور">
-<meta name="twitter:description" content="شاهد أبرز أعمال جسور في تنظيم الفعاليات والتجارب المميزة.">
+<meta name="twitter:title" content="الإنتاج والتسويق | جسور">
+<meta name="twitter:description" content="نقدم خدمات الإنتاج والتسويق الإبداعي لتعزيز الحضور الإعلامي للفعاليات.">
 <meta name="twitter:image" content="https://jusoor.sa/public/assets/images/favicon.png">
 
-<!-- Structured Data: CollectionPage -->
+<!-- Structured Data: Service -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "أعمال جسور",
-  "description": "معرض أعمال جسور الذي يستعرض المشاريع والفعاليات والمعارض والمؤتمرات التي نفذناها.",
-  "publisher": {
+  "@type": "Service",
+  "name": "الإنتاج والتسويق",
+  "provider": {
     "@type": "Organization",
     "name": "جسور",
     "url": "https://jusoor.sa"
-  }
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Saudi Arabia"
+  },
+  "description": "خدمات الإنتاج والتسويق تشمل صناعة المحتوى، التغطية الإعلامية، والتسويق الإبداعي للفعاليات والعلامات التجارية."
 }
 </script>
-
 
 </head>
 <body class="text-white">
 
+    
                 <!-- Navbar -->
     <nav class="navbar">
         <div class="container mx-auto px-6 pt-[0.4rem] flex justify-between items-center">
@@ -158,205 +163,251 @@ https://cdnjs.com/libraries/i18next"> </script>
       </div>
     
     </a>
-
- <div class="bg-layer">
+       <div class="bg-layer">
         <div class="grid-pattern"></div>
         <div class="diagonal-lines"></div>
     </div>
 
-      <!-- Animated Background -->
-    <div class="works-bg-container">
+      <!-- Animated Canvas Background -->
+  <canvas id="bgCanvas"></canvas>
 
-        <!-- Spotlights -->
-        <div class="spotlight"></div>
-        <div class="spotlight"></div>
-        
-        <!-- Floating grid items -->
-        <div class="floating-grid">
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
+  <!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 text-center fade-in-up">
+    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-orange-500/20 mb-8 glow-badge">
+      <div class="w-2 h-2 rounded-full bg-gradient-to-r from-[#F69959] to-[#8E4A8C] animate-pulse"></div>
+      <span class="text-sm text-gray-300" data-i18n="marketing:hero.badge">Production & Marketing</span>
+    </div>
+    
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight hero-title">
+      <span data-i18n="marketing:hero.title">Production &</span> <span class="gradient-text" data-i18n="marketing:hero.titleHighlight">Marketing</span>
+    </h1>
+    
+    <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-light" data-i18n="marketing:hero.subtitle">
+      نُوثّق الحدث بصريًا ونصنع محتوى رقمي يروي القصة
+    </p>
+    
+    <p class="text-base md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed" data-i18n="marketing:hero.description">
+      مع حملات انتشار قبل وأثناء وبعد الفعالية
+    </p>
+    
+    <a href="/Pages/contact.html" class="btn-primary">
+      <span data-i18n="marketing:hero.cta">Request Quote</span>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+  </div>
+
+</section>
+
+  <!-- Stats Section -->
+  <section class="py-20 px-4 relative">
+    <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
+    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.coverage.value">360°</div>
+    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.coverage.label">Coverage</p>
+  </div>
+  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
+    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.quality.value">4K</div>
+    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.quality.label">Video Quality</p>
+  </div>
+  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
+    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.management.value">24/7</div>
+    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.management.label">Social Management</p>
+  </div>
+  <div class="stat-badge text-center pt-[1.5rem] pb-[2rem]">
+    <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2 pt-[0.5rem]" data-i18n="marketing:stats.alignment.value">100%</div>
+    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="marketing:stats.alignment.label">Brand Alignment</p>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-32 px-4 relative">
+  <div class="max-w-7xl mx-auto">
+  <div class="text-center mb-20 fade-in-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+      <span data-i18n="marketing:services.title">Service</span> <span class="gradient-text" data-i18n="marketing:services.titleHighlight">Elements</span>
+    </h2>
+    <div class="w-20 h-1 mx-auto" style="background: linear-gradient(to right, #F69959 0%, #8E4A8C 100%);"></div>
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto mt-6" data-i18n="marketing:services.description">
+      عناصر الخدمة المتكاملة
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <!-- Service 1 -->
+    <div class="service-card">
+      <div class="service-icon">
+        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.production.title">Visual Production</h3>
+      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.production.description">
+        تصوير فوتوغرافي وفيديو احترافي مع تغطية جوية وبرومو الختام
+      </p>
+      <div class="space-y-3">
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.production.features.0">تصوير فوتوغرافي/فيديو احترافي</p>
         </div>
-        
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.production.features.1">تغطية جوية بالدرون</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.production.features.2">برومو الختام والهايلايتس</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Hero Section -->
-<section class="hero-section" id="heroSection">
-        <div class="max-w-7xl mx-auto text-center px-4 relative z-10">
-            <span class="section-badge" data-i18n="works:Hero.Badge">معرض الأعمال</span>
-            <h1 class="text-4xl sm:text-7xl lg:text-8xl font-bold mb-6 hero-title" id="heroTitle">
-                <span data-i18n="works:Hero.Title.Part1">Our</span> <span class="gradient-text" data-i18n="works:Hero.Title.Part2">Works</span>
-            </h1>
-            <p class="text-md sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto" data-i18n="works:Hero.Description">
-                Explore our portfolio of exceptional events, productions, and experiences that have captivated audiences worldwide
-            </p>
+    <!-- Service 2 -->
+    <div class="service-card">
+      <div class="service-icon">
+        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.design.title">Creative Design</h3>
+      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.design.description">
+        تصميم مواد مرئية تُجسّد أجواء الحدث وتعكس الهوية
+      </p>
+      <div class="space-y-3">
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.design.features.0">تصميم مواد مرئية تُجسّد أجواء الحدث</p>
         </div>
-    </section>
-
-    <!-- Stats Section -->
-<section class="max-w-7xl mx-auto px-4 mb-20 mt-20">
-        <div class="stats-section">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-3xl sm:text-5xl font-bold gradient-text mb-2 pt-2" data-i18n="works:Stats.Projects.Number">30+</div>
-                    <div class="text-gray-400 text-sm" data-i18n="works:Stats.Projects.Label">Projects Completed</div>
-                </div>
-                <div>
-                    <div class="text-3xl sm:text-5xl font-bold gradient-text mb-2 pt-2" data-i18n="works:Stats.Members.Number">+50</div>
-                    <div class="text-gray-400 text-sm" data-i18n="works:Stats.Members.Label">Members</div>
-                </div>
-                <div>
-                    <div class="text-3xl sm:text-5xl font-bold gradient-text mb-2 pt-2" data-i18n="works:Stats.Attendees.Number">500+</div>
-                    <div class="text-gray-400 text-sm" data-i18n="works:Stats.Attendees.Label">Attendees</div>
-                </div>
-                <div>
-                    <div class="text-3xl sm:text-5xl font-bold gradient-text mb-2 pt-2" data-i18n="works:Stats.Experience.Number">15+</div>
-                    <div class="text-gray-400 text-sm" data-i18n="works:Stats.Experience.Label">Years Experience</div>
-                </div>
-            </div>
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.design.features.1">محتوى إبداعي يعكس الهوية</p>
         </div>
-    </section>
-
-    <!-- Works Grid -->
-<section class="max-w-7xl mx-auto px-4 mb-20">
-        <div class="grid-masonry" id="worksGrid">
-            <!-- Work Item 1 -->
-            <div class="work-card" data-id="1">
-                <img src="/public/assets/images/works/04.webp" loading="lazy" alt="المسرح المتنقل">
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item1.Title">المسرح المتنقل</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item1.Description">المسرح المستخدم في فعالية حديقة الليوان</p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item1.Tag1">تركيب سريع</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item1.Tag2">جودة</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Item 2 - Video Wide -->
-            <div class="work-card wide" data-id="2">
-                <video loop muted playsinline poster="/public/assets/images/works/حديقة-الليوان.webp">
-                    <source src="/public/assets/videos/حديقة الليوان بحي الفلاح.mp4" type="video/mp4">
-                </video>
-                <div class="play-button"></div>
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item2.Title">حديقة الليوان</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item2.Description">مسرح متنقل، أنظمة اضاءة، انظمة صوت</p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item2.Tag1">فعالية</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item2.Tag2">الرياض</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Item 3 - Tall -->
-            <div class="work-card tall">
-                <img src="/public/assets/images/works/24.webp" loading="lazy" alt="صورة فعالية">
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item3.Title">عروض مسرحية للأطفال</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item3.Description">
-                        عرض تفاعلي حي جمع الأطفال والجمهور في تجربة مسرحية مليئة بالحركة والتفاعل
-                    </p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item3.Tag1">عروض حية</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item3.Tag2">تفاعل جماهيري</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Item 4 -->
-            <div class="work-card" data-id="4">
-                <img src="/public/assets/images/works/حديقة-الكناري-الرياض.webp" loading="lazy" alt="حديقة الكناري">
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item4.Title">ألعاب نارية</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item4.Description">ألعاب نارية مستخدمة لحظة اطلاق فعالية حديقة الكناري</p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item4.Tag1">مؤثرات مسرحية</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item4.Tag2">إطلاق فعالية</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Item 5 - Video -->
-            <div class="work-card" data-id="5">
-                <video loop muted playsinline poster="/public/assets/images/works/thumbnail-2.webp">
-                    <source src="/public/assets/videos/فعالية حديقة الكناري حي الحمراء.mp4" type="video/mp4">
-                </video>
-                <div class="play-button"></div>
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item5.Title">حديقة الكناري</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item5.Description">فعالية للأطفال لمدة 4 أيام متتالية</p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item5.Tag1">4-أيام</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item5.Tag2">الرياض</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Item 6 - Wide -->
-            <div class="work-card wide" data-id="6">
-                <video loop muted playsinline poster="/public/assets/images/works/طويق.webp">
-                    <source src="/public/assets/videos/فعاليات منتزه الدوح حي طويق.mp4" type="video/mp4">
-                </video>
-                <div class="play-button"></div>
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item6.Title">منتزه الدوح</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item6.Description">
-                        تجربة ترفيهية متكاملة داخل مساحة مفتوحة بتوزيع تقني متوازن
-                    </p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item6.Tag1">ترفيه عائلي</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item6.Tag2">مساحات مفتوحة</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Item 7 -->
-            <div class="work-card" data-id="3">
-                <img src='/public/assets/images/works/kids.webp' loading="lazy" alt="اطفال">
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item7.Title">فعاليات متنوعة</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item7.Description">
-                        باقة فعاليات تفاعلية مصممة خصيصًا لتناسب مختلف الأعمار والاهتمامات
-                    </p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item7.Tag1">أنشطة أطفال</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item7.Tag2">فعاليات تفاعلية</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Item 8 -->
-            <div class="work-card wide" data-id="7">
-                <video loop muted playsinline poster="/public/assets/images/works/thumbnail.webp">
-                    <source src="/public/assets/videos/تجهيز-الفعالية.mp4" type="video/mp4">
-                </video>
-                <div class="play-button"></div>
-                <div class="work-overlay">
-                    <h3 class="text-2xl font-bold mb-2" data-i18n="works:Grid.Item8.Title">التجهيز للفعالية</h3>
-                    <p class="text-gray-300 text-sm mb-3" data-i18n="works:Grid.Item8.Description">
-                        تجهيز متكامل وسريع يشمل المسرح، الإضاءة، والصوت خلال ساعات
-                    </p>
-                    <div>
-                        <span class="work-tag" data-i18n="works:Grid.Item8.Tag1">جاهزية سريعة</span>
-                        <span class="work-tag" data-i18n="works:Grid.Item8.Tag2">إنتاج فعاليات</span>
-                    </div>
-                </div>
-            </div>
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.design.features.2">موشن جرافيكس وانيميشن</p>
         </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal" id="workModal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">×</button>
-            <div id="modalBody"></div>
-        </div>
+      </div>
     </div>
 
+    <!-- Service 3 -->
+    <div class="service-card">
+      <div class="service-icon">
+        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.writing.title">Content Writing</h3>
+      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.writing.description">
+        نصوص تسويقية مُوجّهة وفق الجمهور والمنصة
+      </p>
+      <div class="space-y-3">
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.writing.features.0">نصوص تسويقية وفق الجمهور والمنصة</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.writing.features.1">محتوى عربي وإنجليزي احترافي</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.writing.features.2">استراتيجية محتوى متكاملة</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card">
+      <div class="service-icon">
+        <svg class="w-8 h-8 text-[#F69959]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="marketing:services.items.social.title">Social Media Management</h3>
+      <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="marketing:services.items.social.description">
+        إدارة شاملة للمنصات الرقمية مع تحليلات أداء دقيقة
+      </p>
+      <div class="space-y-3">
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.social.features.0">إدارة نشر وتفاعل على المنصات</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.social.features.1">إعلانات ممولة مُستهدفة</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-bullet"></div>
+          <p class="text-gray-300 text-sm" data-i18n="marketing:services.items.social.features.2">تحليلات أداء وتقارير شاملة</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section class="py-32 px-4 relative overflow-hidden">
+   <div class="max-w-5xl mx-auto relative z-10">
+  <div class="text-center mb-20 fade-in-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+      <span data-i18n="marketing:process.title">Our</span> <span class="gradient-text" data-i18n="marketing:process.titleHighlight">Process</span>
+    </h2>
+    <div class="w-20 h-1 mx-auto" style="background: linear-gradient(to right, #F69959 0%, #8E4A8C 100%);"></div>
+  </div>
+
+  <div class="space-y-8">
+    <div class="timeline-step">
+      <h3 class="text-2xl font-bold mb-2 text-white" data-i18n="marketing:process.steps.pre.title">Pre-Event</h3>
+      <p class="text-gray-400" data-i18n="marketing:process.steps.pre.description">تصميم هوية بصرية وحملات تشويقية قبل الفعالية</p>
+    </div>
+
+    <div class="timeline-step">
+      <h3 class="text-2xl font-bold mb-2 text-white" data-i18n="marketing:process.steps.during.title">During Event</h3>
+      <p class="text-gray-400" data-i18n="marketing:process.steps.during.description">تغطية حية ومباشرة مع نشر لحظي على المنصات</p>
+    </div>
+
+    <div class="timeline-step">
+      <h3 class="text-2xl font-bold mb-2 text-white" data-i18n="marketing:process.steps.post.title">Post-Event</h3>
+      <p class="text-gray-400" data-i18n="marketing:process.steps.post.description">محتوى ختامي وتحليلات أداء شاملة</p>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 px-4 relative">
+    <div class="max-w-4xl mx-auto text-center fade-in-up">
+    <div class="relative">
+  <div class="absolute inset-0 bg-gradient-to-r from-[#F69959]/10 via-[#8E4A8C]/10 to-[#F69959]/10 rounded-3xl blur-3xl"></div>
+  
+  <div class="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-12 md:p-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      <span data-i18n="marketing:cta.title">Ready to Tell Your</span> <span class="gradient-text" data-i18n="marketing:cta.titleHighlight">Story?</span>
+    </h2>
+    <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto" data-i18n="marketing:cta.description">
+      دعنا نوثّق حدثك ونصنع محتوى يترك أثرًا
+    </p>
+    <a href="/Pages/contact.html" class="btn-primary">
+      <span data-i18n="marketing:cta.button">Start Your Project</span>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+  </div>
+</div>
+    </div>
+  </section>
+
+
+  
 
             <!-- footer -->
    <footer class="footer-gradient py-16 px-6">
@@ -493,11 +544,10 @@ https://cdnjs.com/libraries/i18next"> </script>
             </div>
         </div>
     </footer>
+    
 
-
-    <script src="/index.js"></script>
-    <script src="/public/assets/js/works.js"></script>
-
-
+     <script src="/index.js"></script>
+        <script src="/public/assets/js/marketing.js"></script>
+    
 </body>
 </html>

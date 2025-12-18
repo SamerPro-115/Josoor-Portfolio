@@ -194,7 +194,6 @@
     .stat-badge {
       background: linear-gradient(135deg, rgba(246, 153, 89, 0.1) 0%, rgba(142, 74, 140, 0.1) 100%);
       border: 1px solid rgba(246, 153, 89, 0.2);
-      backdrop-filter: blur(10px);
       border-radius: 1rem;
       transition: all 0.3s ease;
     }

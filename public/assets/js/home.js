@@ -227,3 +227,58 @@ $(document).ready(function () {
             $(window).on('resize', updateTimeline);
         });
 
+
+
+
+
+
+
+// Lazy load video when it enters viewport
+const lazyVideo = document.querySelector('.lazy-video');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const video = entry.target;
+            const source = document.createElement('source');
+            source.src = video.dataset.src;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            video.load();
+            video.play();
+            observer.unobserve(video);
+        }
+    });
+});
+
+observer.observe(lazyVideo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Optional: Pause animations when tab is hidden for better battery life
+(function() {
+    const orbs = document.querySelector('.floating-orbs');
+    if (!orbs) return;
+    
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            orbs.classList.add('paused');
+        } else {
+            orbs.classList.remove('paused');
+        }
+    });
+})();
+
+
+
+
