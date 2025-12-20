@@ -178,7 +178,6 @@
 
     .feature-card:hover .feature-title {
       color: #ff6b35;
-      letter-spacing: 0.5px;
     }
 
     .feature-description {

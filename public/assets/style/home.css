@@ -45,7 +45,6 @@
 
 .about-title {
     text-align: center;
-    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 500;
     padding-bottom: 1rem;
     line-height: 1.2;
@@ -172,8 +171,8 @@
 .smoke-effect {
     position: absolute;
     z-index: revert-layer;
-    width: min(800px, 80vw);
-    top: 97%;
+    width: min(700px, 80vw);
+    top: 0%;
     left: 79%;
     transform: translate(-50%, -20%);
     pointer-events: none;
@@ -253,7 +252,6 @@
     font-size: 1rem;
     font-weight: 300;
     color: rgb(255 255 255 / .6);
-    letter-spacing: 2px;
     margin-bottom: .5rem;
     display: block;
 }
@@ -493,6 +491,7 @@
     overflow: hidden;
 }
 
+
 .partner-card:hover {
     transform: translateY(-1px) scale(1.08) rotate(0.6deg);
 }
@@ -517,6 +516,10 @@
     position: relative;
     z-index: 1;
     width: 110px;
+}
+
+.aramco img{
+    filter: brightness(1) invert(0.3);
 }
 
 .partner-card:hover img {
@@ -645,7 +648,6 @@
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: bold;
     line-height: 1;
-    letter-spacing: -0.02em;
     position: relative;
     z-index: 2;
     padding-top: 0.5rem;
@@ -809,7 +811,6 @@
 
 .text-label {
     font-size: 0.75rem;
-    letter-spacing: 0.15em;
     text-transform: uppercase;
     font-weight: 500;
     color: #F69959;
@@ -818,7 +819,6 @@
 .section-title {
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 900;
-    letter-spacing: -0.02em;
     line-height: 1.1;
 }
 
@@ -1046,7 +1046,6 @@
     font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
-    letter-spacing: 1px;
     margin-top: 0.25rem;
 }
 
@@ -1066,7 +1065,6 @@
     font-weight: 700;
     color: #ff63a3;
     text-transform: uppercase;
-    letter-spacing: 2px;
     margin-bottom: 1rem;
     padding: 0.5rem 1.25rem;
     background: rgba(217, 119, 6, 0.08);

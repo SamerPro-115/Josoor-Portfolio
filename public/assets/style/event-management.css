@@ -72,7 +72,6 @@
 
         .hero-title {
             font-weight: 900;
-            letter-spacing: -0.02em;
             line-height: 1.1;
             animation: fadeInUp 1s ease-out;
         }

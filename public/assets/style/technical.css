@@ -189,7 +189,6 @@ html {
       font-size: 3rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
     }
 
 
@@ -351,7 +350,6 @@ html {
       font-weight: 700;
       margin-bottom: 0.75rem;
       color: #fff;
-      letter-spacing: -0.01em;
     }
 
 
@@ -399,7 +397,6 @@ html {
       color: rgba(255, 255, 255, 0.8);
       font-size: 0.95rem;
       line-height: 1.6;
-      letter-spacing: 0.02em;
     }
 
     .spec-item:hover .spec-text {
@@ -416,7 +413,6 @@ html {
       border-radius: 2rem;
       font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.6);
       transition: all 0.3s ease;
@@ -499,7 +495,6 @@ html {
       font-size: 3.5rem;
       font-weight: 900;
       margin-bottom: 1.5rem;
-      letter-spacing: -0.03em;
     }
 
     .header-line {
@@ -569,7 +564,6 @@ html {
       border-radius: 2rem;
       font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.15em;
       text-transform: uppercase;
       z-index: 2;
     }
@@ -815,7 +809,6 @@ html {
       border-radius: 2rem;
       font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: all 0.4s ease;
       z-index: 3;
