@@ -1,0 +1,119 @@
+{
+  "hero": {
+    "title": {
+      "line1": "Where ",
+      "vision": "Vision",
+      "line2": "Meets",
+      "reality": "Reality"
+    },
+    "subtitle": "A leading company in organizing exhibitions, conferences, and distinctive events\nWe create exceptional experiences that last forever",
+    "cta": "Request a Quote →"
+  },
+   "vision": {
+    "title": {
+      "text": "We Build ",
+      "highlight": "Bridges of Success"
+    },
+    "description": "Leadership in creating and organizing distinctive events in the Kingdom of Saudi Arabia, contributing to achieving the goals of Saudi Vision 2030 in tourism, entertainment, and culture.",
+    "stats": {
+      "experience": {
+        "number": "+15",
+        "label": "Years of Experience"
+      },
+      "events": {
+        "number": "+100",
+        "label": "Successful Events"
+      }
+    },
+    "achievement": {
+      "number": "15",
+      "title": "Years of Excellence and Innovation",
+      "description": "We have over fifteen years of experience in organizing exhibitions, conferences, festivals, and events"
+    }
+  },
+  "team": {
+    "title": {
+      "text": "A ",
+      "highlight": "Professional",
+      "text2": " Team with a Passion for Excellence"
+    },
+    "description": "Jusoor Events Company, one of the leading national companies in creating and organizing exhibitions, conferences, and distinctive events in the Kingdom of Saudi Arabia. Jusoor was established with over fifteen years of experience in managing exhibitions and conferences, and organizing events, led by a professional Saudi team with a passion for excellence and attention to detail."
+  },
+  "values": {
+    "title": {
+      "highlight": "Our Values",
+      "text": " & Principles"
+    },
+    "subtitle": "The principles we believe in and work through to achieve excellence",
+    "items": [
+      {
+        "number": "01",
+        "title": "Professionalism",
+        "description": "We work according to the highest technical and organizational standards"
+      },
+      {
+        "number": "02",
+        "title": "Innovation",
+        "description": "We always seek creative ideas that make every event a unique experience"
+      },
+      {
+        "number": "03",
+        "title": "Flexibility",
+        "description": "We design our solutions according to the nature and needs of each client"
+      },
+      {
+        "number": "04",
+        "title": "Credibility",
+        "description": "We keep our promises and strive to achieve results with clarity and transparency"
+      },
+      {
+        "number": "05",
+        "title": "Attention to Detail",
+        "description": "We believe that the success of any event starts from the finest details"
+      },
+      {
+        "number": "06",
+        "title": "Excellence",
+        "description": "We always strive to deliver the best results that exceed expectations"
+      }
+    ]
+  },
+  "expertise": {
+    "title": {
+      "highlight": "Our Expertise",
+      "text": " & Experience"
+    },
+    "subtitle": "We combine creativity and technology to deliver exceptional experiences",
+    "panels": [
+      {
+        "title": "Our Specializations",
+        "items": [
+          "Project and Event Management",
+          "Technical Equipment (sound, lighting, screens, theaters)",
+          "Design and Visual Identity",
+          "Media Production and Direction",
+          "Logistical and Organizational Support"
+        ]
+      },
+      {
+        "title": "Types of Events",
+        "items": [
+          "Exhibitions and Commercial Events",
+          "Official Events and National Celebrations",
+          "National Forums and Conferences",
+          "Launch Ceremonies and Official Occasions",
+          "Volunteer and Community Gatherings"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": {
+      "text": "With us, your ",
+      "highlight": "ideas",
+      "text2": " transform into reality that exceeds expectations"
+    },
+    "description": "We create a complete experience that lasts in the memory of attendees and expresses our clients' identity in the best way",
+    "button": "Start Your Project With Us →"
+  }
+}

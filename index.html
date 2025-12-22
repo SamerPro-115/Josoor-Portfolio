@@ -5,136 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جسور | الرئيسية</title>
 
-     <style>
-        /* Prevent flash of content */
-        body.loading {
-            overflow: hidden;
-        }
-        
-  
-
-        /* Loader container */
-        .page-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #0a0416;
-            transition: opacity 0.6s ease-out;
-        }
-
-        /* Gradient background */
-        .page-loader::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #1A0B2E 0%, #0a0416 50%, #1A0B2E 100%);
-            opacity: 1;
-        }
-
-        /* Bouncing balls loader */
-        .wrapper {
-            width: 200px;
-            height: 60px;
-            position: relative;
-            z-index: 10000;
-        }
-
-        .circle {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            border-radius: 50%;
-            background-color: #FF3D9A;
-            left: 15%;
-            transform-origin: 50%;
-            animation: circle7124 .5s alternate infinite ease;
-        }
-
-        @keyframes circle7124 {
-            0% {
-                top: 60px;
-                height: 5px;
-                border-radius: 50px 50px 25px 25px;
-                transform: scaleX(1.7);
-            }
-            40% {
-                height: 20px;
-                border-radius: 50%;
-                transform: scaleX(1);
-            }
-            100% {
-                top: 0%;
-            }
-        }
-
-        .circle:nth-child(2) {
-            left: 45%;
-            animation-delay: .2s;
-            background-color: #7B4FA3;
-        }
-
-        .circle:nth-child(3) {
-            left: auto;
-            right: 15%;
-            animation-delay: .3s;
-            background-color: #FFB582;
-        }
-
-        .shadow {
-            width: 20px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: rgba(107, 107, 107, 0.5);
-            position: absolute;
-            top: 62px;
-            transform-origin: 50%;
-            z-index: -1;
-            left: 15%;
-            filter: blur(1px);
-            animation: shadow046 .5s alternate infinite ease;
-        }
-
-        @keyframes shadow046 {
-            0% {
-                transform: scaleX(1.5);
-            }
-            40% {
-                transform: scaleX(1);
-                opacity: .7;
-            }
-            100% {
-                transform: scaleX(.2);
-                opacity: .4;
-            }
-        }
-
-        .shadow:nth-child(4) {
-            left: 45%;
-            animation-delay: .2s;
-        }
-
-        .shadow:nth-child(5) {
-            left: auto;
-            right: 15%;
-            animation-delay: .3s;
-        }
-
-        /* Fade out state */
-        .page-loader.fade-out {
-            opacity: 0;
-            pointer-events: none;
-        }
+    <style>
+      .nav-menu,.page-loader{display:flex;align-items:center}body.loading{overflow:hidden}.page-loader{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:9999;justify-content:center;background:#0a0416;transition:opacity .6s ease-out}.logo-text,.nav-link,.navbar{transition:.3s}.page-loader::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#1a0b2e 0,#0a0416 50%,#1a0b2e 100%);opacity:1}.wrapper{width:200px;height:60px;position:relative;z-index:10000}.circle,.shadow{width:20px;transform-origin:50%;left:15%;border-radius:50%}.circle,.nav-link::before,.shadow{position:absolute}.circle{height:20px;background-color:#ff3d9a;animation:.5s infinite alternate circle7124}@keyframes circle7124{0%{top:60px;height:5px;border-radius:50px 50px 25px 25px;transform:scaleX(1.7)}40%{height:20px;border-radius:50%;transform:scaleX(1)}100%{top:0}}.circle:nth-child(2){left:45%;animation-delay:.2s;background-color:#7b4fa3}.circle:nth-child(3){left:auto;right:15%;animation-delay:.3s;background-color:#ffb582}.shadow{height:4px;background-color:rgb(107 107 107 / .5);top:62px;z-index:-1;filter:blur(1px);animation:.5s infinite alternate shadow046}@keyframes shadow046{0%{transform:scaleX(1.5)}40%{transform:scaleX(1);opacity:.7}100%{transform:scaleX(.2);opacity:.4}}.shadow:nth-child(4){left:45%;animation-delay:.2s}.shadow:nth-child(5){left:auto;right:15%;animation-delay:.3s}.page-loader.fade-out{opacity:0;pointer-events:none}.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:1px solid #ffffff54}.dropdown,.nav-item,.nav-link{position:relative}.logo-text{font-weight:800;font-size:1.8rem;color:#fff}.dropdown-item,.nav-link{text-decoration:none;font-size:1rem}.nav-menu{gap:0;list-style:none;margin:0;padding:0}.dropdown-item,.lang-toggle{color:#fff;font-weight:500;align-items:center}.nav-item{padding-left:10px;padding-right:10px}.desktop-works{padding-right:0;padding-left:0}.nav-link{color:#fff;font-weight:500;padding:.5rem 0 0;display:block;cursor:pointer}.nav-link:hover{color:#f0f0f0}.nav-link::before{content:'';width:0;height:1px;bottom:-3px;right:0;background:linear-gradient(90deg,#a855f7,#ec4899);transition:width .3s}.nav-link:hover::before{width:100%}.active .nav-item .nav-link,.navbar.scrolled .lang-toggle{color:#2a1a4f}.dropdown-content{position:absolute;top:100%;right:auto;left:50%;transform:translateX(-50%) translateY(-20px);background:linear-gradient(145deg,rgb(30 12 48 / .92),rgb(42 26 79 / .88));width:750px;height:400px;max-width:90vw;border-radius:20px;padding:2rem;opacity:0;visibility:hidden;transition:.4s cubic-bezier(.68, -.55, .265, 1.55);display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem;margin:20px;box-shadow:5px -7px 35px -19px rgb(246 246 246 / .74),0 10px 40px rgb(168 85 247 / .3),inset 0 1px 0 rgb(255 255 255 / .1);-webkit-box-shadow:5px -7px 35px -19px rgb(246 246 246 / .74),0 10px 40px rgb(168 85 247 / .3),inset 0 1px 0 rgb(255 255 255 / .1);-moz-box-shadow:5px -7px 35px -19px rgb(246 246 246 / .74),0 10px 40px rgb(168 85 247 / .3),inset 0 1px 0 rgb(255 255 255 / .1)}.dropdown-item,.flag-icon{position:relative;display:flex}.dropdown-content::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(45deg);width:16px;height:16px;background:rgb(26 11 46 / .98);border-top:1px solid;border-left:1px solid}.dropdown-item{padding:1.2rem 1.5rem;transition:.3s;border-left:3px solid #fff0;border-radius:12px}html[lang=en] .dropdown-item{border-left:none;border-right:3px solid #fff0}.dropdown-item:hover{background:rgb(255 255 255 / .1);color:#ffb582;border-left-color:#ff3d9a;padding-right:2rem;transform:translateX(-5px)}html[lang=en] .dropdown-item:hover{padding-right:1.5rem;padding-left:2rem;border-right-color:#ff3d9a;transform:translateX(5px)}.dropdown-item:before{content:"→";margin-left:1rem;color:#ff3d9a;font-weight:700;font-size:1.2rem;transition:.3s;opacity:0}html[lang=en] .dropdown-item:before{content:"←";margin-left:0;margin-right:1rem}.dropdown-item:hover:before{opacity:1;margin-left:.5rem}html[lang=en] .dropdown-item:hover:before{margin-right:.5rem;margin-left:0}.dropdown-item:after{content:'';position:absolute;right:1.5rem;width:6px;height:6px;background:#7b4fa3;border-radius:50%;transition:.3s}html[lang=en] .dropdown-item:after{right:auto;left:1.5rem}.dropdown-item:hover:after{background:#ff3d9a;box-shadow:0 0 10px #ff3d9a;transform:scale(1.5)}.lang-toggle{padding:.4rem 1rem;border-radius:20px;font-size:.9rem;cursor:pointer;transition:.3s;display:flex;gap:.5rem}.lang-toggle:hover{color:#ffb582;transform:translateY(-2px)}.navbar.scrolled .lang-toggle:hover{background:rgb(123 79 163 / .2)}.flag-icon{width:24px;height:18px;align-items:center;justify-content:center}.flag-icon img{position:absolute;width:24px;height:auto;border-radius:3px;box-shadow:0 2px 4px rgb(0 0 0 / .2);transition:.3s}html[lang=ar] .flag-en,html[lang=en] .flag-ar{opacity:1;transform:scale(1)}html[lang=ar] .flag-ar,html[lang=en] .flag-en{opacity:0;transform:scale(.8)}.mobile-menu-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:.5rem}.mobile-menu-toggle span{width:25px;height:3px;background:#ebebeb;border-radius:2px;transition:.3s}.dropdown-trigger{display:flex;align-items:center;gap:.2rem;position:relative}.dropdown-icon{opacity:.8;flex-shrink:0;width:14px;height:14px;transition:.3s cubic-bezier(.4, 0, .2, 1);opacity:.7;flex-shrink:0}.dropdown:hover .dropdown-icon{transform:translateY(3px) scale(1.1);animation:.6s ease-in-out dropdownBounce;transform:translateY(2px);opacity:1}@keyframes dropdownBounce{0%{transform:translateY(0) rotate(0)}30%{transform:translateY(4px) rotate(0)}50%{transform:translateY(2px) rotate(0)}100%{transform:translateY(3px) rotate(0)}}html[lang=en]{direction:ltr}@media (min-width:769px){.navbar.scrolled{background:#ebebeb}.navbar.scrolled .nav-link{color:#2a1a4f}}@media (max-width:768px){.dropdown.active .dropdown-icon{transform:rotate(180deg);animation:none}.dropdown-icon{animation:none}.nav-menu{position:absolute;top:100%;right: -100%; width:100%;height:100vh;background:#ebebeb;flex-direction:column;align-items:flex-start;padding:2rem;gap:0;transition:right .3s;border-top:1px solid #d9d9d9;overflow-y:auto}html[lang=en] .nav-menu{left:auto;right:-100%}.nav-menu.active,html[lang=en] .nav-menu.active{right:0}.nav-item{width:100%;padding:.6rem 0}.dropdown-content{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;max-height:0;overflow:hidden;transition:max-height .3s;padding:0;width:100%;display:block;height:auto;margin:0}.dropdown-content::before{display:none}.dropdown.active .dropdown-content{max-height:500px;padding:.5rem 0}.dropdown-item{padding:.75rem 1rem .75rem 2rem}html[lang=en] .dropdown-item{padding:.75rem 2rem .75rem 1rem}.mobile-menu-toggle{display:flex}.mobile-menu-toggle.active span:first-child{transform:rotate(45deg) translate(5px,5px)}.mobile-menu-toggle.active span:nth-child(2){opacity:0}.mobile-menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-6px)}.navbar{background:#fff0}.navbar.scrolled{background:#ebebeb}.navbar.scrolled .mobile-menu-toggle span{background:#2a1a4f}}.lang-toggle-mobile{display:flex;color:#2a1a4f;padding:0;margin-top:10px;margin-bottom:40px}.lang-toggle-desktop{display:none}@media screen and (min-width:769px){.dropdown:hover .dropdown-content{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}.lang-toggle-mobile{display:none}.lang-toggle-desktop{display:flex}}.toggle-top{background:#ebebeb}.menu-toggle-on-top{background:#2a1a4f!important}.lang-toggle-on-top{color:#2a1a4f!important}
     </style>
-    
-    <!-- CRITICAL: Inline Loader Script - Runs immediately -->
+
     <script>
-        // Track timing from the very start
         window.loaderStartTime = Date.now();
         window.loaderState = {
             videoReady: false,
@@ -142,20 +17,16 @@
             hidden: false
         };
 
-        // Loader logic
         function checkAndHideLoader() {
             const state = window.loaderState;
             const elapsedTime = Date.now() - window.loaderStartTime;
-            const minimumDisplayTime = 1200; // 1.2 seconds minimum
+            const minimumDisplayTime = 1200; 
             
-            // Don't hide if already hidden
             if (state.hidden) return;
             
-            // Check if ready to hide
             if (state.videoReady && state.pageLoaded && elapsedTime >= minimumDisplayTime) {
                 hideLoader();
             } else if (state.videoReady && state.pageLoaded) {
-                // Wait for remaining time
                 const remainingTime = minimumDisplayTime - elapsedTime;
                 setTimeout(hideLoader, remainingTime);
             }
@@ -183,20 +54,17 @@
             }, 100);
         }
 
-        // Wait for DOM to be ready
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM ready');
             
             const video = document.querySelector('.video-background');
             
             if (video) {
-                // Check if video is already loaded (cached)
                 if (video.readyState >= 3) {
                     console.log('Video already cached');
                     window.loaderState.videoReady = true;
                     checkAndHideLoader();
                 } else {
-                    // Wait for video to load
                     video.addEventListener('canplaythrough', function() {
                         console.log('Video ready');
                         window.loaderState.videoReady = true;
@@ -210,7 +78,6 @@
                     }, { once: true });
                 }
                 
-                // Fallback for slow connections
                 setTimeout(function() {
                     if (!window.loaderState.videoReady) {
                         console.log('Video timeout - proceeding anyway');
@@ -226,14 +93,12 @@
             }
         });
 
-        // Page fully loaded
         window.addEventListener('load', function() {
             console.log('Page fully loaded');
             window.loaderState.pageLoaded = true;
             checkAndHideLoader();
         });
 
-        // Emergency fallback
         setTimeout(function() {
             if (document.body.classList.contains('loading')) {
                 console.warn('Emergency timeout - forcing hide');
@@ -243,28 +108,28 @@
             }
         }, 15000);
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="preload" href="/public/assets/style/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/public/assets/style/home.css"></noscript>
+    <link rel="preload" href="/public/assets/style/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/public/assets/style/home.css"></noscript>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="/public/assets/style/navbar.css">
-<link rel="stylesheet" href="/public/assets/style/footer.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Font Awesome Free -->
-
+        <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
 
   <link rel="icon" type="image/png" href="/public/assets/images/favicon.png">
-
-        <script src="
-    https://unpkg.com/i18next/dist/umd/i18next.js"> </script>
+    <link rel="preload" 
+          href="/public/assets/fonts/29LT Bukra-Medium.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossorigin>
     
-    <script src="
-    
-https://cdnjs.com/libraries/i18next"> </script>
-
-  <script src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
-
+    <link rel="preload" 
+          href="/public/assets/fonts/29LT Bukra-Black.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossorigin>
+<link rel="stylesheet" href="/public/assets/style/tailwind.css">
+<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script defer src="https://unpkg.com/i18next/dist/umd/i18next.js"></script>
+<script defer src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
 
   <meta name="description" content="جسور شركة سعودية رائدة في تنظيم المعارض والمؤتمرات والفعاليات النوعية. نقدم حلولًا إبداعية متكاملة من الفكرة إلى التنفيذ باحترافية عالية.">
 
@@ -274,10 +139,7 @@ https://cdnjs.com/libraries/i18next"> </script>
 <meta name="robots" content="index, follow">
 <meta name="language" content="ar">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="/public/assets/images/favicon.png">
-
-<!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="جسور">
 <meta property="og:title" content="جسور | حلول احترافية لتنظيم الفعاليات">
@@ -285,13 +147,11 @@ https://cdnjs.com/libraries/i18next"> </script>
 <meta property="og:url" content="https://jusoor.sa">
 <meta property="og:image" content="https://jusoor.sa/public/assets/images/favicon.png">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="جسور | تنظيم المعارض والمؤتمرات">
 <meta name="twitter:description" content="شركة سعودية متخصصة في تنظيم الفعاليات والمعارض والمؤتمرات باحترافية.">
 <meta name="twitter:image" content="https://jusoor.sa/public/assets/images/favicon.png">
 
-<!-- Organization Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -327,46 +187,45 @@ https://cdnjs.com/libraries/i18next"> </script>
     </div>
 
 
-                <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation">
         <div class="container mx-auto px-6 pt-[0.4rem] flex justify-between items-center">
            <div class="logo-text" >
                 <img src="/public/assets/images/logo.webp" 
-                     class="w-20 mb-2 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw] h-auto" 
+                width="80" height="80"
+                     class="mb-2 mt-2  sm:w-28  lg:w-36 xl:w-32 max-w-[60vw]" 
                      alt="شعار جسور">
             </div>
             
-            <!-- Desktop Menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="/index.html" class="nav-link"  data-i18n="Home">الرئيسية</a>
+                    <a href="/index.html" aria-label="Link home page" class="nav-link"  data-i18n="Home">الرئيسية</a>
                 </li>
               
-                <li class="nav-item dropdown " style="padding-bottom: 0 !important;">
-                  <a class="nav-link dropdown-trigger">
+                <li class="nav-item dropdown" style="padding-bottom: 0.4rem !important;">
+                  <button class="nav-link dropdown-trigger">
         <span class="nav-text" data-i18n="Services">خدماتنا</span>
         <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
             <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
-    </a>
+    </button>
                     <div class="dropdown-content">
-                        <a href="/pages/mobile-theater.html" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
-                        <a href="/Pages/comprehensive-technical.html" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
-                        <a href="/Pages/conferences.html" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
-                        <a href="/Pages/event-management.html" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
-                        <a href="/Pages/production-&-marketing.html" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
+                        <a href="/pages/mobile-theater.html" aria-label="Link to mobile theater page" class="dropdown-item" data-i18n="Mobile-Theater">المسرح المتنقل</a>
+                        <a href="/Pages/comprehensive-technical.html" aria-label="Link to comprehensive-technical page" class="dropdown-item" data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
+                        <a href="/Pages/conferences.html" aria-label="Link to conferences page" class="dropdown-item" data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
+                        <a href="/Pages/event-management.html" aria-label="Link to event-management page" class="dropdown-item" data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
+                        <a href="/Pages/production-and-marketing.html" aria-label="Link to production-and-marketing page" class="dropdown-item" data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                     </div>
                 </li>
                 <li class="nav-item desktop-works">
-                    <a href="/Pages/works.html" class="nav-link" data-i18n="Works">أعمالنا</a>
+                    <a href="/Pages/works.html" aria-label="Link to works page" class="nav-link" data-i18n="Works">أعمالنا</a>
                 </li>
                   <li class="nav-item lg:pr-5">
-                    <a href="/Pages/about.html" class="nav-link" data-i18n="About-nav">من نحن</a>
+                    <a href="/Pages/about.html" aria-label="Link to about-us page" class="nav-link" data-i18n="About-nav">من نحن</a>
                 </li>
                 <button class="lang-toggle lang-toggle-mobile" onclick="changeLang()">
     <span class="flag-icon">
-        <img src="https://flagcdn.com/w40/sa.png"  alt="العربية" class="flag-ar">
-        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+        <img width="40" height="30"  src="https://flagcdn.com/w40/sa.png"  alt="العربية" class="flag-ar">
+        <img width="40" height="30" src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
     </span>
     <span class="lang-text" data-i18n="translation-text-flag">EN</span>
 </button>
@@ -374,13 +233,12 @@ https://cdnjs.com/libraries/i18next"> </script>
 
            <button class="lang-toggle lang-toggle-desktop" onclick="changeLang()">
     <span class="flag-icon">
-        <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
-        <img src="https://flagcdn.com/w40/us.png"  alt="English" class="flag-en">
+        <img width="40" height="30" src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+        <img width="40" height="30" src="https://flagcdn.com/w40/us.png"  alt="English" class="flag-en">
     </span>
     <span class="lang-text" data-i18n="translation-text-flag">EN</span>
 </button>
 
-            <!-- Mobile Menu Toggle -->
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <span></span>
                 <span></span>
@@ -389,8 +247,7 @@ https://cdnjs.com/libraries/i18next"> </script>
         </div>
     </nav>
      
-
-    <!-- Hero Section -->
+    <main>
     <section class="hero-section">
     <video class="video-background" 
        autoplay 
@@ -398,17 +255,16 @@ https://cdnjs.com/libraries/i18next"> </script>
        loop 
        playsinline
        preload="auto"
-       poster="/public/assets/images//home/poster.webp">
+       fetchpriority="high"
+       poster="/public/assets/images/home/poster.webp">
     <source src="/public/assets/videos/Background-Video.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
         
-        <!-- Video Overlay -->
         <div class="video-overlay"></div>
 
 
       <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-4">
-    <!-- <h1 class="xl:text-6xl lg:text-4xl text-4xl font-[800]" data-i18n="hero-title">جسور</h1> -->
     <h1 class="font-[500] mt-3 text-2xl md:text-3xl lg:text-4xl xl:text-5xl " data-i18n="hero-subtitle">حيث تلتقي الرؤية بالواقع..</h1>
 </div>
 
@@ -424,6 +280,7 @@ https://cdnjs.com/libraries/i18next"> </script>
         overflow-hidden
         cursor-pointer
     " style="z-index: 999;"
+    aria-label="Whatsapp contact"
     >
       <div class="
         relative
@@ -457,76 +314,72 @@ https://cdnjs.com/libraries/i18next"> </script>
             <img src="/public/assets/images/home/smoke.webp" fetchpriority="high" class="smoke-effect" alt="صورة تأثير دخان">
 
 
-    <!-- Text Content -->
     <div class="about-text mb-4 lg:mb-20">
       <h1 data-aos="fade-up" class="text-white about-title text-3xl sm:text-5xl lg:text-6xl" >
          <span data-i18n="who-is-jusoor" class="font-[900]">من هي</span> <span class="font-[900] purple-word" data-i18n="Jusoor">جسور ؟</span>
       </h1>
       </div>
 
-    <!-- Image Scroller -->
     <div class="scroller" dir="ltr" data-speed="fast">
       <div  class="scroller__inner">
-        <!-- Original images -->
         <div data-aos="fade-up" class="slide-card">
-          <img src="/public/assets/images/conferences/Trade.webp" loading="lazy" alt="فعالية 1">
+          <img width="1200" height="800" src="/public/assets/images/home/about/Trade.webp" loading="lazy" alt="فعالية 1">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="200" class="slide-card"
         >
-                  <img src="/public/assets/images/mobileTheater/Mobile-Theater-1.webp" loading="lazy" alt="فعالية 4">
+                  <img width="1200" height="800" src="/public/assets/images/home/about/Mobile-Theater-1.webp" loading="lazy" alt="فعالية 4">
 
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="300" class="slide-card">
-          <img src="/public/assets/images/works/kids.webp" loading="lazy" alt="فعالية 3">
+          <img width="1200" height="800" src="/public/assets/images/home/about/kids.webp" loading="lazy" alt="فعالية 3">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="400" class="slide-card">
-              <img src="/public/assets/images/works/طويق.webp" loading="lazy" alt="فعالية 5">
+              <img width="1200" height="800" src="/public/assets/images/home/about/طويق.webp" loading="lazy" alt="فعالية 5">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div data-aos="fade-up" data-aos-delay="500" class="slide-card">
-                      <img src="/public/assets/images/event-management/24.webp" loading="lazy" alt="فعالية 2">
+                      <img width="1200" height="800" src="/public/assets/images/home/about/24.webp" loading="lazy" alt="فعالية 2">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
-        <!-- Duplicated images for seamless loop -->
         <div  data-aos="fade-up" class="slide-card" aria-hidden="true">
-          <img src="/public/assets/images/conferences/Trade.webp" loading="lazy" alt="فعالية 1">
+          <img width="1200" height="800" src="/public/assets/images/home/about/Trade.webp" loading="lazy" alt="فعالية 1">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="200" aria-hidden="true">
-                  <img src="/public/assets/images/mobileTheater/Mobile-Theater-1.webp" loading="lazy" alt="فعالية 4">
+                  <img width="1200" height="800" src="/public/assets/images/home/about/Mobile-Theater-1.webp" loading="lazy" alt="فعالية 4">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="300" aria-hidden="true">
-          <img src="/public/assets/images/works/kids.webp" loading="lazy" alt="فعالية 3">
+          <img width="1200" height="800" src="/public/assets/images/home/about/kids.webp" loading="lazy" alt="فعالية 3">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="400" aria-hidden="true">
-              <img src="/public/assets/images/works/طويق.webp" loading="lazy" alt="فعالية 5">
+              <img width="1200" height="800" src="/public/assets/images/home/about/طويق.webp" loading="lazy" alt="فعالية 5">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
 
         <div class="slide-card" data-aos="fade-up" data-aos-delay="500" aria-hidden="true">
-                      <img src="/public/assets/images/event-management/24.webp" loading="lazy" alt="فعالية 2">
+                      <img width="1200" height="800" src="/public/assets/images/home/about/24.webp" loading="lazy" alt="فعالية 2">
           <div class="slide-overlay-1"></div>
           <div class="slide-overlay-2"></div>
         </div>
@@ -536,6 +389,8 @@ https://cdnjs.com/libraries/i18next"> </script>
 
    
   </section>
+
+  
  <div class="mb-6 mt-5">
     <p data-aos="fade-up" class="text-white mt-4 sm:mt-0 text-md md:text-lg lg:text-3xl px-6">
         <span data-i18n="about-intro-jusoor">جسور</span>
@@ -564,7 +419,8 @@ https://cdnjs.com/libraries/i18next"> </script>
 
 <a href="/Pages/about.html"
     class="learn-more-btn mt-6 inline-block px-6 py-2  lg:px-10 lg:py-3 md:px-8 text-white text-sm md:text-lg font-semibold rounded-md shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-    data-i18n="about-more-btn">اعرف المزيد</a>
+    data-i18n="about-more-btn"
+    aria-label="Read more button">اعرف المزيد</a>
 </div>
 
 
@@ -572,154 +428,173 @@ https://cdnjs.com/libraries/i18next"> </script>
 
 
 
-  <!-- Services -->
- <section class="py-24 px-6">
-        <div class="container mx-auto max-w-7xl relative z-10">
-            <!-- Section Header -->
-         <div class="text-center mb-20 animate-in delay-1">
-    <h2 data-aos="fade-up" class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-        <span data-i18n="services-title-our">خدماتنا</span> <span class="services-title" data-i18n="services-title-integrated">المتكاملة</span>
-    </h2>
-    <div class="decorative-line"></div>
-    <p data-aos="fade-up" data-aos-delay="200" class="text-md sm:text-xl text-[#cacaca] max-w-3xl mx-auto mt-6" data-i18n="services-description">
-        نقدم حلولاً شاملة ومتكاملة لتنظيم وإدارة الفعاليات والمعارض والمؤتمرات بأعلى معايير الاحترافية
-    </p>
-</div>
-            <!-- Services Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Service 1: Event Management -->
-            <a href="/Pages/conferences.html" class="service-card animate-in delay-2">
-    <img src="/public/assets/images/conferences/Trade.webp" 
-         alt="إدارة وتنظيم المعارض والمؤتمرات" 
-         class="service-image" loading="lazy">
-    <div class="service-content">
-        <span class="service-number">01</span>
-        <h3 class="service-title" data-i18n="service-1-title">إدارة وتنظيم المعارض والمؤتمرات</h3>
-        <p class="service-description" data-i18n="service-1-description">
-            تصميم وتنفيذ متكامل للفعاليات من مرحلة الفكرة إلى لحظة الافتتاح، مع التخطيط الاستراتيجي وإدارة كافة التفاصيل
-        </p>
-        <div class="service-features">
-            <span class="feature-tag" data-i18n="service-1-feature-1">التخطيط الاستراتيجي</span>
-            <span class="feature-tag" data-i18n="service-1-feature-2">إدارة الحضور</span>
-            <span class="feature-tag" data-i18n="service-1-feature-3">توثيق الحدث</span>
+<section class="py-24 px-6">
+    <div class="container mx-auto max-w-7xl relative z-10">
+        <div class="text-center mb-20 animate-in delay-1">
+            <h2 data-aos="fade-up" class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+                <span data-i18n="services-title-our">خدماتنا</span> <span class="services-title" data-i18n="services-title-integrated">المتكاملة</span>
+            </h2>
+            <div class="decorative-line"></div>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-md sm:text-xl text-[#cacaca] max-w-3xl mx-auto mt-6" data-i18n="services-description">
+                نقدم حلولاً شاملة ومتكاملة لتنظيم وإدارة الفعاليات والمعارض والمؤتمرات بأعلى معايير الاحترافية
+            </p>
         </div>
-    </div>
-</a>
-                <!-- Service 2: Technical Equipment -->
-                <a href="/Pages/comprehensive-technical.html" class="service-card animate-in delay-3">
-    <img src="/public/assets/images/home/services/Technical equipment.webp" 
-         loading="lazy"
-         alt="التجهيزات التقنية المتكاملة" 
-         class="service-image">
-    <div class="service-content">
-        <span class="service-number">02</span>
-        <h3 class="service-title" data-i18n="service-2-title">التجهيزات التقنية المتكاملة</h3>
-        <p class="service-description" data-i18n="service-2-description">
-            أنظمة صوت وإضاءة احترافية وشاشات عملاقة بإشراف فني متخصص لضمان تجربة استثنائية
-        </p>
-        <div class="service-features">
-            <span class="feature-tag" data-i18n="service-2-feature-1">أنظمة الصوت</span>
-            <span class="feature-tag" data-i18n="service-2-feature-2">الإضاءة الاحترافية</span>
-            <span class="feature-tag" data-i18n="service-2-feature-3">الشاشات العملاقة</span>
-        </div>
-    </div>
-</a>
-                <!-- Service 3: Stages & Platforms -->
-             <a href="/Pages/mobile-theater.html" class="service-card animate-in delay-4">
-    <img src="/public/assets/images/mobileTheater/Mobile-Theater-1.webp" 
-         alt="المسارح والمنصات" 
-         loading="lazy"
-         class="service-image">
-    <div class="service-content">
-        <span class="service-number">03</span>
-        <h3 class="service-title" data-i18n="service-3-title">المسارح والمنصات</h3>
-        <p class="service-description" data-i18n="service-3-description">
-            تصميم وتنفيذ مسارح بمقاسات خاصة وهوية مميزة، مع توفير مسارح متنقلة احترافية ومتكاملة
-        </p>
-        <div class="service-features">
-            <span class="feature-tag" data-i18n="service-3-feature-1">تصميم مخصص</span>
-            <span class="feature-tag" data-i18n="service-3-feature-2">مسارح متنقلة</span>
-            <span class="feature-tag" data-i18n="service-3-feature-3">أعلى معايير الأمان</span>
-        </div>
-    </div>
-</a>
 
-                <!-- Service 4: Broadcasting -->
-              <a href="/Pages/production-&-marketing.html" class="service-card animate-in delay-5">
-    <img src="/public/assets/images/home/services/Media-production.webp" 
-         alt="البث المباشر والإنتاج الإعلامي" 
-         loading="lazy"
-         class="service-image">
-    <div class="service-content">
-        <span class="service-number">04</span>
-        <h3 class="service-title" data-i18n="service-4-title"></h3>
-        <p class="service-description" data-i18n="service-4-description">
-            توثيق ونقل فعالياتكم بجودة عالية عبر عربة بث مجهزة بالكامل وإخراج احترافي
-        </p>
-        <div class="service-features">
-            <span class="feature-tag" data-i18n="service-4-feature-1">OB Van</span>
-            <span class="feature-tag" data-i18n="service-4-feature-2">إخراج احترافي</span>
-            <span class="feature-tag" data-i18n="service-4-feature-3">جودة عالية</span>
-        </div>
-    </div>
-</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="/Pages/conferences.html" class="service-card animate-in delay-2" aria-label="Visit conferences">
+                <img src="/public/assets/images/conferences/Trade.webp" 
+                     srcset="/public/assets/images/conferences/Trade.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                     alt="إدارة وتنظيم المعارض والمؤتمرات" 
+                     class="service-image w-full h-64 md:h-72 lg:h-80 object-cover" 
+                     loading="lazy" 
+                     width="1200" 
+                     height="800">
+                <div class="service-content">
+                    <span class="service-number">01</span>
+                    <h3 class="service-title" data-i18n="service-1-title">إدارة وتنظيم المعارض والمؤتمرات</h3>
+                    <p class="service-description" data-i18n="service-1-description">
+                        تصميم وتنفيذ متكامل للفعاليات من مرحلة الفكرة إلى لحظة الافتتاح، مع التخطيط الاستراتيجي وإدارة كافة التفاصيل
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag" data-i18n="service-1-feature-1">التخطيط الاستراتيجي</span>
+                        <span class="feature-tag" data-i18n="service-1-feature-2">إدارة الحضور</span>
+                        <span class="feature-tag" data-i18n="service-1-feature-3">توثيق الحدث</span>
+                    </div>
+                </div>
+            </a>
 
-                <!-- Service 5: Photography & Documentation -->
-               <a href="/Pages/event-management.html" class="service-card animate-in delay-6">
-    <img src="public/assets/images/home/services/Event-management-&-activation.webp" 
-         alt="ادارة وتفعيل الفعاليات" 
-         loading="lazy"
-         class="service-image">
-    <div class="service-content">
-        <span class="service-number">05</span>
-        <h3 class="service-title" data-i18n="service-5-title">إدارة وتفعيل الفعاليات</h3>
-        <p class="service-description" data-i18n="service-5-description">
-    تخطيط وإدارة وتفعيل الفعاليات باحترافية عالية لضمان تجربة سلسة، تفاعلية، ومؤثرة من البداية حتى التنفيذ
-        </p>
-      <div class="service-features">
-    <span class="feature-tag" data-i18n="service-5-feature-1">إدارة الفعاليات</span>
-    <span class="feature-tag" data-i18n="service-5-feature-2">تفعيل وتجربة الجمهور</span>
-    <span class="feature-tag" data-i18n="service-5-feature-3">تنفيذ ميداني</span>
-</div>
-    </div>
-</a>
-                <!-- Service 6: Design & Decor -->
-               <div class="service-card animate-in delay-6">
-    <img src="/public/assets/images/home/services/design-stages.webp" 
-         alt="التصميم والديكورات" 
-         loading="lazy"
-         class="service-image">
-    <div class="service-content">
-        <span class="service-number">06</span>
-        <h3 class="service-title" data-i18n="service-6-title">التصميم والديكورات</h3>
-        <p class="service-description" data-i18n="service-6-description">
-            تصميم وتنفيذ ديكورات ومنصات خاصة بأسلوب عصري ومبتكر يعكس هوية الحدث
-        </p>
-        <div class="service-features">
-            <span class="feature-tag" data-i18n="service-6-feature-1">تصميم مبتكر</span>
-            <span class="feature-tag" data-i18n="service-6-feature-2">تنفيذ احترافي</span>
-            <span class="feature-tag" data-i18n="service-6-feature-3">هوية مميزة</span>
-        </div>
-    </div>
-</div>
+            <a href="/Pages/comprehensive-technical.html" class="service-card animate-in delay-3" aria-label="Visit comprehensive-technical">
+                <img src="/public/assets/images/home/services/Technical-equipment.webp" 
+                     srcset="/public/assets/images/home/services/small/Technical-equipment.webp 600w, 
+                             /public/assets/images/home/services/Technical-equipment.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                     alt="التجهيزات التقنية المتكاملة" 
+                     class="service-image w-full h-64 md:h-72 lg:h-80 object-cover" 
+                     loading="lazy"
+                     width="1200" 
+                     height="800">
+                <div class="service-content">
+                    <span class="service-number">02</span>
+                    <h3 class="service-title" data-i18n="service-2-title">التجهيزات التقنية المتكاملة</h3>
+                    <p class="service-description" data-i18n="service-2-description">
+                        أنظمة صوت وإضاءة احترافية وشاشات عملاقة بإشراف فني متخصص لضمان تجربة استثنائية
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag" data-i18n="service-2-feature-1">أنظمة الصوت</span>
+                        <span class="feature-tag" data-i18n="service-2-feature-2">الإضاءة الاحترافية</span>
+                        <span class="feature-tag" data-i18n="service-2-feature-3">الشاشات العملاقة</span>
+                    </div>
+                </div>
+            </a>
 
+            <a href="/Pages/mobile-theater.html" class="service-card animate-in delay-4" aria-label="Visit mobile theater">
+                <img src="/public/assets/images/mobileTheater/Mobile-Theater-1.webp" 
+                     srcset="/public/assets/images/mobileTheater/Mobile-Theater-1.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                     alt="المسارح والمنصات" 
+                     class="service-image w-full h-64 md:h-72 lg:h-80 object-cover" 
+                     loading="lazy"
+                     width="1200" 
+                     height="800">
+                <div class="service-content">
+                    <span class="service-number">03</span>
+                    <h3 class="service-title" data-i18n="service-3-title">المسارح والمنصات</h3>
+                    <p class="service-description" data-i18n="service-3-description">
+                        تصميم وتنفيذ مسارح بمقاسات خاصة وهوية مميزة، مع توفير مسارح متنقلة احترافية ومتكاملة
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag" data-i18n="service-3-feature-1">تصميم مخصص</span>
+                        <span class="feature-tag" data-i18n="service-3-feature-2">مسارح متنقلة</span>
+                        <span class="feature-tag" data-i18n="service-3-feature-3">أعلى معايير الأمان</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Pages/production-and-marketing.html" class="service-card animate-in delay-5" aria-label="Visit production and marketing">
+                <img src="/public/assets/images/home/services/Media-production.webp"
+                     srcset="/public/assets/images/home/services/small/Media-production.webp 600w, 
+                             /public/assets/images/home/services/Media-production.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                     alt="البث المباشر والإنتاج الإعلامي" 
+                     class="service-image w-full h-64 md:h-72 lg:h-80 object-cover" 
+                     loading="lazy"
+                     width="1200" 
+                     height="800">
+                <div class="service-content">
+                    <span class="service-number">04</span>
+                    <h3 class="service-title" data-i18n="service-4-title">البث المباشر والإنتاج الإعلامي</h3>
+                    <p class="service-description" data-i18n="service-4-description">
+                        توثيق ونقل فعالياتكم بجودة عالية عبر عربة بث مجهزة بالكامل وإخراج احترافي
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag" data-i18n="service-4-feature-1">OB Van</span>
+                        <span class="feature-tag" data-i18n="service-4-feature-2">إخراج احترافي</span>
+                        <span class="feature-tag" data-i18n="service-4-feature-3">جودة عالية</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Pages/event-management.html" class="service-card animate-in delay-6" aria-label="Visit event management">
+                <img src="/public/assets/images/home/services/Event-management-&-activation.webp"
+                     srcset="/public/assets/images/home/services/small/Event-management-&-activation.webp 600w, 
+                             /public/assets/images/home/services/Event-management-&-activation.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                     alt="ادارة وتفعيل الفعاليات" 
+                     class="service-image w-full h-64 md:h-72 lg:h-80 object-cover" 
+                     loading="lazy"
+                     width="1200" 
+                     height="800">
+                <div class="service-content">
+                    <span class="service-number">05</span>
+                    <h3 class="service-title" data-i18n="service-5-title">إدارة وتفعيل الفعاليات</h3>
+                    <p class="service-description" data-i18n="service-5-description">
+                        تخطيط وإدارة وتفعيل الفعاليات باحترافية عالية لضمان تجربة سلسة، تفاعلية، ومؤثرة من البداية حتى التنفيذ
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag" data-i18n="service-5-feature-1">إدارة الفعاليات</span>
+                        <span class="feature-tag" data-i18n="service-5-feature-2">تفعيل وتجربة الجمهور</span>
+                        <span class="feature-tag" data-i18n="service-5-feature-3">تنفيذ ميداني</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="service-card animate-in delay-6">
+                <img src="/public/assets/images/home/services/design-stages.webp" 
+                     srcset="/public/assets/images/home/services/small/design-stages.webp 600w, /public/assets/images/home/services/design-stages.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                     alt="التصميم والديكورات" 
+                     class="service-image w-full h-64 md:h-72 lg:h-80 object-cover" 
+                     loading="lazy"
+                     width="1200" 
+                     height="800">
+                <div class="service-content">
+                    <span class="service-number">06</span>
+                    <h3 class="service-title" data-i18n="service-6-title">التصميم والديكورات</h3>
+                    <p class="service-description" data-i18n="service-6-description">
+                        تصميم وتنفيذ ديكورات ومنصات خاصة بأسلوب عصري ومبتكر يعكس هوية الحدث
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag" data-i18n="service-6-feature-1">تصميم مبتكر</span>
+                        <span class="feature-tag" data-i18n="service-6-feature-2">تنفيذ احترافي</span>
+                        <span class="feature-tag" data-i18n="service-6-feature-3">هوية مميزة</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- CTA Section -->
-           <div class="text-center mt-20 animate-in delay-6">
-    <p class="text-gray-400 mb-6 text-lg" data-i18n="cta-question">هل لديك فعالية قادمة؟</p>
-    <a href="/Pages/contact.html" class="request-quote text-white font-semibold py-3 px-7 rounded-lg text-sm shadow-xl transform hover:scale-105 transition-all duration-300 " data-i18n="cta-button">
-       اطلب عرض سعر!
-    </a>
-</div>
-
         </div>
-    </section>
 
-        <!-- Video Section -->
+        <div class="text-center mt-20 animate-in delay-6">
+            <p class="text-gray-400 mb-6 text-lg" data-i18n="cta-question">هل لديك فعالية قادمة؟</p>
+            <a href="/Pages/contact.html" aria-label="Request a Quote" class="request-quote text-white font-semibold py-3 px-7 rounded-lg text-sm shadow-xl transform hover:scale-105 transition-all duration-300" data-i18n="cta-button">
+                اطلب عرض سعر!
+            </a>
+        </div>
+
+    </div>
+</section>
+
 <section class="video-section relative h-screen overflow-hidden ">
-    <!-- Video Background -->
 
 <video 
     class="absolute inset-0 w-full h-full object-cover lazy-video"
@@ -731,20 +606,16 @@ https://cdnjs.com/libraries/i18next"> </script>
     data-src="/public/assets/videos/We-are-Jusoor.mp4">
 </video>
     
-    <!-- Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-br from-black/50  to-black/60"></div>
     
  
     
-    <!-- Content -->
     <div class="relative h-full flex items-end video-content-container  pb-20 px-6 md:px-16 lg:px-24 z-10">
         <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
-            <!-- Small Tag -->
             <span class="inline-block px-4 py-2 mb-6 text-sm font-semibold text-white bg-white/10 backdrop-blur-md rounded-full border border-white/20" data-i18n="video-tag">
                 نحن جسور
             </span>
             
-            <!-- Main Heading -->
             <h2 class="video-title-main text-2xl sm:text-3xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span data-i18n="video-title-1">نحوّل</span>
                 <span class="sm:block video-title services-title" data-i18n="video-title-highlight">
@@ -753,14 +624,11 @@ https://cdnjs.com/libraries/i18next"> </script>
                 <span data-i18n="video-title-2">استثنائي</span>
             </h2>
             
-            <!-- Description -->
             <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-2xl" data-i18n="video-description">
                 نصمم تجارب لا تُنسى ونصنع لحظات تبقى في الذاكرة. من التخطيط إلى التنفيذ، نحن شريكك في صناعة النجاح.
             </p>
             
-            
-            <!-- Stats (Optional) -->
-            <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/20">
+                    <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/20">
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-2xl md:text-4xl sm:text-3xl font-bold text-white mb-2">30+</div>
                     <div class="text-xs sm:text-sm text-gray-300" data-i18n="video-stat-1">فعالية ناجحة</div>
@@ -781,11 +649,10 @@ https://cdnjs.com/libraries/i18next"> </script>
 </section>
 
     <div class="overflow-hidden" style="background: linear-gradient(180deg, #0f0a1e 0%, #1a0f2e 50%, #0f0a1e 100%);  position: relative; "  >
-                                           <img src="/public/assets/images/home/purple-splash.webp" class="splash-effect" alt="تأثير صورة دخانية">
-                                           <img src="/public/assets/images/home/purple-splash.webp" class="splash-effect-2" alt="تأثير صورة دخانية">
+                                           <img src="/public/assets/images/home/purple-splash.webp" width="200" height="200" class="splash-effect" alt="تأثير صورة دخانية">
+                                           <img src="/public/assets/images/home/purple-splash.webp" width="200" height="200" class="splash-effect-2" alt="تأثير صورة دخانية">
 
 
-        <!-- Stats Section -->
         <section class="pt-20 px-4 relative">
             <div class="max-w-7xl mx-auto">
               <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
@@ -813,11 +680,9 @@ https://cdnjs.com/libraries/i18next"> </script>
             </div>
         </section>
 
-        <!-- Vision & Mission Section -->
         <section class="pt-20 px-4 relative z-10">
             <div class="max-w-7xl mx-auto">
                 <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-                    <!-- Vision Card -->
                     <div class="vision-card">
                         <div class="vision-card-corner top-left"></div>
                         <div class="vision-card-corner bottom-right"></div>
@@ -832,7 +697,6 @@ https://cdnjs.com/libraries/i18next"> </script>
                         </p>
                     </div>
 
-                    <!-- Mission Card -->
                     <div class="vision-card">
                         <div class="vision-card-corner top-left"></div>
                         <div class="vision-card-corner bottom-right"></div>
@@ -850,7 +714,6 @@ https://cdnjs.com/libraries/i18next"> </script>
 
         </section>
 
-        <!-- Values Section -->
         <section class="pt-20 pb-20 px-4 relative z-10">
 
            <div class="max-w-7xl mx-auto">
@@ -863,7 +726,6 @@ https://cdnjs.com/libraries/i18next"> </script>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        <!-- Innovation -->
         <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
             <div class="value-icon">
                 <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">01</span>
@@ -876,7 +738,6 @@ https://cdnjs.com/libraries/i18next"> </script>
             </p>
         </div>
 
-        <!-- Professionalism -->
         <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
             <div class="value-icon">
                 <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">02</span>
@@ -889,7 +750,6 @@ https://cdnjs.com/libraries/i18next"> </script>
             </p>
         </div>
 
-        <!-- Flexibility -->
         <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
             <div class="value-icon">
                 <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">03</span>
@@ -902,7 +762,6 @@ https://cdnjs.com/libraries/i18next"> </script>
             </p>
         </div>
 
-        <!-- Credibility -->
         <div class="value-card rounded-2xl p-6 md:p-8 lg:p-10 text-center">
             <div class="value-icon">
                 <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold z-10">04</span>
@@ -926,10 +785,8 @@ https://cdnjs.com/libraries/i18next"> </script>
 
 
 
-    <!-- Steps -->
      <div class="max-w-7xl mx-auto py-40 relative">
 
-        <!-- Header -->
         <div class="text-center mb-24 section-header px-2">
             <h2 class="text-2xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
                <span class="text-white" data-i18n="Process.Title">كيف نصنع</span> <span class="gradient-title" data-i18n="Process.TitleHighlight"> فعالية لا تُنسى؟</span> 
@@ -937,11 +794,9 @@ https://cdnjs.com/libraries/i18next"> </script>
             <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-i18n="Process.Subtitle">من الفكرة إلى التنفيذ، سبع خطوات متكاملة لتحويل رؤيتك إلى تجربة استثنائية</p>
         </div>
 
-        <!-- Timeline -->
         <div class="timeline-wrapper">
             <div class="timeline-line" id="timelineLine"></div>
             
-            <!-- Step 1 -->
             <div class="timeline-item left" data-step="1">
                 <div class="step-container">
                     <div class="content-box left-content">
@@ -993,7 +848,6 @@ https://cdnjs.com/libraries/i18next"> </script>
                 </div>
             </div>
 
-            <!-- Step 2 -->
             <div class="timeline-item right" data-step="2">
                 <div class="step-container">
                     <div class="content-box left-content">
@@ -1047,7 +901,6 @@ https://cdnjs.com/libraries/i18next"> </script>
                 </div>
             </div>
 
-            <!-- Step 3 -->
             <div class="timeline-item left" data-step="3">
                 <div class="step-container">
                     <div class="content-box left-content">
@@ -1099,7 +952,6 @@ https://cdnjs.com/libraries/i18next"> </script>
                 </div>
             </div>
 
-            <!-- Step 4 -->
             <div class="timeline-item right" data-step="4">
                 <div class="step-container">
                     <div class="content-box left-content">
@@ -1151,7 +1003,6 @@ https://cdnjs.com/libraries/i18next"> </script>
                 </div>
             </div>
 
-            <!-- Step 5 -->
             <div class="timeline-item left" data-step="5">
                 <div class="step-container">
                     <div class="content-box left-content">
@@ -1203,7 +1054,6 @@ https://cdnjs.com/libraries/i18next"> </script>
                 </div>
             </div>
 
-            <!-- Step 6 -->
             <div class="timeline-item right" data-step="6">
                 <div class="step-container">
                     <div class="content-box left-content">
@@ -1257,7 +1107,6 @@ https://cdnjs.com/libraries/i18next"> </script>
                 </div>
             </div>
 
-            <!-- Step 7 -->
             <div class="timeline-item left" data-step="7">
                 <div class="step-container">
                     <div class="content-box left-content">
@@ -1314,19 +1163,14 @@ https://cdnjs.com/libraries/i18next"> </script>
 
     
 
-
-
- <!-- Background Effects -->
     <div class="bg-layer">
         <div class="grid-pattern"></div>
         <div class="diagonal-lines"></div>
     </div>
 
-        <!-- Partners Section -->
 <section class="partners-section relative py-24 px-6 overflow-hidden">
    
     <div class="container mx-auto max-w-7xl relative z-10">
-        <!-- Section Header -->
     <div class="text-center mb-16">
         <p class="section-subtitle mb-2" data-i18n="partners-subtitle">من نفتخر بالعمل معهم</p>
         <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
@@ -1336,54 +1180,52 @@ https://cdnjs.com/libraries/i18next"> </script>
         <div class="decorative-line"></div>
     </div>
 
-        <!-- Scrolling Partners -->
         <div class="scroll-container" dir="ltr">
             <div class="scroll-content">
-                <!-- Original logos -->
                   <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/Ministry-of-Health.webp" loading="lazy" alt="وزارة الصحة">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/Ministry-of-Health.webp" loading="lazy" alt="وزارة الصحة">
                     </div>
                 </div>
                   <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/Ministry-of-Education.webp" loading="lazy" alt="وزارة التعليم">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/Ministry-of-Education.webp" loading="lazy" alt="وزارة التعليم">
                     </div>
                 </div>
                    <div class="partner-logo">
                     <div class="partner-card aramco">
-                        <img src="/public/assets/images/home/partners/Aramco.webp" loading="lazy" alt="Aramco">
+                        <img src="/public/assets/images/home/partners/Aramco.webp" width="110" height="80" loading="lazy" alt="Aramco">
                     </div>
                 </div>
                 <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/Alrajhi.png" loading="lazy" alt="Alrajhi">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/Alrajhi.png" loading="lazy" alt="Alrajhi">
                     </div>
                 </div>
                    <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/Intel.webp" loading="lazy" alt="Intel">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/Intel.webp" loading="lazy" alt="Intel">
                     </div>
                 </div>
                  <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/SWA.webp" loading="lazy" alt="هيئة المياه">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/SWA.webp" loading="lazy" alt="هيئة المياه">
                     </div>
                 </div>
                   <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/STC.png" loading="lazy" alt="STC">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/STC.png" loading="lazy" alt="STC">
                     </div>
                 </div>
                 <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/mobily.png" class="mobily" loading="lazy" alt="Mobily">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/mobily.png" class="mobily" loading="lazy" alt="Mobily">
                     </div>
                 </div>
               
                 <div class="partner-logo">
                     <div class="partner-card">
-                        <img src="/public/assets/images/home/partners/Toyota.png" loading="lazy" alt="Toyota">
+                        <img width="110" height="80" src="/public/assets/images/home/partners/Toyota.png" loading="lazy" alt="Toyota">
                     </div>
                 </div>
             
@@ -1393,72 +1235,70 @@ https://cdnjs.com/libraries/i18next"> </script>
 </section>
 
 
-            <!-- footer -->
+    </main>
+
+
+
    <footer class="footer-gradient py-16 px-6">
         <div class="max-w-7xl mx-auto">
-            <!-- Main Footer Content -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 
-                <!-- Logo & Description -->
             <div class="space-y-4">
-    <img src="/public/assets/images/logo.webp" loading="lazy"  width="100px" alt="شعار جسور">
+    <img src="/public/assets/images/logo.webp" loading="lazy"  width="100" height="70" alt="شعار جسور">
     <p class="text-gray-400 text-sm leading-relaxed" data-i18n="footer-description">
         حيث تلتقي الرؤية بالواقع... نبني الجسر بين الفكرة والحدث، بين التخطيط والتنفيذ، لنخلق فعاليات تُخلّد في الذاكرة
     </p>
 </div>
 
-                <!-- Quick Links -->
                 <div>
                     <h3 class="text-lg font-semibold text-white mb-5" data-i18n="Quick-links">روابط سريعة</h3>
                     <ul class="space-y-3" >
                         <li>
-                            <a href="/index.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/index.html" aria-label="Home" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Home">الرئيسية</a>
                         </li>
                         <li>
-                            <a href="/Pages/works.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/works.html" aria-label="works" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Works">أعمالنا</a>
                         </li>
                          <li>
-                            <a href="/Pages/about.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/about.html" aria-label="About us" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="About-nav">من نحن</a>
                         </li>
                         <li>
-                            <a href="/Pages/contact.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/contact.html" aria-label="contact" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Contact">تواصل</a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Services -->
                 <div>
                     <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Services">الخدمات</h3>
                     <ul class="space-y-3" >
                         <li>
-                            <a href="/pages/mobile-theater.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/pages/mobile-theater.html" aria-label="Visit Mobile Theater Link" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Mobile-Theater">المسرح المتنقل</a>
                         </li>
                         <li>
-                            <a href="/Pages/conferences.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/conferences.html" aria-label="Visit conferences Link" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Exhibition-&-Conference-Organization">تنظيم المعارض والمؤتمرات</a>
                         </li>
                         <li>
-                            <a href="/Pages/production-&-marketing.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/production-and-marketing.html" aria-label="Visit production and marketing Link" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Production-&-Marketing">الإنتاج والتسويق</a>
                         </li>
                        
                          <li>
-                            <a href="/Pages/comprehensive-technical.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/comprehensive-technical.html" aria-label="Visit Comprehensive Technical  Link" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Comprehensive-Technical-Show/Setup">التجهيزات التقنية المتكاملة</a>
                         </li>
                          <li>
-                            <a href="/Pages/event-management.html" class="footer-link text-gray-400 hover:text-white text-sm" 
+                            <a href="/Pages/event-management.html" aria-label="Visit Event Management Link" class="footer-link text-gray-400 hover:text-white text-sm" 
                                data-i18n="Event-Management-&-Activation">إدارة وتفعيل الفعاليات</a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
                <div>
         <h3 class="text-lg font-semibold text-white mb-5"  data-i18n="Contact-us">تواصل معنا</h3>
         <ul class="space-y-4">
@@ -1477,7 +1317,7 @@ https://cdnjs.com/libraries/i18next"> </script>
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
         </svg>
     </div>
-    <a href="tel:+966503667534" target="_blank" class="text-gray-400 text-sm" dir="ltr">+966 50 366 7534</a>
+    <a href="tel:+966503667534" aria-label="link whatsapp contact" target="_blank" class="text-gray-400 text-sm" dir="ltr">+966 50 366 7534</a>
 </li>
 <li class="contact-item flex items-center gap-2">
     <div class="contact-icon">
@@ -1491,35 +1331,31 @@ https://cdnjs.com/libraries/i18next"> </script>
     </div>
             </div>
 
-            <!-- Divider -->
             <div class="divider mb-10"></div>
 
-            <!-- Bottom Section -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 
-               <!-- Social Media Icons -->
     <div class="flex gap-3 justify-center md:justify-start">
      
-      <a href="https://x.com/JusoorEvents" target="_blank" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
+      <a href="https://x.com/JusoorEvents" aria-label="Social Jusoor X" target="_blank" class="social-icon twitter w-10 h-10 rounded-lg text-white flex items-center justify-center">
     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
     </svg>
 </a>
-<a href="https://www.snapchat.com/add/jusoorevents" target="_blank" class="social-icon snapchat w-10 h-10 rounded-lg text-white flex items-center justify-center">
+<a href="https://www.snapchat.com/add/jusoorevents" aria-label="Social Jusoor Snapchat" target="_blank" class="social-icon snapchat w-10 h-10 rounded-lg text-white flex items-center justify-center">
        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"  viewBox="0 0 24 24" fill="none">
 <path d="M5.82901 4.533C5.22901 5.877 5.46601 8.285 5.56201 9.969C4.91401 10.328 4.08201 9.698 3.61101 9.698C3.12101 9.698 2.53601 10.02 2.44401 10.5C2.37801 10.846 2.53301 11.35 3.64501 11.789C4.07501 11.959 5.09801 12.159 5.33501 12.717C5.66801 13.501 3.62501 17.12 0.417012 17.648C0.166012 17.689 -0.0129883 17.913 0.00101167 18.167C0.0570117 19.142 2.24301 19.524 3.21201 19.674C3.31101 19.808 3.39101 20.374 3.51801 20.805C3.57501 20.998 3.72201 21.229 4.10001 21.229C4.59301 21.229 5.41201 20.849 6.83801 21.085C8.23601 21.318 9.55001 23.3 12.073 23.3C14.418 23.3 15.817 21.309 17.163 21.085C17.942 20.956 18.611 20.997 19.359 21.143C19.874 21.244 20.336 21.3 20.483 20.794C20.612 20.357 20.691 19.802 20.788 19.671C21.748 19.522 23.944 19.141 23.999 18.166C24.013 17.912 23.834 17.689 23.583 17.647C20.429 17.127 18.324 13.519 18.665 12.716C18.901 12.159 19.917 11.961 20.355 11.788C21.169 11.467 21.577 11.072 21.568 10.615C21.557 10.03 20.853 9.681 20.335 9.681C19.808 9.681 19.051 10.305 18.438 9.967C18.534 8.269 18.77 5.872 18.171 4.529C17.036 1.986 14.511 0.699997 11.987 0.699997C9.47901 0.699997 6.97301 1.968 5.82901 4.533Z" fill="#fff"/>
 </svg>
 </a>
  
        
-        <a href="https://www.tiktok.com/@jusoorevents" target="_blank" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
+        <a href="https://www.tiktok.com/@jusoorevents" aria-label="Social Jusoor TikTok" target="_blank" class="social-icon tiktok w-10 h-10 rounded-lg text-white flex items-center justify-center">
     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
     </svg>
 </a>
     </div>
 
-                <!-- Copyright -->
                 <div class="text-center text-gray-400 text-sm">
 <p data-i18n="footer-copyright">© 2024 جسور. جميع الحقوق محفوظة</p>
                 </div>
@@ -1541,10 +1377,9 @@ https://cdnjs.com/libraries/i18next"> </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="/index.js"></script>
-    <script src="/public/assets/js/home.js"></script>
-    <script>
+    <script defer src="/public/assets/js/home.js"></script>
+    <script >
         AOS.init({ once: !0, duration: 800, offset: 100 });
-
     </script>
 </body>
 </html>
