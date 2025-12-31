@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>404 الصفحة غير موجودة | جسور</title>
+
+    <style>
+                
+@font-face {
+    font-family: Bukra;
+    src: url("/public/assets/fonts/29LT Bukra-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Bukra;
+    src: url("/public/assets/fonts/29LT Bukra-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Bukra;
+    src: url("/public/assets/fonts/29LT Bukra-Extra Bold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Bukra;
+    src: url("/public/assets/fonts/29LT Bukra-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+           font-family: Bukra, sans-serif;
+        }
+
+
+
+        html {
+            overflow-x: hidden !important;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0b2e 50%, #2d1b4e 100%);
+            color: #fff;
+            overflow-x: hidden !important;
+            min-height: 100vh;
+            min-height: 100dvh;
+            direction: rtl;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
+        }
+
+        html[lang="en"] body {
+            direction: ltr;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            bottom: 20%;
+            right: 15%;
+            animation-delay: 5s;
+        }
+
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #ec4899, #7b4fa3);
+            top: 50%;
+            right: 25%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-30px) rotate(90deg);
+            }
+            50% {
+                transform: translateY(-60px) rotate(180deg);
+            }
+            75% {
+                transform: translateY(-30px) rotate(270deg);
+            }
+        }
+
+       
+        .container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        
+        .logo {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 10;
+        }
+
+        html[lang="en"] .logo {
+            right: auto;
+            left: 2rem;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5));
+        }
+
+        
+        .error-code {
+            font-size: clamp(8rem, 20vw, 10rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 80px rgba(168, 85, 247, 0.5);
+            animation: glitch 3s infinite;
+            padding-top: 1rem;
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% {
+                transform: translate(0);
+            }
+            92% {
+                transform: translate(-2px, 2px);
+            }
+            94% {
+                transform: translate(2px, -2px);
+            }
+            96% {
+                transform: translate(-2px, -2px);
+            }
+            98% {
+                transform: translate(2px, 2px);
+            }
+        }
+
+        
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .error-description {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        
+        .buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            position: relative;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            min-width: 180px;
+            text-align: center;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(168, 85, 247, 0.6);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary:active {
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        
+        @media (hover: none) and (pointer: coarse) {
+            .btn:hover {
+                transform: none;
+            }
+
+            .btn:active {
+                transform: scale(0.98);
+            }
+
+            .btn-primary:active {
+                box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
+            }
+        }
+
+        
+        .lang-toggle {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            color: #fff;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            user-select: none;
+            min-height: 40px;
+        }
+
+        html[lang="en"] .lang-toggle {
+            left: auto;
+            right: 2rem;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .lang-toggle:active {
+            transform: translateY(0);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .flag-icon {
+            width: 24px;
+            height: 18px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flag-icon img {
+            position: absolute;
+            width: 24px;
+            height: auto;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        html[lang="ar"] .flag-en {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        html[lang="ar"] .flag-ar {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        html[lang="en"] .flag-ar {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        html[lang="en"] .flag-en {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+       
+        .deco-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #a855f7, #ec4899, transparent);
+            top: 50%;
+            left: 0;
+            opacity: 0.3;
+            animation: slide 3s infinite;
+        }
+
+        @keyframes slide {
+            0%, 100% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Responsive Design */
+        
+        @media (max-width: 1440px) {
+            .floating-shape {
+                opacity: 0.08;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .shape-1 {
+                width: 250px;
+                height: 250px;
+            }
+
+            .shape-2 {
+                width: 180px;
+                height: 180px;
+            }
+
+            .shape-3 {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .error-code {
+                font-size: clamp(6rem, 18vw, 12rem);
+                margin-bottom: 0.75rem;
+            }
+
+            .error-title {
+                font-size: clamp(1.25rem, 3.5vw, 2rem);
+                margin-bottom: 0.75rem;
+            }
+
+            .error-description {
+                font-size: clamp(0.9rem, 2vw, 1.1rem);
+                margin-bottom: 2.5rem;
+                max-width: 500px;
+            }
+
+            .logo img {
+                width: 85px;
+            }
+
+            .floating-shape {
+                opacity: 0.06;
+            }
+
+            .shape-1 {
+                width: 200px;
+                height: 200px;
+            }
+
+            .shape-2 {
+                width: 150px;
+                height: 150px;
+            }
+
+            .shape-3 {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* Mobile Landscape & Small Tablet */
+        @media (max-width: 768px) {
+            .logo {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            html[lang="en"] .logo {
+                left: 1rem;
+                right: auto;
+            }
+
+            .logo img {
+                width: 70px;
+            }
+
+            .lang-toggle {
+                top: 1rem;
+                left: 1rem;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            html[lang="en"] .lang-toggle {
+                right: 1rem;
+                left: auto;
+            }
+
+            .container {
+                padding: 1rem;
+                justify-content: center;
+            }
+
+            .error-code {
+                font-size: clamp(5rem, 16vw, 10rem);
+                margin-bottom: 0.5rem;
+            }
+
+            .error-title {
+                font-size: clamp(1.1rem, 3vw, 1.75rem);
+                margin-bottom: 0.5rem;
+                padding: 0 1rem;
+            }
+
+            .error-description {
+                font-size: clamp(0.85rem, 2vw, 1rem);
+                margin-bottom: 2rem;
+                max-width: 90%;
+                padding: 0 0.5rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+
+            .floating-shape {
+                opacity: 0.05;
+            }
+
+            .shape-1 {
+                width: 150px;
+                height: 150px;
+                top: 10%;
+                left: -25%;
+            }
+
+            .shape-2 {
+                width: 120px;
+                height: 120px;
+                bottom: 15%;
+                right: -20%;
+            }
+
+            .shape-3 {
+                width: 80px;
+                height: 80px;
+                top: 40%;
+                right: -10%;
+            }
+        }
+
+        /* Mobile Portrait */
+        @media (max-width: 480px) {
+            .logo {
+                top: 0.75rem;
+                right: 0.75rem;
+            }
+
+            html[lang="en"] .logo {
+                left: 0.75rem;
+                right: auto;
+            }
+
+            .logo img {
+                width: 60px;
+            }
+
+            .lang-toggle {
+                top: 0.75rem;
+                left: 0.75rem;
+                padding: 0.35rem 0.7rem;
+                font-size: 0.85rem;
+                gap: 0.35rem;
+            }
+
+            html[lang="en"] .lang-toggle {
+                right: 0.75rem;
+                left: auto;
+            }
+
+            .flag-icon {
+                width: 20px;
+                height: 15px;
+            }
+
+            .flag-icon img {
+                width: 20px;
+            }
+
+            .container {
+                padding: 0.75rem;
+                min-height: 100vh;
+                min-height: 100dvh; 
+            }
+
+            .error-code {
+                font-size: clamp(4rem, 20vw, 8rem);
+                margin-bottom: 0.5rem;
+            }
+
+            .error-title {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+                margin-bottom: 0.5rem;
+                padding: 0 0.5rem;
+            }
+
+            .error-description {
+                font-size: clamp(0.8rem, 3vw, 0.95rem);
+                margin-bottom: 1.5rem;
+                line-height: 1.5;
+                max-width: 95%;
+            }
+
+            .buttons {
+                gap: 0.875rem;
+                max-width: 280px;
+            }
+
+            .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.95rem;
+                border-radius: 40px;
+            }
+
+            .floating-shape {
+                opacity: 0.04;
+            }
+
+            .shape-1 {
+                width: 100px;
+                height: 100px;
+                left: -30%;
+            }
+
+            .shape-2 {
+                width: 80px;
+                height: 80px;
+                right: -25%;
+            }
+
+            .shape-3 {
+                width: 60px;
+                height: 60px;
+                right: -15%;
+            }
+
+            .deco-line {
+                height: 1px;
+            }
+        }
+
+        /* Extra Small Mobile */
+        @media (max-width: 360px) {
+            .logo img {
+                width: 50px;
+            }
+
+            .error-code {
+                font-size: clamp(3.5rem, 18vw, 7rem);
+            }
+
+            .error-title {
+                font-size: clamp(0.9rem, 4.5vw, 1.3rem);
+            }
+
+            .error-description {
+                font-size: 0.8rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .buttons {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.25rem;
+                font-size: 0.9rem;
+            }
+
+            .lang-toggle {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Landscape mode for mobile */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .container {
+                padding: 1rem;
+                justify-content: center;
+            }
+
+            .logo {
+                top: 0.5rem;
+                right: 0.5rem;
+            }
+
+            html[lang="en"] .logo {
+                left: 0.5rem;
+                right: auto;
+            }
+
+            .logo img {
+                width: 50px;
+            }
+
+            .lang-toggle {
+                top: 0.5rem;
+                left: 0.5rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            html[lang="en"] .lang-toggle {
+                right: 0.5rem;
+                left: auto;
+            }
+
+            .error-code {
+                font-size: clamp(3rem, 12vh, 6rem);
+                margin-bottom: 0.25rem;
+            }
+
+            .error-title {
+                font-size: clamp(0.9rem, 3vh, 1.25rem);
+                margin-bottom: 0.25rem;
+            }
+
+            .error-description {
+                font-size: clamp(0.75rem, 2vh, 0.9rem);
+                margin-bottom: 1rem;
+                line-height: 1.4;
+            }
+
+            .buttons {
+                flex-direction: row;
+                gap: 1rem;
+                max-width: none;
+            }
+
+            .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .floating-shape {
+                display: none;
+            }
+        }
+
+      
+    </style>
+
+    <link rel="icon" type="image/png" href="/public/assets/images/favicon.png">
+</head>
+<body>
+
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+
+    <div class="logo">
+        <a href="/index.html">
+            <img src="/public/assets/images/logo.webp" alt="شعار جسور">
+        </a>
+    </div>
+
+    <button class="lang-toggle" style="z-index: 999999;" onclick="toggleLanguage()">
+        <span class="flag-icon">
+            <img src="https://flagcdn.com/w40/sa.png" alt="العربية" class="flag-ar">
+            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-en">
+        </span>
+        <span class="lang-text" data-i18n="lang">EN</span>
+    </button>
+
+    <div class="deco-line"></div>
+
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title" data-i18n="title">عذراً، الصفحة غير موجودة</h2>
+        <p class="error-description" data-i18n="description">
+            يبدو أن الصفحة التي تبحث عنها قد انتقلت إلى مكان آخر أو لم تعد موجودة. لا تقلق، يمكنك العودة إلى الصفحة الرئيسية أو التواصل معنا.
+        </p>
+        
+        <div class="buttons">
+            <a href="/index.html" class="btn btn-primary" data-i18n="home">العودة للرئيسية</a>
+            <a href="/Pages/contact.html" class="btn btn-secondary" data-i18n="contact">تواصل معنا</a>
+        </div>
+    </div>
+
+  
+    <script src="/404.js"></script>
+</body>
+</html>

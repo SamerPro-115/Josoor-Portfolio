@@ -296,7 +296,7 @@ html[lang="en"] .flag-en {
     display: flex;
     align-items: center;
     gap: .2rem;
-    position: relative
+    position: relative;
 }
 
 .dropdown-icon {
