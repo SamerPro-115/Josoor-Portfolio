@@ -21,7 +21,7 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 
 <meta name="description" content="تواصل مع جسور للاستفسار عن خدمات تنظيم الفعاليات والمعارض والمؤتمرات أو لطلب عرض سعر.">
@@ -245,9 +245,7 @@
         <p class="text-gray-300 mb-8" data-i18n="contact:form.subtitle">سنرد عليك في أقرب وقت ممكن</p>
         
         <div id="form-message-warning" class="mb-4 hidden p-4 bg-red-500/10 border border-red-500/30 text-red-300 rounded-lg"></div>
-        <div id="form-message-success" class="mb-4 hidden p-4 bg-green-500/10 border border-green-500/30 text-green-300 rounded-lg" data-i18n="contact:messageSuccess">
-            تم إرسال رسالتك بنجاح، شكراً لك!
-        </div>
+        
         
         <form  id="contactForm" class="contactForm space-y-6">
             
@@ -319,7 +317,15 @@
             </div>
             
             <div class="form-group">
+                <div class="turnstile-container">
+    <div class="cf-turnstile" 
+         data-sitekey="0x4AAAAAACLtxa2S9oz_XVot"
+         data-callback="onTurnstileSuccess">
+    </div>
+</div>
+         <span class="error verification-error text-red-400 text-sm mt-1" style="margin-bottom: 0.90rem;"></span>
                 <button 
+                id="submit-btn"
                     type="submit" 
                     class="btn-modern bg-[#7144a7] w-full md:w-auto px-8 py-4 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-[#5d3891] transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group">
                     <span data-i18n="contact:form.submit">إرسال</span>
@@ -331,6 +337,9 @@
                     </svg>
                     <span data-i18n="contact:form.submitting">جاري الإرسال...</span>
                 </div>
+                <div id="form-message-success" class="mb-4 hidden p-4 bg-green-500/10 border border-green-500/30 text-green-300 rounded-lg" data-i18n="contact:messageSuccess">
+            تم إرسال رسالتك بنجاح، شكراً لك!
+        </div>
             </div>
             
         </form>
